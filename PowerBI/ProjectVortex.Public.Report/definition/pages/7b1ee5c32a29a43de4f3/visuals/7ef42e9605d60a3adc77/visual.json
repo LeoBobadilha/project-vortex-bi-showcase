@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "7ef42e9605d60a3adc77",
+  "position": {
+    "x": 24,
+    "y": 160,
+    "z": 1100,
+    "width": 392,
+    "height": 238,
+    "tabOrder": 16024
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "SOURCE MATERIAL\r\n\r\nAl Brooks books on trends, trading ranges and reversals; Thomas N. Bulkowski, Encyclopedia of Chart Patterns (2nd edition); and complementary candlestick materials. The Intelligence library records source identity, provenance and permitted use.",
+                    "textStyle": {
+                      "fontFamily": "Aptos",
+                      "fontSize": "10pt",
+                      "color": "#E8F1F7",
+                      "bold": false
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102236'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

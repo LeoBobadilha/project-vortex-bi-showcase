@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "5b1b23c85b5e8f5c9c1e",
+  "position": {
+    "x": 24,
+    "y": 182,
+    "z": 1100,
+    "width": 392,
+    "height": 224,
+    "tabOrder": 18224
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "RESEARCH EVIDENCE\n\nThe selected PSC benchmark is a frozen historical backtest. It passed ledger, registry, key-digest and source-bar timestamp reconciliation. Backtest results do not establish future performance.",
+                    "textStyle": {
+                      "fontFamily": "Aptos",
+                      "fontSize": "10pt",
+                      "color": "#E8F1F7",
+                      "bold": false
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102236'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

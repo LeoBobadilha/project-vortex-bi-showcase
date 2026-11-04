@@ -1,0 +1,14 @@
+﻿{
+  "sourceManifestSha256": "383dda05de10a410509d430cd5e3d0240a21e9f0f8c38519736bba24bcd78c3c",
+  "pageCount": 14,
+  "pageOrderAndIdsCopied": true,
+  "publicDataScope": "approved aggregates plus anonymized chart exhibits",
+  "intentionalSubstitutions": [
+    "trade-level facts to monthly/annual/benchmark aggregates",
+    "M5 and trade-order paths to explicitly labeled month-end proxy",
+    "unsupported direction/strategy filters to disclosure text",
+    "case metadata to redacted labels and images",
+    "forward session details to qualitative scope"
+  ],
+  "companionWebsite": "project-vortex-portfolio; repository URL to be added after authenticated publication"
+}

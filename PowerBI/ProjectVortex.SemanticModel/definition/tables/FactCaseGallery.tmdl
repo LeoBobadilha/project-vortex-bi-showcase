@@ -1,0 +1,37 @@
+table FactCaseGallery
+	lineageTag: 6d303f9c-29f5-40a4-806a-391bb4abf852
+
+	column CaseID
+		dataType: string
+		lineageTag: 19d48cc0-2d66-4237-925a-245d48d2a278
+		summarizeBy: none
+		sourceColumn: CaseID
+
+	column ResultType
+		dataType: string
+		lineageTag: 3773df90-8654-4b50-a39a-0a18782556eb
+		summarizeBy: none
+		sourceColumn: ResultType
+
+	column PublicContext
+		dataType: string
+		lineageTag: 3e67f5e2-8941-433e-85a5-077303198b87
+		summarizeBy: none
+		sourceColumn: PublicContext
+
+	column PublicDisclosure
+		dataType: string
+		lineageTag: e1972668-6863-4043-a98c-d351588ab267
+		summarizeBy: none
+		sourceColumn: PublicDisclosure
+
+	column ImageUrl
+		dataType: string
+		lineageTag: 8b3bed06-a88b-41ac-911f-e99222867a64
+		summarizeBy: none
+		sourceColumn: ImageUrl
+
+	partition FactCaseGallery = m
+		mode: import
+		source = #table(type table [CaseID=text, ResultType=text, PublicContext=text, PublicDisclosure=text, ImageUrl=text], {{"W01","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"W02","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"W03","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"W04","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"W05","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"W06","Win","Selected historical case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"L01","Loss","Selected historical loss case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"},{"L02","Loss","Selected historical loss case; exact dates, price levels, and individual P&L redacted.","Illustrative only; not representative of portfolio distribution.","Embedded anonymized image"}})
+

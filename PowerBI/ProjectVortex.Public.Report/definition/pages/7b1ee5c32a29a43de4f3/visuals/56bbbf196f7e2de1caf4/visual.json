@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "56bbbf196f7e2de1caf4",
+  "position": {
+    "x": 444,
+    "y": 160,
+    "z": 1100,
+    "width": 392,
+    "height": 238,
+    "tabOrder": 16444
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "PROCESSING & RETENTION\n\nVerified repository mechanisms include a versioned library manifest, checksums, provenance sidecars, page-referenced notes, PDF page extraction, research documents, catalogs and recorded decisions. Extraction coverage varied by source and page.",
+                    "textStyle": {
+                      "fontFamily": "Aptos",
+                      "fontSize": "10pt",
+                      "color": "#E8F1F7",
+                      "bold": false
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102236'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,51 @@
+table FactMonthlyRiskProxy
+	lineageTag: ead4ba04-2281-4883-952e-a4bfe12040d9
+
+	column Portfolio
+		dataType: string
+		lineageTag: 87678da2-dbe3-4358-a624-af722cec13b3
+		summarizeBy: none
+		sourceColumn: Portfolio
+
+	column YearMonth
+		dataType: string
+		lineageTag: ebb8f8ab-ca83-476a-bd86-00d26cea7c95
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column CumulativeMonthlyNetC30_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 761f9900-33b8-4df2-9a54-6b60afcb9ee2
+		summarizeBy: none
+		sourceColumn: CumulativeMonthlyNetC30_BRL
+
+	column MonthEndDrawdownProxy_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: fa2aa9af-9c98-4138-a425-bfd0cdfbefa2
+		summarizeBy: none
+		sourceColumn: MonthEndDrawdownProxy_BRL
+
+	column MonthStart
+		dataType: dateTime
+		formatString: MMM yyyy
+		lineageTag: c960d1a1-a844-4af1-a731-ccafa524fd79
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition FactMonthlyRiskProxy = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "monthly_drawdown_proxy.csv"), [Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"Portfolio", type text}, {"YearMonth", type text}, {"CumulativeMonthlyNetC30_BRL", type number}, {"MonthEndDrawdownProxy_BRL", type number}}, "en-US"),
+				    Month = Table.AddColumn(Types, "MonthStart", each Date.FromText([YearMonth] & "-01", [Culture="en-US"]), type date)
+				in
+				    Month
+
+	annotation PBI_ResultType = Table
+

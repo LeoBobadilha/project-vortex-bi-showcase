@@ -1,0 +1,27 @@
+table DimPortfolio
+	lineageTag: 8cbd7f84-6178-43da-b4bd-59d3b68e62f3
+
+	column Portfolio
+		dataType: string
+		lineageTag: 408fe848-6685-4222-97fc-ee559eed6dc1
+		summarizeBy: none
+		sourceColumn: Portfolio
+
+	column PortfolioLabel
+		dataType: string
+		lineageTag: a464441b-56fa-497c-a6d3-37611919125e
+		summarizeBy: none
+		sourceColumn: PortfolioLabel
+
+	partition DimPortfolio = m
+		mode: import
+		source =
+				let
+				    Source = Benchmark,
+				    Distinct = Table.Distinct(Table.SelectColumns(Source, {"Portfolio"})),
+				    AddLabel = Table.AddColumn(Distinct, "PortfolioLabel", each if [Portfolio] = "P6+SIZE+CE" then "P6 + SIZE + CE" else "P6 Baseline", type text)
+				in
+				    AddLabel
+
+	annotation PBI_ResultType = Table
+

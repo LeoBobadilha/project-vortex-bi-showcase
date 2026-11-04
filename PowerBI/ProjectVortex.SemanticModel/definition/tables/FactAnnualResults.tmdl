@@ -1,0 +1,63 @@
+table FactAnnualResults
+	lineageTag: 29fc284b-978b-4564-86a8-d74e3d2cb526
+
+	column Portfolio
+		dataType: string
+		lineageTag: 3042bf1a-331d-4e25-b9f0-2dd0f848abe5
+		summarizeBy: none
+		sourceColumn: Portfolio
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 18559e3a-daca-4ff1-add0-c52f7d627e15
+		summarizeBy: none
+		sourceColumn: Year
+
+	column NetPnL_BRL_C30
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 604a0d88-8791-40d6-b949-faa89d0e6802
+		summarizeBy: sum
+		sourceColumn: NetPnL_BRL_C30
+
+	column GrossPnL_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: fb5450f0-4e33-4efa-854c-d7b665931527
+		summarizeBy: sum
+		sourceColumn: GrossPnL_BRL
+
+	column TradeCount
+		dataType: int64
+		formatString: #,0
+		lineageTag: d48577d8-bf86-4caf-965a-0991de9b7bbc
+		summarizeBy: sum
+		sourceColumn: TradeCount
+
+	column WinningTrades
+		dataType: int64
+		formatString: #,0
+		lineageTag: bfb1ed9e-a933-48d5-866d-237fde49c2c1
+		summarizeBy: sum
+		sourceColumn: WinningTrades
+
+	column ContractUnits
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7702e873-7d6a-4de9-a24d-39ef6bb41cef
+		summarizeBy: sum
+		sourceColumn: ContractUnits
+
+	partition FactAnnualResults = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "annual_portfolio_results.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"Portfolio", type text}, {"Year", Int64.Type}, {"NetPnL_BRL_C30", type number}, {"GrossPnL_BRL", type number}, {"TradeCount", Int64.Type}, {"WinningTrades", Int64.Type}, {"ContractUnits", Int64.Type}}, "en-US")
+				in
+				    Types
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Project Vortex Public Portfolio"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0e001235-f691-45f8-97a2-7c33c125c1ba"
+  }
+}

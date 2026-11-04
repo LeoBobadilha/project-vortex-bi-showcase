@@ -1,0 +1,5 @@
+expression DataRoot = "__CONFIGURE_DATA_ROOT__/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: f25e5798-c7b3-4bc6-ae31-d48d61ff20c8
+
+	annotation PBI_ResultType = Text
+

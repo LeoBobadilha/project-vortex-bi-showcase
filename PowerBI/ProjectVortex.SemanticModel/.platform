@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Project Vortex Public Semantic Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "94b9514c-6ae6-4175-bfa0-a52ac4aab4ea"
+  }
+}

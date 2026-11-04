@@ -1,0 +1,72 @@
+table FactMonthlyResults
+	lineageTag: 9e4a0ceb-db6e-4654-9806-2b6add280032
+
+	column Portfolio
+		dataType: string
+		lineageTag: 3e9ddbd0-6b07-4361-9b5d-feaa204404d7
+		summarizeBy: none
+		sourceColumn: Portfolio
+
+	column YearMonth
+		dataType: string
+		lineageTag: abf2d3ec-0b58-4485-8c34-c59ef612e6af
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column NetPnL_BRL_C30
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 9caed2ae-87fd-4756-8dc7-6c2e58718533
+		summarizeBy: sum
+		sourceColumn: NetPnL_BRL_C30
+
+	column GrossPnL_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 6a3e1f88-9ed4-425a-b641-322622bfcb1f
+		summarizeBy: sum
+		sourceColumn: GrossPnL_BRL
+
+	column TradeCount
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6522a3aa-3e04-4b98-aa99-f0c7e32381aa
+		summarizeBy: sum
+		sourceColumn: TradeCount
+
+	column WinningTrades
+		dataType: int64
+		formatString: #,0
+		lineageTag: 12d7e065-269e-474d-88dc-fcc33eaf130e
+		summarizeBy: sum
+		sourceColumn: WinningTrades
+
+	column ContractUnits
+		dataType: int64
+		formatString: #,0
+		lineageTag: 07c38920-2817-447c-bb02-03581ed46a40
+		summarizeBy: sum
+		sourceColumn: ContractUnits
+
+	column MonthStart
+		dataType: dateTime
+		formatString: MMM yyyy
+		lineageTag: 1654f4d8-7290-40c4-9fa8-ea5d93755f9e
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition FactMonthlyResults = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "monthly_portfolio_results.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"Portfolio", type text}, {"YearMonth", type text}, {"NetPnL_BRL_C30", type number}, {"GrossPnL_BRL", type number}, {"TradeCount", Int64.Type}, {"WinningTrades", Int64.Type}, {"ContractUnits", Int64.Type}}, "en-US"),
+				    Month = Table.AddColumn(Types, "MonthStart", each Date.FromText([YearMonth] & "-01", [Culture="en-US"]), type date)
+				in
+				    Month
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,154 @@
+table Benchmark
+	lineageTag: 27d3117b-d3dc-413b-a9ae-08e6813937bc
+
+	column Portfolio
+		dataType: string
+		lineageTag: 51d7e1b5-44d8-4670-8d47-b86aed1674c6
+		summarizeBy: none
+		sourceColumn: Portfolio
+
+	column DataOrigin
+		dataType: string
+		lineageTag: 101db9d7-31b8-42b8-b56b-440f38be56ff
+		summarizeBy: none
+		sourceColumn: DataOrigin
+
+	column PeriodStart
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3f01457c-e7df-4653-a8e6-261982e1632b
+		summarizeBy: none
+		sourceColumn: PeriodStart
+
+		variation Variation
+			isDefault
+			relationship: e147910f-7612-464d-abf1-9fb2e206b85b
+			defaultHierarchy: LocalDateTable_d3621f3a-a88d-4c03-bad5-16c047ece320.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PeriodEnd
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 15c332b8-62b5-4f5f-8813-7238639d4b35
+		summarizeBy: none
+		sourceColumn: PeriodEnd
+
+		variation Variation
+			isDefault
+			relationship: 0a5c61f2-7da9-428a-8a40-9bbbadddabc4
+			defaultHierarchy: LocalDateTable_c452d25d-146f-41cb-b980-749a251c9cec.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PortfolioRecords
+		dataType: int64
+		formatString: #,0
+		lineageTag: 98684d0b-ad71-4e8c-b380-f3368fbd11ec
+		summarizeBy: sum
+		sourceColumn: PortfolioRecords
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinalContractUnits
+		dataType: int64
+		formatString: #,0
+		lineageTag: 4eb22795-6c5e-4fb9-a1e1-725f212c3f12
+		summarizeBy: sum
+		sourceColumn: FinalContractUnits
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrossPnL_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 660f45bb-1ba9-4fdf-bcc8-c6cb0df0c9d0
+		summarizeBy: sum
+		sourceColumn: GrossPnL_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column C30NetPnL_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 06bca901-e3aa-48a8-96a8-9ea4bb095e57
+		summarizeBy: sum
+		sourceColumn: C30NetPnL_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordedCosts_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 3a61972d-d9e1-4793-b75a-0d16397d46a4
+		summarizeBy: sum
+		sourceColumn: RecordedCosts_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column WinRate
+		dataType: double
+		formatString: 0.00%
+		lineageTag: a4c1bba1-14f0-4a55-8488-a131eac4f52e
+		summarizeBy: sum
+		sourceColumn: WinRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProfitFactor
+		dataType: double
+		formatString: 0.000
+		lineageTag: 73cb925c-325d-4d60-88e4-6e5bd469eeac
+		summarizeBy: sum
+		sourceColumn: ProfitFactor
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealizedCloseOrderMaxDD_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: b96c498a-0317-4d2f-a8bb-37f6049bc07b
+		summarizeBy: sum
+		sourceColumn: RealizedCloseOrderMaxDD_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column M5CloseMaxDD_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: 16b11aea-cdc2-4b87-9028-77a77499d75a
+		summarizeBy: sum
+		sourceColumn: M5CloseMaxDD_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column M5AdverseOHLCEnvelopeDD_BRL
+		dataType: double
+		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
+		lineageTag: c46a1047-8e52-4eed-b5f7-0d3742794849
+		summarizeBy: sum
+		sourceColumn: M5AdverseOHLCEnvelopeDD_BRL
+
+		annotation SummarizationSetBy = Automatic
+
+	column LongestLosingStreak
+		dataType: int64
+		formatString: #,0
+		lineageTag: 281a292e-26c6-4c49-8c3f-f842c02450a0
+		summarizeBy: sum
+		sourceColumn: LongestLosingStreak
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Benchmark = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "benchmark_summary.csv"), [Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"Portfolio", type text}, {"DataOrigin", type text}, {"PeriodStart", type date}, {"PeriodEnd", type date}, {"PortfolioRecords", Int64.Type}, {"FinalContractUnits", Int64.Type}, {"GrossPnL_BRL", type number}, {"C30NetPnL_BRL", type number}, {"RecordedCosts_BRL", type number}, {"WinRate", type number}, {"ProfitFactor", type number}, {"RealizedCloseOrderMaxDD_BRL", type number}, {"M5CloseMaxDD_BRL", type number}, {"M5AdverseOHLCEnvelopeDD_BRL", type number}, {"LongestLosingStreak", Int64.Type}}, "en-US")
+				in
+				    Types
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+relationship Monthly_Date
+	fromColumn: FactMonthlyResults.MonthStart
+	toColumn: DimDate.Date
+
+relationship Monthly_Portfolio
+	fromColumn: FactMonthlyResults.Portfolio
+	toColumn: DimPortfolio.Portfolio
+
+relationship Annual_Portfolio
+	fromColumn: FactAnnualResults.Portfolio
+	toColumn: DimPortfolio.Portfolio
+
+relationship Benchmark_Portfolio
+	fromColumn: Benchmark.Portfolio
+	toColumn: DimPortfolio.Portfolio
+
+relationship RiskProxy_Date
+	fromColumn: FactMonthlyRiskProxy.MonthStart
+	toColumn: DimDate.Date
+
+relationship RiskProxy_Portfolio
+	fromColumn: FactMonthlyRiskProxy.Portfolio
+	toColumn: DimPortfolio.Portfolio
+
+relationship e147910f-7612-464d-abf1-9fb2e206b85b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Benchmark.PeriodStart
+	toColumn: LocalDateTable_d3621f3a-a88d-4c03-bad5-16c047ece320.Date
+
+relationship 0a5c61f2-7da9-428a-8a40-9bbbadddabc4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Benchmark.PeriodEnd
+	toColumn: LocalDateTable_c452d25d-146f-41cb-b980-749a251c9cec.Date
+
+relationship 65ad92c1-5602-440c-b7e6-7b34ed53e702
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.Date
+	toColumn: LocalDateTable_2727ff58-a2e6-4f55-9187-71b85ebd484e.Date
+
+relationship dbb27467-935c-4abc-b765-4e95c0d132ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.MonthStart
+	toColumn: LocalDateTable_0ded72c9-a30a-4e62-9f25-43b1e9acb79d.Date
+

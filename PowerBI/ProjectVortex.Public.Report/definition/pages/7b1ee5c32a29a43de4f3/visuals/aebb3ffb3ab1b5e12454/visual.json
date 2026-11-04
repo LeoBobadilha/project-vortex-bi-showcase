@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "aebb3ffb3ab1b5e12454",
+  "position": {
+    "x": 24,
+    "y": 420,
+    "z": 1100,
+    "width": 1232,
+    "height": 170,
+    "tabOrder": 42024
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "SOURCE MATERIAL > EXTRACTION & NOTES > VERSIONED RESEARCH LIBRARY > HYPOTHESES > HUMAN INTERPRETATION > EXECUTABLE TESTS\r\n\r\nKnowledge consultation is not foundation-model training. No fine-tuning, vector database or verified RAG implementation was found. The difficult step was deciding when a visible pattern represented a valid opportunity and encoding that context without losing causality.",
+                    "textStyle": {
+                      "fontFamily": "Aptos",
+                      "fontSize": "11pt",
+                      "color": "#31C5D9",
+                      "bold": true
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102236'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

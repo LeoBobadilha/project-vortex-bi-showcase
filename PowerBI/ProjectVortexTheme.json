@@ -1,0 +1,17 @@
+{
+  "name": "Project Vortex Research",
+  "dataColors": [
+    "#56D9ED",
+    "#58E39A",
+    "#FF7F83",
+    "#7FB6FF",
+    "#A99BFF",
+    "#F2C879"
+  ],
+  "background": "#081421",
+  "foreground": "#F0F6FC",
+  "tableAccent": "#56D9ED",
+  "good": "#58E39A",
+  "neutral": "#C7D6E4",
+  "bad": "#FF7F83"
+}

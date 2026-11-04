@@ -1,0 +1,210 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "791db7f36a0f4d61a49a",
+  "position": {
+    "x": 648,
+    "y": 408,
+    "z": 1000,
+    "width": 608,
+    "height": 238,
+    "tabOrder": 41448
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPortfolio"
+                    }
+                  },
+                  "Property": "PortfolioLabel"
+                }
+              },
+              "queryRef": "DimPortfolio.PortfolioLabel",
+              "nativeQueryRef": "PortfolioLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthlyResults"
+                    }
+                  },
+                  "Property": "YearMonth"
+                }
+              },
+              "queryRef": "FactMonthlyResults.YearMonth",
+              "nativeQueryRef": "YearMonth"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthlyResults"
+                    }
+                  },
+                  "Property": "TradeCount"
+                }
+              },
+              "queryRef": "FactMonthlyResults.TradeCount",
+              "nativeQueryRef": "TradeCount"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthlyResults"
+                    }
+                  },
+                  "Property": "ContractUnits"
+                }
+              },
+              "queryRef": "FactMonthlyResults.ContractUnits",
+              "nativeQueryRef": "ContractUnits"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthlyResults"
+                    }
+                  },
+                  "Property": "GrossPnL_BRL"
+                }
+              },
+              "queryRef": "FactMonthlyResults.GrossPnL_BRL",
+              "nativeQueryRef": "GrossPnL_BRL"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthlyResults"
+                    }
+                  },
+                  "Property": "NetPnL_BRL_C30"
+                }
+              },
+              "queryRef": "FactMonthlyResults.NetPnL_BRL_C30",
+              "nativeQueryRef": "NetPnL_BRL_C30"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verified monthly portfolio aggregates — not individual trades'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E8F1F7'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102236'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "'true'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#18334D'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "'10'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

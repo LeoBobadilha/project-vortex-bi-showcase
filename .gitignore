@@ -1,0 +1,20 @@
+﻿# Private report, model caches, and local data configuration
+PowerBI/ProjectVortex-Demo*
+PowerBI/ProjectVortex.SemanticModel/.pbi/
+PowerBI/ProjectVortex.Public.Report/.pbi/
+PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl
+*.pkl
+*ledger*.csv
+*Ledger*.csv
+*TradeID_Map*
+*M5*.csv
+**/credentials*
+**/.env
+
+# Approved public PBIP source
+!PowerBI/ProjectVortex-Public.pbip
+!PowerBI/ProjectVortex.Public.Report/
+!PowerBI/ProjectVortex.Public.Report/**
+!PowerBI/ProjectVortex.SemanticModel/
+!PowerBI/ProjectVortex.SemanticModel/**
+!PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl

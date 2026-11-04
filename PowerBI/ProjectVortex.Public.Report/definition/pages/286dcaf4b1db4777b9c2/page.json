@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "286dcaf4b1db4777b9c2",
+  "displayName": "W06 · Winning Case Study",
+  "displayOption": "FitToPage",
+  "height": 780,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#081421'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "'0'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+table DimDate
+	lineageTag: 11ce3b97-f142-4972-8914-1c96c25559ad
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e599fd95-2b27-4da1-850b-98b1499d1500
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 65ad92c1-5602-440c-b7e6-7b34ed53e702
+			defaultHierarchy: LocalDateTable_2727ff58-a2e6-4f55-9187-71b85ebd484e.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthStart
+		dataType: dateTime
+		formatString: MMM yyyy
+		lineageTag: 9d59498c-2be8-4ed6-b87c-d334f1d30b83
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		variation Variation
+			isDefault
+			relationship: dbb27467-935c-4abc-b765-4e95c0d132ac
+			defaultHierarchy: LocalDateTable_0ded72c9-a30a-4e62-9f25-43b1e9acb79d.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearMonth
+		dataType: string
+		lineageTag: 364e5002-4f62-4b29-97c0-e3c69a20c170
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 394f9a96-1a2c-4ba4-88b5-609318f88c9f
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 33ecd933-f2bf-4c9e-b2b1-018c33aa2ca7
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 19944801-6ba1-4b5f-9132-0d81cadb89da
+		summarizeBy: none
+		sourceColumn: Month
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = FactMonthlyResults,
+				    DistinctMonths = Table.Distinct(Table.SelectColumns(Source, {"MonthStart", "YearMonth"})),
+				    AddDate = Table.AddColumn(DistinctMonths, "Date", each [MonthStart], type date),
+				    AddYear = Table.AddColumn(AddDate, "Year", each Date.Year([MonthStart]), Int64.Type),
+				    AddMonthNumber = Table.AddColumn(AddYear, "MonthNumber", each Date.Month([MonthStart]), Int64.Type),
+				    AddMonth = Table.AddColumn(AddMonthNumber, "Month", each Date.ToText([MonthStart], "MMM", "en-US"), type text),
+				    Sort = Table.Sort(AddMonth, {{"MonthStart", Order.Ascending}})
+				in
+				    Sort
+
+	annotation PBI_ResultType = Table
+

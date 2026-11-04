@@ -1,0 +1,25 @@
+table FactForwardValidation
+	lineageTag: 1dca86f9-7572-4b80-bac4-88da8b91165a
+
+	column Stage
+		dataType: string
+		lineageTag: 440a4c1d-a9f4-4823-9961-a183a0faba6d
+		summarizeBy: none
+		sourceColumn: Stage
+
+	column Status
+		dataType: string
+		lineageTag: 16289735-8afc-470f-acd5-6d6511df03df
+		summarizeBy: none
+		sourceColumn: Status
+
+	column PublicNote
+		dataType: string
+		lineageTag: 0325e69d-770c-4efc-bf5b-5106238f8f71
+		summarizeBy: none
+		sourceColumn: PublicNote
+
+	partition FactForwardValidation = m
+		mode: import
+		source = #table(type table [Stage=text, Status=text, PublicNote=text], {{"Paper Live","No prospective metrics included","Simulated trading is not real-money performance; no live-account results are presented."}})
+

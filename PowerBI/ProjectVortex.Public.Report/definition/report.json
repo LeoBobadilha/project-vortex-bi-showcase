@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU12",
+      "reportVersionAtImport": {
+        "visual": "2.5.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Vortex_Navy",
+      "reportVersionAtImport": {
+        "visual": "2.5.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU12",
+          "path": "BaseThemes/CY25SU12.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "L01_Embedded.png",
+          "path": "L01_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "L02_Embedded.png",
+          "path": "L02_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W01_Embedded.png",
+          "path": "W01_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W02_Embedded.png",
+          "path": "W02_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W03_Embedded.png",
+          "path": "W03_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W04_Embedded.png",
+          "path": "W04_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W05_Embedded.png",
+          "path": "W05_Embedded.png",
+          "type": "Image"
+        },
+        {
+          "name": "W06_Embedded.png",
+          "path": "W06_Embedded.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useEnhancedTooltips": false
+  },
+  "annotations": [
+    {
+      "name": "evidence",
+      "value": "Approved portfolio aggregates and anonymized embedded case exhibits only; no trade ledger or raw market data."
+    }
+  ]
+}

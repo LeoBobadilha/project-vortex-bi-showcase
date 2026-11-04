@@ -1,0 +1,29 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["FactMonthlyResults","FactAnnualResults","Benchmark","DimDate","DimPortfolio","FactMonthlyRiskProxy","FactCaseGallery","FactForwardValidation","VortexMetrics","DataRoot"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table FactMonthlyResults
+ref table FactAnnualResults
+ref table Benchmark
+ref table DimDate
+ref table DimPortfolio
+ref table FactMonthlyRiskProxy
+ref table FactCaseGallery
+ref table FactForwardValidation
+ref table VortexMetrics
+ref table DateTableTemplate_29bf80d1-88d9-4bc0-bdd6-90083529a7e6
+ref table LocalDateTable_d3621f3a-a88d-4c03-bad5-16c047ece320
+ref table LocalDateTable_c452d25d-146f-41cb-b980-749a251c9cec
+ref table LocalDateTable_2727ff58-a2e6-4f55-9187-71b85ebd484e
+ref table LocalDateTable_0ded72c9-a30a-4e62-9f25-43b1e9acb79d
+
