@@ -1,14 +1,41 @@
-﻿{
-  "sourceManifestSha256": "383dda05de10a410509d430cd5e3d0240a21e9f0f8c38519736bba24bcd78c3c",
-  "pageCount": 14,
-  "pageOrderAndIdsCopied": true,
-  "publicDataScope": "approved aggregates plus anonymized chart exhibits",
-  "intentionalSubstitutions": [
-    "trade-level facts to monthly/annual/benchmark aggregates",
-    "M5 and trade-order paths to explicitly labeled month-end proxy",
-    "unsupported direction/strategy filters to disclosure text",
-    "case metadata to redacted labels and images",
-    "forward session details to qualitative scope"
-  ],
-  "companionWebsite": "project-vortex-portfolio; repository URL to be added after authenticated publication"
+{
+    "publicRepository":  "https://github.com/LeoBobadilha/project-vortex-bi-showcase",
+    "companionWebsite":  "https://github.com/LeoBobadilha/project-vortex-portfolio",
+    "verifiedBaseRelease":  {
+                                "version":  "v1.0.0",
+                                "biCommitSha":  "a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d",
+                                "websiteCommitSha":  "0fc9239bfd860c63cb60fa0d2186f09492c48545"
+                            },
+    "publicReport":  {
+                         "pages":  14,
+                         "visuals":  83,
+                         "orderedPageNamesMatchActiveLocalPrivate":  true,
+                         "activeLocalPrivateVisualDefinitions":  83,
+                         "operatorReportedPrivateVisuals":  88,
+                         "unreconciledReportedDifference":  5,
+                         "customTheme":  "Vortex_Navy",
+                         "customThemeSha256":  "04856cbf987a55030310e14d8187536907A108DE49825D6614648886FAC3DE14"
+                     },
+    "publicModel":  {
+                        "authoredTables":  9,
+                        "relationships":  10,
+                        "measures":  24,
+                        "scope":  "Public portfolio aggregates and anonymized case exhibits"
+                    },
+    "activeLocalPrivateModelCounts":  {
+                                          "authoredTables":  10,
+                                          "relationships":  14,
+                                          "measures":  29
+                                      },
+    "intentionalVisualSubstitutions":  [
+                                           "Autonomous Research Pipeline: one private bar chart replaced by one explanatory textbox because a reliable publishable experiment-count series is unavailable.",
+                                           "Executive Overview: two private slicers replaced by two disclosure textboxes because the public aggregate model does not expose those detail filters.",
+                                           "Portfolio Performance: one private bar chart replaced by one explanatory textbox because the public aggregate model does not support that detailed breakdown."
+                                       ],
+    "excludedFromPublicModel":  [
+                                    "Trade-level and execution-detail facts",
+                                    "Raw M5 market bars",
+                                    "Private strategy logic and signal rules",
+                                    "Exact trade dates, prices, sizes and individual outcomes"
+                                ]
 }

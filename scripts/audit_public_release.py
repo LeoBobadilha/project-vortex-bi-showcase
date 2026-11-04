@@ -32,11 +32,14 @@ else:
  if '__CONFIGURE_DATA_ROOT__/' not in (ROOT/'PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl').read_text(encoding='utf-8-sig'):errors.append('DataRoot is not the clone-safe placeholder')
  case_images=list((ROOT/'PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources').glob('*_Embedded.png'))
  if len(case_images)!=8:errors.append(f'Expected eight embedded redacted case resources, found {len(case_images)}')
+ report=json.loads((ROOT/'PowerBI/ProjectVortex.Public.Report/definition/report.json').read_text(encoding='utf-8-sig'))
+ theme_name=report.get('themeCollection',{}).get('customTheme',{}).get('name')
+ if not theme_name or not (ROOT/f'PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/{theme_name}.json').exists():errors.append('Declared public PBIR custom theme resource is missing')
  public_screens=list((ROOT/'images/powerbi').glob('[0-9][0-9]-*.png'))
  if len(public_screens)!=14:errors.append(f'Expected 14 Desktop page screenshots, found {len(public_screens)}')
  visual_files=list((ROOT/'PowerBI/ProjectVortex.Public.Report/definition/pages').glob('*/visuals/*/visual.json'))
  if len(visual_files)!=83:errors.append(f'Expected 83 PBIR visual definitions, found {len(visual_files)}')
-for required in ['README.md','SECURITY_REVIEW.md','PowerBI/README.md','data/benchmark_summary.csv','data/annual_portfolio_results.csv','data/monthly_portfolio_results.csv','data/monthly_drawdown_proxy.csv']:
+for required in ['README.md','SECURITY_REVIEW.md','PowerBI/README.md','docs/pbip-parity-report.md','docs/pbip-parity-report.json','docs/pbip-structure-baseline.json','data/benchmark_summary.csv','data/annual_portfolio_results.csv','data/monthly_portfolio_results.csv','data/monthly_drawdown_proxy.csv']:
  if not (ROOT/required).exists():errors.append('Missing '+required)
 # Verify headline arithmetic from the approved benchmark row.
 with (ROOT/'data/benchmark_summary.csv').open(encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))

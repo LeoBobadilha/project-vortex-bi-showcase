@@ -1,6 +1,6 @@
-﻿# Project Vortex | BI and Research Showcase
+# Project Vortex | BI and Research Showcase
 
-A public-safe, editable Power BI portfolio about the engineering process behind Project Vortex: structured market knowledge, AI-assisted research workflows, quantitative validation, risk analysis and human governance. The PBIP contains 14 pages and a public-only semantic model. It is separate from the private research system.
+I built this Power BI report to make the results of my quantitative research easier to compare, inspect and explain. I wanted one place to follow the path from organized market knowledge through AI-assisted experiments to historical portfolio and risk analysis. The public PBIP has 14 pages and an aggregate-only semantic model, separate from my private research system.
 
 ## Verified historical benchmark
 
@@ -18,7 +18,7 @@ The selected benchmark is **P6+SIZE+CE (PSC)** from 2022-01-04 through 2026-10-2
 8–13. Six anonymized winning case studies
 14. Two anonymized losing case studies
 
-The first seven pages use approved aggregate data and bounded qualitative process descriptions. Trade exhibits are redacted visual case studies; dates, exact prices, position sizes, individual P&L and operational identifiers are not included. They are illustrative and are not a statistical performance sample.
+The first seven pages combine approved aggregate data with a concise account of how I organized knowledge, directed research and reviewed the evidence. Trade exhibits are redacted visual case studies; dates, exact prices, position sizes, individual P&L and operational identifiers are not included. They are illustrative and are not a statistical performance sample.
 
 ## Open the PBIP
 
@@ -51,3 +51,12 @@ The companion [Project Vortex portfolio website source](https://github.com/LeoBo
 ## Risk disclosure
 
 Past performance, including historical backtests and simulated trading results, does not guarantee future results. Actual trading involves risk and execution conditions may differ materially from simulations.
+
+## Published releases and parity
+
+Public BI release: https://github.com/LeoBobadilha/project-vortex-bi-showcase/releases/tag/v1.0.0
+Base commit: a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d.
+Companion website release: https://github.com/LeoBobadilha/project-vortex-portfolio/releases/tag/v1.0.0
+Base commit: 0fc9239bfd860c63cb60fa0d2186f09492c48545.
+
+The active local private PBIR source and public PBIP both contain 14 pages and 83 visual definitions. The separately reported 88-visual count was not reproducible in the available active source; see docs/pbip-parity-report.md for the page-level substitutions and exact limitation.

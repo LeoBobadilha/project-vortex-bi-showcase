@@ -1,11 +1,12 @@
-﻿# Changelog
+# Changelog
 
-## 1.0.0 — public 14-page release candidate — 2026-11-04
+## 1.0.1 — parity, documentation and deployment hardening — 2026-11-04
 
-- Added the 14-page public-safe PBIP report and aggregate-only model.
-- Added native Power BI Desktop captures for all 14 report pages.
-- Embedded anonymized case exhibits; removed local file URL dependency.
-- Reconciled PSC benchmark presentation and separated P6 baseline results.
-- Added clone setup for the local aggregate data root and reset the committed parameter to a placeholder.
-- Added public data boundaries, metric methodology, source-parity notes and release security review.
-- GitHub publication is pending authenticated account access and online verification.
+- Corrected DAX examples to use the actual aggregate-only public semantic model.
+- Added a reproducible PBIP parity report and structural drift validator.
+- Embedded the declared Vortex_Navy theme in the public PBIR resources.
+- Updated security and publication documentation with verified GitHub repository URLs and v1.0.0 root commit SHAs.
+- Recorded that the locally available active private PBIR has 14 pages and 83 visual definitions. The separately reported 88-visual baseline could not be reproduced from that source snapshot; no five missing visuals are inferred.
+- Added repository and release provenance links for the verified companion portfolio.
+
+Base releases: BI a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d; website 0fc9239bfd860c63cb60fa0d2186f09492c48545.

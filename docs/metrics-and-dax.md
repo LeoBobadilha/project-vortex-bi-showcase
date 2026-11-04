@@ -1,21 +1,87 @@
-# Benchmark metrics and DAX
+# Public benchmark metrics and DAX
 
-- Gross P&L: sum of recorded gross monthly portfolio aggregates.
-- Net C30 P&L: sum after the recorded C30 methodology; costs are applied once upstream.
-- Portfolio records: sum of aggregate monthly record counts; records are not contract units.
-- Win rate: sum of winning records divided by portfolio records.
-- PF: approved full-history net-C30 summary value.
-- Realized close-order DD: approved full-history portfolio metric. It is not intrabar DD.
+Public measures are stored in the VortexMetrics table. Their formulas use portfolio-level aggregates and do not expose trade-level calculations.
 
-Representative model formulas:
+## Source tables
 
-```DAX
-PSC Gross P&L = SUM(FactTrades[GrossPnL_BRL])
-PSC Net C30 = SUM(FactTrades[NetPnL_BRL_C30])
-PSC Portfolio Records = SUM(FactTrades[TradeCount])
-PSC Win Rate = DIVIDE(SUM(FactTrades[WinningTrades]), [PSC Portfolio Records])
-PSC Profit Factor = MAX(Benchmark[ProfitFactor])
-PSC Max Realized DD (Full History) = MAX(Benchmark[RealizedCloseOrderMaxDD_BRL])
-```
+- FactMonthlyResults: monthly portfolio totals for gross P&L, net C30 P&L, operation counts, winning-operation counts and contract units.
+- Benchmark: reconciled portfolio-level metrics, including Profit Factor and separately defined drawdown statistics.
+- DimDate and DimPortfolio: report dimensions used by the aggregate model.
+- FactAnnualResults: approved annual aggregates.
+- FactMonthlyRiskProxy: month-end cumulative P&L and drawdown proxy; it is not an intrabar equity curve.
+- FactForwardValidation: qualitative validation-stage status only.
+- FactCaseGallery: anonymized case-study labels, not an operation ledger.
 
-The year dimension filters monthly P&L; PF and DD are sourced from the portfolio summary and remain full-history measures. Cumulative monthly P&L is not account equity. Return percentage is omitted because no starting capital is specified.
+## Measures in the model
+
+These examples match the expressions in VortexMetrics.tmdl:
+
+    Gross P&L = SUM ( FactMonthlyResults[GrossPnL_BRL] )
+
+    Net C30 = SUM ( FactMonthlyResults[NetPnL_BRL_C30] )
+
+    Operations = SUM ( FactMonthlyResults[TradeCount] )
+
+    Contract Units = SUM ( FactMonthlyResults[ContractUnits] )
+
+    Winning Operations = SUM ( FactMonthlyResults[WinningTrades] )
+
+    Losing Operations = [Operations] - [Winning Operations]
+
+    Win Rate = DIVIDE ( [Winning Operations], [Operations] )
+
+    Profit Factor =
+        CALCULATE (
+            MAX ( Benchmark[ProfitFactor] ),
+            REMOVEFILTERS ( DimDate )
+        )
+
+    PSC Net C30 =
+        CALCULATE (
+            [Net C30],
+            REMOVEFILTERS ( DimPortfolio ),
+            FactMonthlyResults[Portfolio] = "P6+SIZE+CE"
+        )
+
+    PSC Win Rate =
+        CALCULATE (
+            MAX ( Benchmark[WinRate] ),
+            REMOVEFILTERS ( DimPortfolio ),
+            Benchmark[Portfolio] = "P6+SIZE+CE"
+        )
+
+    PSC Profit Factor =
+        CALCULATE (
+            MAX ( Benchmark[ProfitFactor] ),
+            REMOVEFILTERS ( DimPortfolio ),
+            Benchmark[Portfolio] = "P6+SIZE+CE"
+        )
+
+    PSC Max Realized DD (Full History) =
+        CALCULATE (
+            MAX ( Benchmark[RealizedCloseOrderMaxDD_BRL] ),
+            REMOVEFILTERS ( DimDate ),
+            REMOVEFILTERS ( DimPortfolio ),
+            Benchmark[Portfolio] = "P6+SIZE+CE"
+        )
+
+A DAX query using existing measure names:
+
+    EVALUATE
+    ROW (
+        "Gross P&L", [PSC Gross P&L],
+        "Net C30", [PSC Net C30],
+        "Operations", [PSC Operations],
+        "Win Rate", [PSC Win Rate],
+        "Profit Factor", [PSC Profit Factor],
+        "Realized close-order DD", [PSC Max Realized DD (Full History)]
+    )
+
+## Interpretation limits
+
+- P6+SIZE+CE is the selected historical backtest benchmark; the P6 baseline remains separately selectable and is not added to it.
+- C30 costs are already included in NetPnL_BRL_C30 and applied once upstream.
+- PSC Operations counts portfolio records represented by monthly aggregates. Contract Units is distinct and must not be conflated with operation count.
+- Profit Factor and the full-history drawdown measure intentionally ignore date slicing. Cumulative monthly P&L is not account equity.
+- The three benchmark drawdowns are separate: realized close-order, M5 close and adverse M5 OHLC-envelope. Monthly Drawdown Proxy is only a month-end proxy.
+- No percentage return is calculated because starting capital is unspecified. These are historical backtest results, not Paper Live or live-account performance.
