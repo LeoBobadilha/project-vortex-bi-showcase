@@ -36,7 +36,10 @@ else:
  theme_name=report.get('themeCollection',{}).get('customTheme',{}).get('name')
  if not theme_name or not (ROOT/f'PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/{theme_name}.json').exists():errors.append('Declared public PBIR custom theme resource is missing')
  public_screens=list((ROOT/'images/powerbi').glob('[0-9][0-9]-*.png'))
- if len(public_screens)!=14:errors.append(f'Expected 14 Desktop page screenshots, found {len(public_screens)}')
+ expected_screens={'01-Knowledge.png','02-Research.png','03-Executive.png','12-W06-Win.png','13-L01-Loss.png','14-L02-Loss.png'}
+ actual_screens={p.name for p in public_screens}
+ if actual_screens!=expected_screens:errors.append(f'Expected only the six visually checked unobstructed screenshots; found {sorted(actual_screens)}')
+ if (ROOT/'images/powerbi/contact-sheet.png').exists():errors.append('Contact sheet must remain withheld until all 14 captures are clean')
  visual_files=list((ROOT/'PowerBI/ProjectVortex.Public.Report/definition/pages').glob('*/visuals/*/visual.json'))
  if len(visual_files)!=83:errors.append(f'Expected 83 PBIR visual definitions, found {len(visual_files)}')
 for required in ['README.md','SECURITY_REVIEW.md','PowerBI/README.md','docs/pbip-parity-report.md','docs/pbip-parity-report.json','docs/pbip-structure-baseline.json','data/benchmark_summary.csv','data/annual_portfolio_results.csv','data/monthly_portfolio_results.csv','data/monthly_drawdown_proxy.csv']:
@@ -51,7 +54,7 @@ else:
  if '23551' not in values and '23,551' not in values:errors.append('PSC gross 23,551 not found in benchmark aggregate')
  if '3156' not in values and '3,156' not in values:errors.append('PSC C30 cost 3,156 not found in benchmark aggregate')
 # manifest hashes every public file except its own self-referential manifest
-payload={'reviewDate':'2026-11-04','scope':'local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation','fileCount':len(files),'pageCount':14,'publicScreenshotCount':14,'errors':errors,'files':[{'path':rel(p),'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(files)]}
+payload={'reviewDate':'2026-11-05','scope':'local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation','fileCount':len(files),'pageCount':14,'publicScreenshotCount':6,'withheldContaminatedScreenshotCount':8,'errors':errors,'files':[{'path':rel(p),'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(files)]}
 (ROOT/'security-review-manifest.json').write_text(json.dumps(payload,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({k:v for k,v in payload.items() if k!='files'},indent=2))
 if errors:raise SystemExit(1)

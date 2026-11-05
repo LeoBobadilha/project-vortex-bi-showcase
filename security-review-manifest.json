@@ -1,9 +1,10 @@
 {
-  "reviewDate": "2026-11-04",
+  "reviewDate": "2026-11-05",
   "scope": "local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation",
-  "fileCount": 194,
+  "fileCount": 186,
   "pageCount": 14,
-  "publicScreenshotCount": 14,
+  "publicScreenshotCount": 6,
+  "withheldContaminatedScreenshotCount": 8,
   "errors": [],
   "files": [
     {
@@ -18,8 +19,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 422,
-      "sha256": "6f78b6955670a97ecf985cbb671de4a314a9701cdd241e4898e413dc3fe22101"
+      "size": 816,
+      "sha256": "13f812a13929f7de56c9140d7bf15ac797822be7f86525c04717bbed269ad108"
     },
     {
       "path": "data/annual_portfolio_results.csv",
@@ -58,8 +59,8 @@
     },
     {
       "path": "docs/getting-started.md",
-      "size": 871,
-      "sha256": "b06e5d2835e50bdd01665e885683be45be694005121f5c45b9b8607d6735afd3"
+      "size": 1073,
+      "sha256": "3fce5086082789a34514fdfcc88d5332b6c1f5f5bec3c6fc223ea10534a8adf7"
     },
     {
       "path": "docs/knowledge-engineering.md",
@@ -78,8 +79,8 @@
     },
     {
       "path": "docs/pbip-parity-report.json",
-      "size": 1831,
-      "sha256": "2cc29370280c459a3d83fed4b901077ad54546fe54405e18a73543b9ff05d5bb"
+      "size": 1764,
+      "sha256": "d18e7e21069e3d5633dd039a2502f81a14c94481d3385750c837d7889c68605b"
     },
     {
       "path": "docs/pbip-parity-report.md",
@@ -89,12 +90,12 @@
     {
       "path": "docs/pbip-structure-baseline.json",
       "size": 641,
-      "sha256": "223ad27ef99420ad6f06c9bfdbf79db724a45cbc7cca2ca5772585a216377007"
+      "sha256": "23a0a6eac71570d86a14392f76bcffb6d379567505d1de9aac2aa9ba84d8cc3a"
     },
     {
       "path": "docs/power-bi-scope.md",
-      "size": 1141,
-      "sha256": "088bf5050db152a334b5692cccf8c42ad4069e75f748c790f720da07bdccc86b"
+      "size": 1335,
+      "sha256": "f8af74ac271f6e1db546dd20fecd40e0528d35060152cc70d8ed4ea2c2f0be9c"
     },
     {
       "path": "docs/privacy-and-security.md",
@@ -112,9 +113,14 @@
       "sha256": "b4c384c8c6698b9ee98c86f757a855cebfd284dbe459baf05de6cfae9f1398a3"
     },
     {
+      "path": "docs/screenshot-qa-2026-11-05.md",
+      "size": 4371,
+      "sha256": "4a20729ad6e9ea46e16941907c08fb972a39b2d4f6bf5e725864f87cf1371721"
+    },
+    {
       "path": "docs/source-parity.json",
-      "size": 2692,
-      "sha256": "7105ff87934190dc319061066875232b5681bd31982db086f964e950987d58eb"
+      "size": 2658,
+      "sha256": "afffbf99165f04ba7fd005d8b66b09da5426573677a80bf20d8e5251603bb773"
     },
     {
       "path": "images/architecture.png",
@@ -187,46 +193,6 @@
       "sha256": "ce41fe81874a8e614a016b7e114659a11e7492c8a25ddd24544be2038cbd3e9a"
     },
     {
-      "path": "images/powerbi/04-Performance.png",
-      "size": 314708,
-      "sha256": "45252bcfd4fac5459a5f26d93903c3a29ab92c656f11fef62025153ca6a72ef0"
-    },
-    {
-      "path": "images/powerbi/05-Risk.png",
-      "size": 508914,
-      "sha256": "71e37b5bca6dc3552d01bbbe9c9edb738f1aa686bd2f4f845965e286c42fa50f"
-    },
-    {
-      "path": "images/powerbi/06-Trade-Explorer.png",
-      "size": 572257,
-      "sha256": "ee2fe045e039c929334fb7e03bfe6fb9513cbff52548724a27d72198914f3490"
-    },
-    {
-      "path": "images/powerbi/07-Validation.png",
-      "size": 408782,
-      "sha256": "b3d95fec8bb52906e168adca742ddcbf326eb6cf9b8ef9be5256df324b0cdf68"
-    },
-    {
-      "path": "images/powerbi/08-W02-Win.png",
-      "size": 438074,
-      "sha256": "e5f482bf2876c0ffb44490fb51ac90807edfccf1f9b7d63dbe5e83cad1744966"
-    },
-    {
-      "path": "images/powerbi/09-W03-Win.png",
-      "size": 347812,
-      "sha256": "1dea8aecd6edc3f1e3e9bc3c8474d635df1e1a23f4832f2e3c8cb23bda257fa6"
-    },
-    {
-      "path": "images/powerbi/10-W04-Win.png",
-      "size": 616803,
-      "sha256": "938635ef503918e844f61a3651755aecfc415977dfa66aca0e05024740ff1a9f"
-    },
-    {
-      "path": "images/powerbi/11-W05-Win.png",
-      "size": 252661,
-      "sha256": "17e8be13bd9e866ed812dc0263c3d852190cf750f3c23e3ce5befa7d3038122d"
-    },
-    {
       "path": "images/powerbi/12-W06-Win.png",
       "size": 233083,
       "sha256": "194303c4a67dfde7cfd6d8a74043f75c81911d4c29bf813cda7039d5df7d858e"
@@ -240,11 +206,6 @@
       "path": "images/powerbi/14-L02-Loss.png",
       "size": 229446,
       "sha256": "6feef2d2e0c676bd432ecca4e8eb4a0c25cee311e329b699a903f7c92f390fa8"
-    },
-    {
-      "path": "images/powerbi/contact-sheet.png",
-      "size": 1157058,
-      "sha256": "c3f28d02c1640f4d08e2a3b1246e9311da014ed5e349040c2997137c013d8ef9"
     },
     {
       "path": "images/research-workflow.svg",
@@ -788,8 +749,8 @@
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/Vortex_Navy.json",
-      "size": 6847,
-      "sha256": "04856cbf987a55030310e14d8187536907a108de49825d6614648886fac3de14"
+      "size": 6527,
+      "sha256": "27c0cec1fd422ce50fe528bd058e9705924bce738f024168e2c51fa2f38b8e7e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/W01_Embedded.png",
@@ -933,18 +894,18 @@
     },
     {
       "path": "PowerBI/README.md",
-      "size": 3112,
-      "sha256": "5e83ebfe5eb61ff0d31007bb13ab4fd07e403ccafb062d33dd05bf9c309d86e9"
+      "size": 3075,
+      "sha256": "6b98516401ed59f5a01f20f6c377811c26a71094c46203d79981b8af93a08200"
     },
     {
       "path": "README.md",
-      "size": 4691,
-      "sha256": "bf45792920ad86af2ce6c4ae6c79b7ec5954a7b58f92eecf846f2cf7bc33e2a6"
+      "size": 4965,
+      "sha256": "f8cda2816ec44654092916667fca0dc91e875d595735fb4a5df34c46804f65cf"
     },
     {
       "path": "scripts/audit_public_release.py",
-      "size": 5540,
-      "sha256": "c353b8386bca3bc3cd7fe9d431ec3ab95477c2beb5b85ec5c4bdf1f139280790"
+      "size": 5934,
+      "sha256": "3f74118264797895a1576535424d2d576f9035093ec5e55f6916175863d1e5a9"
     },
     {
       "path": "scripts/build_monthly_drawdown_proxy.py",
@@ -973,8 +934,8 @@
     },
     {
       "path": "SECURITY_REVIEW.md",
-      "size": 2543,
-      "sha256": "8ea2428b3aa472ec19fa98f49eb8c01fa5f29e467d91f47dc0b15521c206f7cd"
+      "size": 3608,
+      "sha256": "de6885fbc4ee472ef1bfd04219584f374e881123128972225f19c26bc757bb30"
     }
   ]
 }
