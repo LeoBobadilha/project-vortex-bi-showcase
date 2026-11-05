@@ -22,9 +22,9 @@ Pages 04-10 expose meeting UI and unrelated shared-screen market information; pa
 
 ## Actions and limits
 
-- Withheld pages 04-11 and `contact-sheet.png` from this local hotfix tree. The website's matching `report-gallery.png` was also removed from its source tree. Original files were archived in private local QA storage and SHA-256 checked before removal.
+- Withheld pages 04-11 and `contact-sheet.png` from the published main tree. The website's matching `report-gallery.png` was also removed from the published website tree. Original files were archived in private local QA storage and SHA-256 checked before removal.
 - Kept the six pixel-inspected, unobstructed screenshots. No chart pixels were altered and no replacement art was generated.
 - Power BI Desktop was not available as a command or running process in this session. Eight genuine replacements and a regenerated 14-page contact sheet therefore remain outstanding.
-- The already published v1.0.0 Git history was not rewritten. Until a future authenticated update removes the affected files from the current remote branch, the original public commits still contain them.
+- The already published v1.0.0 Git history was not rewritten. The published hotfix removes the affected files from current main, but the original public commits and v1.0.0 history still contain their blobs.
 
 The full SHA-256 inventory for the original files is retained in the local QA evidence folder. The public PBIP and all 14 page definitions remain unchanged.

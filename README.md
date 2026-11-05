@@ -1,5 +1,8 @@
 # Project Vortex | BI and Research Showcase
 
+**Live portfolio:** [leobobadilha.github.io/project-vortex-portfolio](https://leobobadilha.github.io/project-vortex-portfolio/)
+**Website source:** [project-vortex-portfolio](https://github.com/LeoBobadilha/project-vortex-portfolio)
+
 I established the research direction for Project Vortex, drawing on prior Price Action study and a Business Intelligence and Data Engineering background. AI agents supported research, implementation, backtesting, analysis and documentation; strategic decisions and validation remained subject to human review. This public-safe PBIP presents aggregate performance and research evidence in an editable 14-page report, separate from the private research system.
 
 ## Verified historical benchmark
@@ -42,9 +45,13 @@ Then open the PBIP and refresh the model. It reads only the CSV aggregates under
 - Portfolio comparisons do not add P6 and PSC together. Cost scenario C30 is applied once in the benchmark net result.
 - No trade-level ledger or private market archive is included.
 
+## Public PBIP structure
+
+The report has 14 pages and 83 visual definitions. Its semantic model contains nine authored tables, ten relationships and 24 measures. The separately reported 88-visual count is not reproduced by the inspected snapshot and is not used as the current count.
+
 ## Screenshots and documentation
 
-`images/powerbi/` currently retains six visually checked, unobstructed page captures (01–03 and 12–14). Eight captures (04–11) and the contact sheet have been withdrawn from this local hotfix because they show Zoom windows or meeting controls. No clean replacements are available until Power BI Desktop can be used to recapture the public PBIP. The report still has 14 pages; this image limitation does not change the PBIP. See `docs/screenshot-qa-2026-11-05.md` for the inspection record.
+`images/powerbi/` currently contains six inspected clean captures (01-03 and 12-14). Captures 04-11 and the contact sheet were withdrawn from the published `main` because they contained desktop or meeting overlays. Genuine recaptures remain outstanding; the public PBIP itself still has all 14 pages. See `docs/screenshot-qa-2026-11-05.md` for the page-by-page audit.
 
 ## Repository relationship
 
@@ -67,4 +74,4 @@ Base commit: 0fc9239bfd860c63cb60fa0d2186f09492c48545.
 
 The available active private PBIR snapshot and public PBIP each contain 14 pages and 83 visual definitions. The separately reported 88-visual count could not be reproduced from that snapshot. See `docs/pbip-parity-report.md` for the page-level differences and validation limits.
 
-The public remote remains at v1.0.0. This local hotfix branch includes the reviewed documentation follow-up and the screenshot withdrawal; it has not been pushed or released. The original `feature/personal-author-voice` branch is preserved.
+The published `main` includes the screenshot-withdrawal update at `401a28a95c7ae9dc82ab3634911e8429ce761185`. The initial `v1.0.0` tag remains unchanged; no new version tag is claimed. The website main update is `0b4b617d072d37e3ef8a668bca948b21bad4ce24`. Earlier public history still contains the original screenshot blobs.
