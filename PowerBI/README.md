@@ -18,13 +18,13 @@ The script points the semantic model's `DataRoot` parameter to this clone's `dat
 
 The public model contains portfolio/period aggregate facts, benchmark summaries, public case metadata and qualitative validation status. It excludes individual trade records, precise case timestamps/prices/results, raw M5 data, strategy rules and account data. Its monthly drawdown line is explicitly a month-end proxy. It is not intrabar mark-to-market equity.
 
-The 14 pages are: Knowledge & Intelligence; Autonomous Research Pipeline; Executive Overview; Portfolio Performance; Risk & Drawdown; Trade Explorer; Forward Validation & Governance; five selected winning case-study pages (with one additional win example in Trade Explorer); and two selected losing case studies.
+The 14 pages cover seven core analytics and governance views, five winning case-study pages, and two losing case studies. Trade Explorer includes one additional winning example.
 
 ## Rebuild and validation
 
 The model tables and DAX live in TMDL. Public data extracts live in `../data/`. `../scripts/` contains the public model and report utilities. Genuine Desktop screenshots for each page are in `../images/powerbi/`.
 
-I validated this project in Power BI Desktop 2.159.883.0: the PBIP opens as a named report, refresh clears the initial model-load warning, all 14 page tabs render, and aggregate benchmark cards reconcile to R$20,395 net C30, R$23,551 gross, 324 records, 57.7% win rate, PF 1.951 and R$1,932 realized close-order maximum drawdown. Screenshots are from the native Desktop application. The private report and private dataset are not part of this repository.
+Validated in Power BI Desktop 2.159.883.0: the PBIP opens as a named report, refresh clears the initial model-load warning, all 14 page tabs render, and aggregate benchmark cards reconcile to R$20,395 net C30, R$23,551 gross, 324 records, 57.7% win rate, PF 1.951 and R$1,932 realized close-order maximum drawdown. Screenshots are from the native Desktop application. The private report and private dataset are not part of this repository.
 
 Past performance, including historical backtests and simulated trading results, does not guarantee future results. Actual trading involves risk and execution conditions may differ materially from simulations.
 

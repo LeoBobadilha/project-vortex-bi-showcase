@@ -1,12 +1,12 @@
 # Project Vortex | BI and Research Showcase
 
-I built this Power BI report to make the results of my quantitative research easier to compare, inspect and explain. I wanted one place to follow the path from organized market knowledge through AI-assisted experiments to historical portfolio and risk analysis. The public PBIP has 14 pages and an aggregate-only semantic model, separate from my private research system.
+I established the research direction for Project Vortex, drawing on prior Price Action study and a Business Intelligence and Data Engineering background. AI agents supported research, implementation, backtesting, analysis and documentation; strategic decisions and validation remained subject to human review. This public-safe PBIP presents aggregate performance and research evidence in an editable 14-page report, separate from the private research system.
 
 ## Verified historical benchmark
 
 The selected benchmark is **P6+SIZE+CE (PSC)** from 2022-01-04 through 2026-10-20: 324 portfolio records, 526 contract units, R$23,551 gross P&L, R$3,156 C30 costs applied once, and R$20,395 net C30 P&L. Historical win rate is 57.716%; PF is 1.950816. Maximum drawdown figures are R$1,932 realized close-order, R$2,077 M5 close, and R$2,113 adverse M5 OHLC-envelope. These are backtest results, not Paper Live or live-account performance. The P6 baseline is presented separately. No percentage return is calculated because initial capital is not specified.
 
-## 14-page report
+## Report pages
 
 1. Knowledge & Intelligence
 2. Autonomous Research Pipeline
@@ -15,10 +15,12 @@ The selected benchmark is **P6+SIZE+CE (PSC)** from 2022-01-04 through 2026-10-2
 5. Risk & Drawdown
 6. Trade Explorer
 7. Forward Validation & Governance
-8–13. Six anonymized winning case studies
-14. Two anonymized losing case studies
+8-12. Five anonymized winning case studies
+13-14. Two anonymized losing case studies
 
-The first seven pages combine approved aggregate data with a concise account of how I organized knowledge, directed research and reviewed the evidence. Trade exhibits are redacted visual case studies; dates, exact prices, position sizes, individual P&L and operational identifiers are not included. They are illustrative and are not a statistical performance sample.
+One additional winning example appears in Trade Explorer.
+
+The first seven pages combine approved aggregate data with a concise account of the knowledge and validation workflow. Trade exhibits are redacted visual case studies; dates, exact prices, position sizes, individual P&L and operational identifiers are not included. They are illustrative and are not a statistical performance sample.
 
 ## Open the PBIP
 
@@ -30,7 +32,7 @@ Open `PowerBI/ProjectVortex-Public.pbip` in Power BI Desktop. From a fresh clone
 
 Then open the PBIP and refresh the model. It reads only the CSV aggregates under `data/`. No broker, account or live-market connection is configured. If moving the folder, rerun the setup script. Do not commit the locally configured `DataRoot` value.
 
-## Data and metric limits
+## Data and metric definitions
 
 - `data/benchmark_summary.csv`: reconciled portfolio-level benchmark metrics.
 - `data/monthly_portfolio_results.csv`: approved monthly aggregates.
@@ -46,17 +48,21 @@ Then open the PBIP and refresh the model. It reads only the CSV aggregates under
 
 ## Repository relationship
 
-The companion [Project Vortex portfolio website source](https://github.com/LeoBobadilha/project-vortex-portfolio) is maintained separately. The website links back to this BI showcase repository.
+The companion [Project Vortex portfolio source](https://github.com/LeoBobadilha/project-vortex-portfolio) is maintained separately and links to this BI showcase.
+
+## About the author
+
+My professional background is in Business Intelligence and Data Engineering, with experience using SQL Server, Python, SSIS and Power BI. Project Vortex applies those disciplines to financial research, historical testing and AI-assisted software development.
 
 ## Risk disclosure
 
 Past performance, including historical backtests and simulated trading results, does not guarantee future results. Actual trading involves risk and execution conditions may differ materially from simulations.
 
-## Published releases and parity
+## Release provenance and parity
 
 Public BI release: https://github.com/LeoBobadilha/project-vortex-bi-showcase/releases/tag/v1.0.0
 Base commit: a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d.
 Companion website release: https://github.com/LeoBobadilha/project-vortex-portfolio/releases/tag/v1.0.0
 Base commit: 0fc9239bfd860c63cb60fa0d2186f09492c48545.
 
-The active local private PBIR source and public PBIP both contain 14 pages and 83 visual definitions. The separately reported 88-visual count was not reproducible in the available active source; see docs/pbip-parity-report.md for the page-level substitutions and exact limitation.
+The available active private PBIR snapshot and public PBIP each contain 14 pages and 83 visual definitions. The separately reported 88-visual count could not be reproduced from that snapshot. See `docs/pbip-parity-report.md` for the page-level differences and validation limits.
