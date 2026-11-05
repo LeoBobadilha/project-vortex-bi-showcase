@@ -1,7 +1,7 @@
 {
   "reviewDate": "2026-11-04",
   "scope": "local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation",
-  "fileCount": 189,
+  "fileCount": 194,
   "pageCount": 14,
   "publicScreenshotCount": 14,
   "errors": [],
@@ -18,8 +18,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 655,
-      "sha256": "6c15ed6533373eb638c558c21e1e237929f095253e59c78c5040109f9d20791f"
+      "size": 422,
+      "sha256": "6f78b6955670a97ecf985cbb671de4a314a9701cdd241e4898e413dc3fe22101"
     },
     {
       "path": "data/annual_portfolio_results.csv",
@@ -58,48 +58,63 @@
     },
     {
       "path": "docs/getting-started.md",
-      "size": 702,
-      "sha256": "b35270d6f4c79f89b7f47db20d44ceeb1771b6edbde718685ac0e28945536396"
+      "size": 871,
+      "sha256": "b06e5d2835e50bdd01665e885683be45be694005121f5c45b9b8607d6735afd3"
     },
     {
       "path": "docs/knowledge-engineering.md",
-      "size": 698,
-      "sha256": "6b36338a26de90d9e19b4bde36fcd03c1fe8473af0c4b8fb0a008982154a4bd5"
+      "size": 474,
+      "sha256": "e676c605bda6f49f3552af8e5c00eb1f85a7bb55163385326eed25ef0cffe750"
     },
     {
       "path": "docs/knowledge-system.md",
-      "size": 1271,
-      "sha256": "d9f7bb23e7aeb910ab780589daabed0145e70b838366887f5b491cf4a3933330"
+      "size": 1039,
+      "sha256": "db513abeb68644f06da068c611f137f131373d5b59fffc2b0a13dea3bf3fbe25"
     },
     {
       "path": "docs/metrics-and-dax.md",
-      "size": 1119,
-      "sha256": "9ac940d7ee5d05abc450c3f4edf840f40d048a1b2b31fee8f06a771e44a1d38d"
+      "size": 3462,
+      "sha256": "1e47f758c77c10e986129ca421d3796b396234a2f70cc5e4087495fe3354c7cf"
+    },
+    {
+      "path": "docs/pbip-parity-report.json",
+      "size": 1831,
+      "sha256": "2cc29370280c459a3d83fed4b901077ad54546fe54405e18a73543b9ff05d5bb"
+    },
+    {
+      "path": "docs/pbip-parity-report.md",
+      "size": 4084,
+      "sha256": "82902d68bfd836787ef12485667af5a039512b20331f7e01198df8fc5e9afce7"
+    },
+    {
+      "path": "docs/pbip-structure-baseline.json",
+      "size": 641,
+      "sha256": "223ad27ef99420ad6f06c9bfdbf79db724a45cbc7cca2ca5772585a216377007"
     },
     {
       "path": "docs/power-bi-scope.md",
-      "size": 899,
-      "sha256": "2cc9308a81dc3f466d9cb22b98f91bd22229f21d44407b799ea6971ae8a381b1"
+      "size": 1141,
+      "sha256": "088bf5050db152a334b5692cccf8c42ad4069e75f748c790f720da07bdccc86b"
     },
     {
       "path": "docs/privacy-and-security.md",
-      "size": 474,
-      "sha256": "1b2639526583dd5a31cb85a74f55d0de15bbb47d02df156f547e2eed72092a7b"
+      "size": 880,
+      "sha256": "cb5df9a4edaa7176c7d746cec65b0a930fa905b9b4c1a14d97e3ebd62a008e0f"
     },
     {
       "path": "docs/research-pipeline.md",
-      "size": 1013,
-      "sha256": "ab9b93ac90c2738a4f47f42ebf48be537f91ce89604e528f698e7882fcd5b177"
+      "size": 805,
+      "sha256": "39db414ab73d6f863e390910413d2c0f52fdc364c0893cddf50e0431a33da52a"
     },
     {
       "path": "docs/research-workflow.md",
-      "size": 520,
-      "sha256": "1ad026a48142f757159cf568bceb5e9bb0037dabdb4ab9593e57d42ea67cc32e"
+      "size": 459,
+      "sha256": "b4c384c8c6698b9ee98c86f757a855cebfd284dbe459baf05de6cfae9f1398a3"
     },
     {
       "path": "docs/source-parity.json",
-      "size": 676,
-      "sha256": "b30eeab9e54e80e8191cba5b50d763451a7451bf569e78f8533c54687c5045d4"
+      "size": 2692,
+      "sha256": "7105ff87934190dc319061066875232b5681bd31982db086f964e950987d58eb"
     },
     {
       "path": "images/architecture.png",
@@ -772,6 +787,11 @@
       "sha256": "c7338541f4d9032a029f4f470df2996eb1101a475101ec83e268458f07885745"
     },
     {
+      "path": "PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/Vortex_Navy.json",
+      "size": 6847,
+      "sha256": "04856cbf987a55030310e14d8187536907a108de49825d6614648886fac3de14"
+    },
+    {
       "path": "PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/W01_Embedded.png",
       "size": 75078,
       "sha256": "2695c4c19f5f1efb11e131e412fccc69271419034111a308b22061f632b320d6"
@@ -913,18 +933,18 @@
     },
     {
       "path": "PowerBI/README.md",
-      "size": 2251,
-      "sha256": "f04032cb822ac9751ad02031a1f5b2470cb61347d6d3c73f93dd62615300fe91"
+      "size": 3112,
+      "sha256": "5e83ebfe5eb61ff0d31007bb13ab4fd07e403ccafb062d33dd05bf9c309d86e9"
     },
     {
       "path": "README.md",
-      "size": 3418,
-      "sha256": "818238f68c95dec81ae69cd848bf291d7ac8163d3396b171cec842f9b91276c2"
+      "size": 4691,
+      "sha256": "bf45792920ad86af2ce6c4ae6c79b7ec5954a7b58f92eecf846f2cf7bc33e2a6"
     },
     {
       "path": "scripts/audit_public_release.py",
-      "size": 5039,
-      "sha256": "8317d859e681dd6daf0cd55676503c5fffc1fe3886c29da78f7c8dbcb2bed505"
+      "size": 5540,
+      "sha256": "c353b8386bca3bc3cd7fe9d431ec3ab95477c2beb5b85ec5c4bdf1f139280790"
     },
     {
       "path": "scripts/build_monthly_drawdown_proxy.py",
@@ -947,9 +967,14 @@
       "sha256": "d0fe5ee5286037f8d0269d1cc11a13ede4c983f1cfff05f17f16a1c37640a37f"
     },
     {
+      "path": "scripts/validate_pbip_parity.py",
+      "size": 10856,
+      "sha256": "c31779b999a1bb856c9a3bf4b494cb185766211bd4b703f989bf4c503c75b137"
+    },
+    {
       "path": "SECURITY_REVIEW.md",
-      "size": 2413,
-      "sha256": "7c34f61f3d1a2b8c3739f7a0d2c962dd64f9cc0df18ed7ebaaa1c7ec112c4d33"
+      "size": 2543,
+      "sha256": "8ea2428b3aa472ec19fa98f49eb8c01fa5f29e467d91f47dc0b15521c206f7cd"
     }
   ]
 }

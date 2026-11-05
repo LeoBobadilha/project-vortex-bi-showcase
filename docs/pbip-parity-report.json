@@ -1,0 +1,67 @@
+{
+  "reference": "active locally supplied private PBIR snapshot; source path intentionally omitted",
+  "privatePageCount": 14,
+  "privateVisualCountReproduced": 83,
+  "operatorReportedPrivateVisualCount": 88,
+  "unreconciledReportedVisualDifference": 5,
+  "publicPageCount": 14,
+  "publicVisualCount": 83,
+  "samePageNamesAndOrder": true,
+  "pageVisualDifferences": [
+    {
+      "page": "Autonomous Research Pipeline",
+      "privateVisualCount": 9,
+      "publicVisualCount": 9,
+      "visualTypeCounts": {
+        "barChart": {
+          "private": 1,
+          "public": 0
+        },
+        "textbox": {
+          "private": 7,
+          "public": 8
+        }
+      }
+    },
+    {
+      "page": "Executive Overview",
+      "privateVisualCount": 15,
+      "publicVisualCount": 15,
+      "visualTypeCounts": {
+        "slicer": {
+          "private": 3,
+          "public": 1
+        },
+        "textbox": {
+          "private": 4,
+          "public": 6
+        }
+      }
+    },
+    {
+      "page": "Portfolio Performance",
+      "privateVisualCount": 9,
+      "publicVisualCount": 9,
+      "visualTypeCounts": {
+        "barChart": {
+          "private": 1,
+          "public": 0
+        },
+        "textbox": {
+          "private": 3,
+          "public": 4
+        }
+      }
+    }
+  ],
+  "themeNameMatches": true,
+  "themeContentMatches": true,
+  "semanticModelComparison": "Public aggregate-only relationships and DAX intentionally differ from private trade-level semantics; counts only, private definitions omitted.",
+  "privateAuthoredTableCount": 10,
+  "publicAuthoredTableCount": 9,
+  "privateRelationshipCount": 14,
+  "publicRelationshipCount": 10,
+  "privateMeasureCount": 29,
+  "publicMeasureCount": 24,
+  "privateModelFormulasOrDataWritten": false
+}
