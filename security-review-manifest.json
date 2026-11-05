@@ -18,8 +18,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 857,
-      "sha256": "ba3bab78f6ada00d74af5c1412c1579d86cded1c25fe5ec1e2841b96b0d74932"
+      "size": 422,
+      "sha256": "6f78b6955670a97ecf985cbb671de4a314a9701cdd241e4898e413dc3fe22101"
     },
     {
       "path": "data/annual_portfolio_results.csv",
@@ -63,13 +63,13 @@
     },
     {
       "path": "docs/knowledge-engineering.md",
-      "size": 698,
-      "sha256": "6b36338a26de90d9e19b4bde36fcd03c1fe8473af0c4b8fb0a008982154a4bd5"
+      "size": 474,
+      "sha256": "e676c605bda6f49f3552af8e5c00eb1f85a7bb55163385326eed25ef0cffe750"
     },
     {
       "path": "docs/knowledge-system.md",
-      "size": 1271,
-      "sha256": "d9f7bb23e7aeb910ab780589daabed0145e70b838366887f5b491cf4a3933330"
+      "size": 1039,
+      "sha256": "db513abeb68644f06da068c611f137f131373d5b59fffc2b0a13dea3bf3fbe25"
     },
     {
       "path": "docs/metrics-and-dax.md",
@@ -103,13 +103,13 @@
     },
     {
       "path": "docs/research-pipeline.md",
-      "size": 1013,
-      "sha256": "ab9b93ac90c2738a4f47f42ebf48be537f91ce89604e528f698e7882fcd5b177"
+      "size": 805,
+      "sha256": "39db414ab73d6f863e390910413d2c0f52fdc364c0893cddf50e0431a33da52a"
     },
     {
       "path": "docs/research-workflow.md",
-      "size": 520,
-      "sha256": "1ad026a48142f757159cf568bceb5e9bb0037dabdb4ab9593e57d42ea67cc32e"
+      "size": 459,
+      "sha256": "b4c384c8c6698b9ee98c86f757a855cebfd284dbe459baf05de6cfae9f1398a3"
     },
     {
       "path": "docs/source-parity.json",
@@ -938,8 +938,8 @@
     },
     {
       "path": "README.md",
-      "size": 4575,
-      "sha256": "a5443b90b9f32df05f5a05cf7c102aa47e072c2411843ff3a9204b7383baba99"
+      "size": 4691,
+      "sha256": "bf45792920ad86af2ce6c4ae6c79b7ec5954a7b58f92eecf846f2cf7bc33e2a6"
     },
     {
       "path": "scripts/audit_public_release.py",

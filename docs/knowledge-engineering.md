@@ -1,5 +1,3 @@
 # Knowledge engineering
 
-The Intelligence workstream used local books and complementary Price Action materials as reference sources, then organized research notes, strategy-book entries, catalogs, indexes and decision records. Agents consulted these artifacts to investigate markets or formulate hypotheses; the available implementation does not establish a vector database, RAG service, or foundation-model fine-tuning, so none is claimed.
-
-Natural-language concepts were reviewed with a human domain expert and converted into measurable candidate rules. Visual/contextual ambiguity required explanation and correction by the research lead. A pattern label alone was not treated as a valid trade.
+The Intelligence repository preserves source identity and research context through versioned manifests, checksums, provenance sidecars, page-referenced notes, strategy-book entries, catalogs and decision records. PDF extraction and SQLite FTS5 utilities support document processing and class-filtered text search. Coverage varies by source; these utilities do not imply that every document is fully indexed or universally retrievable by each agent.

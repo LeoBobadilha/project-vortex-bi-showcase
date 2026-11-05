@@ -66,3 +66,5 @@ Companion website release: https://github.com/LeoBobadilha/project-vortex-portfo
 Base commit: 0fc9239bfd860c63cb60fa0d2186f09492c48545.
 
 The available active private PBIR snapshot and public PBIP each contain 14 pages and 83 visual definitions. The separately reported 88-visual count could not be reproduced from that snapshot. See `docs/pbip-parity-report.md` for the page-level differences and validation limits.
+
+The public repository remains at v1.0.0. The parity and editorial follow-up is committed only to the local `feature/personal-author-voice` branch; it has not been pushed or released.
