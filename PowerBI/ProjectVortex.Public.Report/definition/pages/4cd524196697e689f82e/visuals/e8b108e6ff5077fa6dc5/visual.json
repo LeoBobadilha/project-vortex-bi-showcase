@@ -3,9 +3,9 @@
   "name": "e8b108e6ff5077fa6dc5",
   "position": {
     "x": 24,
-    "y": 82,
+    "y": 76,
     "z": 1000,
-    "height": 50,
+    "height": 70,
     "width": 245,
     "tabOrder": 8224
   },
@@ -162,7 +162,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             }
@@ -194,6 +194,26 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "7feec530fe9543dbefab",
   "position": {
-    "x": 458,
-    "y": 82,
+    "x": 708,
+    "y": 76,
     "z": 1000,
-    "height": 50,
-    "width": 170,
+    "height": 70,
+    "width": 548,
     "tabOrder": 8658
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "No public direction split",
+                    "value": "Win rate, profit factor and drawdown always show the full period. No public strategy-family or direction split.",
                     "textStyle": {
                       "fontFamily": "Aptos",
-                      "fontSize": "12pt",
+                      "fontSize": "10pt",
                       "color": "#DCE6F0"
                     }
                   }

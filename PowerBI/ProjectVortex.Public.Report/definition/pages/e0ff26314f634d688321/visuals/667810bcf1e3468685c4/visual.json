@@ -5,7 +5,7 @@
     "x": 24,
     "y": 12,
     "z": 1000,
-    "height": 693,
+    "height": 656,
     "width": 1232,
     "tabOrder": 1124
   },
@@ -60,7 +60,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anonymized historical case exhibit'"
+                  "Value": "'Selected historical backtest case  -  anonymized exhibit'"
                 }
               }
             },

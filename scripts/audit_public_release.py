@@ -3,7 +3,12 @@ import csv, hashlib, json, re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 errors=[]
-files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '.pbi' not in p.parts and p.name != 'security-review-manifest.json']
+BINARY={'.png','.jpg','.jpeg','.gif','.webp','.ico','.pdf','.woff','.woff2','.ttf'}
+def canonical(p):
+ # Hash what Git stores: LF for text, exact bytes for binaries, on every operating system.
+ raw=p.read_bytes()
+ return raw if p.suffix.lower() in BINARY or b'\0' in raw else raw.replace(b'\r\n',b'\n')
+files=sorted((p for p in ROOT.rglob('*') if p.is_file() and not {'.git','.pbi','__pycache__'}&set(p.parts) and p.name != 'security-review-manifest.json'),key=lambda p:p.relative_to(ROOT).as_posix())
 rel=lambda p:p.relative_to(ROOT).as_posix()
 forbidden_names={'HIST_LEGS.pkl','P6_BASELINE_LEDGER.csv','PSC_BASELINE_LEDGER.csv','FactTrades.csv','FactEquityDrawdown.csv','*.pbix','*.abf','*.parquet','*.sqlite','*.db'}
 for p in files:
@@ -57,7 +62,7 @@ else:
  if '23551' not in values and '23,551' not in values:errors.append('PSC gross 23,551 not found in benchmark aggregate')
  if '3156' not in values and '3,156' not in values:errors.append('PSC C30 cost 3,156 not found in benchmark aggregate')
 # manifest hashes every public file except its own self-referential manifest
-payload={'reviewDate':'2026-11-06','scope':'local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation','fileCount':len(files),'pageCount':14,'publicScreenshotCount':len(public_screens),'withheldScreenshotCount':14-len(public_screens),'galleryComplete':len(public_screens)==14,'errors':errors,'files':[{'path':rel(p),'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(files)]}
-(ROOT/'security-review-manifest.json').write_text(json.dumps(payload,indent=2)+'\n',encoding='utf-8')
+payload={'reviewDate':'2026-11-06','scope':'local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation','fileCount':len(files),'pageCount':14,'publicScreenshotCount':len(public_screens),'withheldScreenshotCount':14-len(public_screens),'galleryComplete':len(public_screens)==14,'errors':errors,'files':[{'path':rel(p),'size':len(canonical(p)),'sha256':hashlib.sha256(canonical(p)).hexdigest()} for p in sorted(files)]}
+(ROOT/'security-review-manifest.json').write_bytes((json.dumps(payload,indent=2)+'\n').encode('utf-8'))
 print(json.dumps({k:v for k,v in payload.items() if k!='files'},indent=2))
 if errors:raise SystemExit(1)

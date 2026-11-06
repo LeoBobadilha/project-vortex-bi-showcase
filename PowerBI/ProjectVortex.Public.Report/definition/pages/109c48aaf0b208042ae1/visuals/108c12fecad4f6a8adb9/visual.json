@@ -66,7 +66,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cumulative realized C30 equity  -  PSC benchmark'"
+                  "Value": "'Cumulative net C30 P&L — monthly aggregates (PSC)'"
                 }
               }
             },

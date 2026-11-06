@@ -3,10 +3,10 @@
   "name": "791db7f36a0f4d61a49a",
   "position": {
     "x": 648,
-    "y": 408,
+    "y": 244,
     "z": 1000,
     "width": 608,
-    "height": 238,
+    "height": 402,
     "tabOrder": 41448
   },
   "visual": {
@@ -102,6 +102,24 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactMonthlyResults"
+                  }
+                },
+                "Property": "YearMonth"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -199,6 +217,21 @@
               "expr": {
                 "Literal": {
                   "Value": "'10'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

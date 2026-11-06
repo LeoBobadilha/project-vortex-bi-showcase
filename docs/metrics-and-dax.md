@@ -12,35 +12,49 @@ Public measures are stored in the VortexMetrics table. Their formulas use portfo
 - FactForwardValidation: qualitative validation-stage status only.
 - FactCaseGallery: anonymized case-study labels, not an operation ledger.
 
+## Portfolio separation
+
+P6 and PSC are separate research portfolios and must never be added together. Every portfolio-scoped measure returns BLANK unless exactly one portfolio is in context, so an unfiltered visual cannot show a blended figure. The test is on DimPortfolio rather than a fact table: October 2024 has PSC data only, and a fact-table test would let that month through in an unfiltered view.
+
+The PSC measures set DimPortfolio themselves, so they ignore any portfolio selection. A measure that needs a portfolio must get it from a chart series, a slicer or a page filter.
+
 ## Measures in the model
 
-These examples match the expressions in VortexMetrics.tmdl:
+These examples match the expressions in VortexMetrics.tmdl. The same guard wraps Profit Factor, Max Realized DD (Full History), Longest Losing Streak, Max M5 Close DD, Max M5 OHLC Envelope DD, Monthly Drawdown Proxy, Cumulative Monthly Net C30 and Portfolio Records.
 
-    Gross P&L = SUM ( FactMonthlyResults[GrossPnL_BRL] )
+    Gross P&L =
+        IF ( HASONEVALUE ( DimPortfolio[Portfolio] ), SUM ( FactMonthlyResults[GrossPnL_BRL] ) )
 
-    Net C30 = SUM ( FactMonthlyResults[NetPnL_BRL_C30] )
+    Net C30 =
+        IF ( HASONEVALUE ( DimPortfolio[Portfolio] ), SUM ( FactMonthlyResults[NetPnL_BRL_C30] ) )
 
-    Operations = SUM ( FactMonthlyResults[TradeCount] )
+    Operations =
+        IF ( HASONEVALUE ( DimPortfolio[Portfolio] ), SUM ( FactMonthlyResults[TradeCount] ) )
 
-    Contract Units = SUM ( FactMonthlyResults[ContractUnits] )
+    Contract Units =
+        IF ( HASONEVALUE ( DimPortfolio[Portfolio] ), SUM ( FactMonthlyResults[ContractUnits] ) )
 
-    Winning Operations = SUM ( FactMonthlyResults[WinningTrades] )
+    Winning Operations =
+        IF ( HASONEVALUE ( DimPortfolio[Portfolio] ), SUM ( FactMonthlyResults[WinningTrades] ) )
 
     Losing Operations = [Operations] - [Winning Operations]
 
     Win Rate = DIVIDE ( [Winning Operations], [Operations] )
 
     Profit Factor =
-        CALCULATE (
-            MAX ( Benchmark[ProfitFactor] ),
-            REMOVEFILTERS ( DimDate )
+        IF (
+            HASONEVALUE ( DimPortfolio[Portfolio] ),
+            CALCULATE (
+                MAX ( Benchmark[ProfitFactor] ),
+                REMOVEFILTERS ( DimDate )
+            )
         )
 
     PSC Net C30 =
         CALCULATE (
             [Net C30],
             REMOVEFILTERS ( DimPortfolio ),
-            FactMonthlyResults[Portfolio] = "P6+SIZE+CE"
+            DimPortfolio[Portfolio] = "P6+SIZE+CE"
         )
 
     PSC Win Rate =
@@ -79,7 +93,7 @@ A DAX query using existing measure names:
 
 ## Interpretation limits
 
-- P6+SIZE+CE is the selected historical backtest benchmark; the P6 baseline remains separately selectable and is not added to it.
+- P6+SIZE+CE is the selected historical backtest benchmark. The P6 baseline remains separately selectable, is never added to it, and has a different recorded end date (16 Oct 2026 against 20 Oct 2026), so full-period totals are not directly comparable returns.
 - C30 costs are already included in NetPnL_BRL_C30 and applied once upstream.
 - PSC Operations counts portfolio records represented by monthly aggregates. Contract Units is distinct and must not be conflated with operation count.
 - Profit Factor and the full-history drawdown measure intentionally ignore date slicing. Cumulative monthly P&L is not account equity.

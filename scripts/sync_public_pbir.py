@@ -1,3 +1,5 @@
+# The public report now carries corrections that are not in the private report. Rerunning this
+# overwrites them; scripts/audit_report_semantics.py fails if that happens.
 import argparse,hashlib,json,shutil,uuid
 from pathlib import Path
 CASES={"W01":"Case_01_Win.png","W02":"Case_02_Win.png","W03":"Case_03_Win.png","W04":"Case_04_Win.png","W05":"Case_05_Win.png","W06":"Case_06_Win.png","L01":"Case_07_Loss.png","L02":"Case_08_Loss.png"}

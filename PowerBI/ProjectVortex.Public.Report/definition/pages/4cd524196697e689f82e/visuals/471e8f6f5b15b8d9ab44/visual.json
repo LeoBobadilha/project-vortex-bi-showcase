@@ -5,7 +5,7 @@
     "x": 648,
     "y": 148,
     "z": 1000,
-    "height": 80,
+    "height": 84,
     "width": 608,
     "tabOrder": 15448
   },
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Strategy-family attribution is omitted; public results are by portfolio and period.",
+                    "value": "Recorded periods differ: PSC 4 Jan 2022 – 20 Oct 2026; P6 Baseline 4 Jan 2022 – 16 Oct 2026. The two portfolios are never added together. Full-period totals are not directly comparable returns, and 2026 is a partial year.",
                     "textStyle": {
                       "fontFamily": "Aptos",
                       "fontSize": "12pt",

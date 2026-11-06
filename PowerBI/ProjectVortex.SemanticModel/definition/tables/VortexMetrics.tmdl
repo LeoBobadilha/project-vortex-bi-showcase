@@ -1,23 +1,23 @@
 table VortexMetrics
 	lineageTag: 0a499e41-1090-4e87-8f12-78b0d4735ef2
 
-	measure 'Gross P&L' = SUM(FactMonthlyResults[GrossPnL_BRL])
+	measure 'Gross P&L' = IF(HASONEVALUE(DimPortfolio[Portfolio]),SUM(FactMonthlyResults[GrossPnL_BRL]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: 01c74c42-c9ad-4dfb-b805-78933c4a3dbe
 
-	measure 'Net C30' = SUM(FactMonthlyResults[NetPnL_BRL_C30])
+	measure 'Net C30' = IF(HASONEVALUE(DimPortfolio[Portfolio]),SUM(FactMonthlyResults[NetPnL_BRL_C30]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: e620a392-b7c1-4a91-9edf-3e0a802a9d96
 
-	measure Operations = SUM(FactMonthlyResults[TradeCount])
+	measure Operations = IF(HASONEVALUE(DimPortfolio[Portfolio]),SUM(FactMonthlyResults[TradeCount]))
 		formatString: #,0
 		lineageTag: 5a2a9955-5726-4c89-9e5e-0f91d46c36b2
 
-	measure 'Contract Units' = SUM(FactMonthlyResults[ContractUnits])
+	measure 'Contract Units' = IF(HASONEVALUE(DimPortfolio[Portfolio]),SUM(FactMonthlyResults[ContractUnits]))
 		formatString: #,0
 		lineageTag: 287a3f48-3863-43fd-9e47-b9c75ae2b131
 
-	measure 'Winning Operations' = SUM(FactMonthlyResults[WinningTrades])
+	measure 'Winning Operations' = IF(HASONEVALUE(DimPortfolio[Portfolio]),SUM(FactMonthlyResults[WinningTrades]))
 		formatString: #,0
 		lineageTag: 1f3302c4-8aff-4f8e-b514-3c65c2e277e5
 
@@ -29,7 +29,7 @@ table VortexMetrics
 		formatString: 0.0%
 		lineageTag: 321df3b6-de4b-4169-ae71-0652b0b003d1
 
-	measure 'Profit Factor' = CALCULATE(MAX(Benchmark[ProfitFactor]),REMOVEFILTERS(DimDate))
+	measure 'Profit Factor' = IF(HASONEVALUE(DimPortfolio[Portfolio]),CALCULATE(MAX(Benchmark[ProfitFactor]),REMOVEFILTERS(DimDate)))
 		formatString: 0.000
 		lineageTag: 7c44d8cd-405f-4718-b92c-f141a8b91be6
 
@@ -37,19 +37,19 @@ table VortexMetrics
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: 81213297-26b6-42d5-8c0d-71834c4f298e
 
-	measure 'Max Realized DD (Full History)' = CALCULATE(MAX(Benchmark[RealizedCloseOrderMaxDD_BRL]),REMOVEFILTERS(DimDate))
+	measure 'Max Realized DD (Full History)' = IF(HASONEVALUE(DimPortfolio[Portfolio]),CALCULATE(MAX(Benchmark[RealizedCloseOrderMaxDD_BRL]),REMOVEFILTERS(DimDate)))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: 3fe5ee1b-2019-419c-bd9e-1bbec74f02a9
 
-	measure 'PSC Gross P&L' = CALCULATE([Gross P&L],REMOVEFILTERS(DimPortfolio),FactMonthlyResults[Portfolio]="P6+SIZE+CE")
+	measure 'PSC Gross P&L' = CALCULATE([Gross P&L],REMOVEFILTERS(DimPortfolio),DimPortfolio[Portfolio]="P6+SIZE+CE")
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: 14a53edb-6a03-4afe-8fd4-acb8b101e61b
 
-	measure 'PSC Net C30' = CALCULATE([Net C30],REMOVEFILTERS(DimPortfolio),FactMonthlyResults[Portfolio]="P6+SIZE+CE")
+	measure 'PSC Net C30' = CALCULATE([Net C30],REMOVEFILTERS(DimPortfolio),DimPortfolio[Portfolio]="P6+SIZE+CE")
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: 9a9dab8a-51d3-474a-b925-017eefabc8cc
 
-	measure 'PSC Operations' = CALCULATE([Operations],REMOVEFILTERS(DimPortfolio),FactMonthlyResults[Portfolio]="P6+SIZE+CE")
+	measure 'PSC Operations' = CALCULATE([Operations],REMOVEFILTERS(DimPortfolio),DimPortfolio[Portfolio]="P6+SIZE+CE")
 		formatString: #,0
 		lineageTag: 87e955f5-4424-4099-8b67-78fc18bc0f83
 
@@ -69,23 +69,23 @@ table VortexMetrics
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: cdad1b18-de52-4cce-a0c0-12effcc1974b
 
-	measure 'Longest Losing Streak' = MAX(Benchmark[LongestLosingStreak])
+	measure 'Longest Losing Streak' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MAX(Benchmark[LongestLosingStreak]))
 		formatString: #,0
 		lineageTag: 11470a2b-85f1-4bb6-ad34-0e12599fec44
 
-	measure 'Max M5 Close DD' = MAX(Benchmark[M5CloseMaxDD_BRL])
+	measure 'Max M5 Close DD' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MAX(Benchmark[M5CloseMaxDD_BRL]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: a8649a33-78b5-43db-b4e4-0af5204a60fd
 
-	measure 'Max M5 OHLC Envelope DD' = MAX(Benchmark[M5AdverseOHLCEnvelopeDD_BRL])
+	measure 'Max M5 OHLC Envelope DD' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MAX(Benchmark[M5AdverseOHLCEnvelopeDD_BRL]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: dc1e99ee-7319-4330-acc1-d195dcfada38
 
-	measure 'Monthly Drawdown Proxy' = MIN(FactMonthlyRiskProxy[MonthEndDrawdownProxy_BRL])
+	measure 'Monthly Drawdown Proxy' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MIN(FactMonthlyRiskProxy[MonthEndDrawdownProxy_BRL]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: b3c1166e-16ce-4c77-aacf-b4cd9732598e
 
-	measure 'Cumulative Monthly Net C30' = MAX(FactMonthlyRiskProxy[CumulativeMonthlyNetC30_BRL])
+	measure 'Cumulative Monthly Net C30' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MAX(FactMonthlyRiskProxy[CumulativeMonthlyNetC30_BRL]))
 		formatString: R$ #,##0.00;(R$ #,##0.00);R$ 0.00
 		lineageTag: b64ef20a-9f32-42c1-ba9d-5f3f18b0c146
 
@@ -93,7 +93,7 @@ table VortexMetrics
 		formatString: #,0
 		lineageTag: db706584-beaf-4ad2-91b6-e63ade0f3daa
 
-	measure 'Portfolio Records' = MAX(Benchmark[PortfolioRecords])
+	measure 'Portfolio Records' = IF(HASONEVALUE(DimPortfolio[Portfolio]),MAX(Benchmark[PortfolioRecords]))
 		formatString: #,0
 		lineageTag: 0b88d50f-2649-4ef8-9727-7d54640a00e3
 

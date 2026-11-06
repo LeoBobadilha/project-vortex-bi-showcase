@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Drawdown is the peak-to-trough decline. Cards show verified close-order, M5-close and adverse OHLC-envelope maximums. The line is a month-end aggregate proxy; it does not reconstruct trade-order or intrabar paths.",
+                    "value": "Cards show the verified realized close-order, M5-close and adverse M5 OHLC-envelope maximums. The drawdown chart is a separate month-end aggregate proxy; neither chart reconstructs trade-order or intrabar paths, and neither is account equity.",
                     "textStyle": {
                       "fontFamily": "Aptos",
                       "fontSize": "12pt",

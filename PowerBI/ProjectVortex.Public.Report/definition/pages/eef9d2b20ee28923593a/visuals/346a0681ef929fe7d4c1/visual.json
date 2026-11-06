@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Eight anonymized cases appear on the case pages. Dates, exact prices and individual P&L are redacted; examples are illustrative, not a performance sample.",
+                    "value": "Eight anonymized historical backtest cases: W01 is shown here and the other seven have their own pages. Dates, exact prices and individual P&L are redacted; examples are illustrative, not a performance sample.",
                     "textStyle": {
                       "fontFamily": "Aptos",
                       "fontSize": "12pt",

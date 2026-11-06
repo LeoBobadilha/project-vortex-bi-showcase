@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimDate.MonthStart",
-              "nativeQueryRef": "TimestampB3",
+              "nativeQueryRef": "MonthStart",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "VortexMetrics"
                     }
                   },
-                  "Property": "Monthly Drawdown Proxy"
+                  "Property": "Cumulative Monthly Net C30"
                 }
               },
-              "queryRef": "VortexMetrics.Monthly Drawdown Proxy",
-              "nativeQueryRef": "M5 Close Underwater"
+              "queryRef": "VortexMetrics.Cumulative Monthly Net C30",
+              "nativeQueryRef": "Cumulative Monthly Net C30"
             }
           ]
         }
@@ -66,7 +66,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Monthly aggregate series — not an M5 mark-to-market path'"
+                  "Value": "'Cumulative net C30 P&L (PSC)  -  monthly aggregates, not an M5 path'"
                 }
               }
             },

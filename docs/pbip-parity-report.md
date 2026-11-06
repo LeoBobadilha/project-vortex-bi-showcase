@@ -39,3 +39,7 @@ Run the public validation baseline check after PBIR, theme, relationship or DAX 
     python scripts/validate_pbip_parity.py
 
 The validator compares ordered page structure, all public visual-definition hashes, the custom-theme hash, TMDL relationship declarations, authored table and measure counts, and DAX declaration hashes with docs/pbip-structure-baseline.json. Unexpected drift fails the command. Refreshing the baseline requires the explicit --write-baseline option and should only follow review.
+
+## Intentional public corrections
+
+The public report now differs from the private snapshot by design. Page 05 replaces its portfolio slicer with a scope panel and adds a PSC page filter, its second line chart now shows cumulative net C30 P&L, and the case pages are 1280 x 720. Slicers use dropdown mode. Page and visual counts are unchanged at 14 and 83. `docs/pbip-structure-baseline.json` records the corrected structure, and the page-level comparison above predates these changes.

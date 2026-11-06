@@ -22,8 +22,8 @@
                     "value": "Compare the separate PSC and P6 baseline portfolios. Monthly and annual views use approved aggregates; strategy-family and trade-level attribution are not included.",
                     "textStyle": {
                       "fontFamily": "Aptos",
-                      "fontSize": "12pt",
-                      "color": "#DCE6F0"
+                      "fontSize": "9pt",
+                      "color": "#A8BBC9"
                     }
                   }
                 ],

@@ -5,7 +5,7 @@ The published PBIP is complete at 14 pages, and all 14 have current captures. Us
 ## Capture procedure
 
 1. In the normal Windows desktop session, launch Power BI Desktop from Start and open `PowerBI/ProjectVortex-Public.pbip` from this repository.
-2. Use only the public-safe PBIP and its public aggregate `data/` folder. Set the local `DataRoot` parameter to this clone if needed, refresh, and confirm P6+SIZE+CE (PSC) is selected on pages 04 and 05. Do not save report/model changes.
+2. Use only the public-safe PBIP and its public aggregate `data/` folder. Set the local `DataRoot` parameter to this clone if needed, refresh, and leave every slicer at All. Do not save report/model changes.
 3. Use Report view, maximize the application, close unrelated windows, hide editing panes that reduce the canvas, and wait until every visual has rendered. Do not capture a shared meeting or screen-share session.
 4. Capture every report page in page order at one consistent display resolution. The current set is 3208 x 1804 from a 3840 x 2160 display; the size follows the actual display, so use a single high-resolution 16:9 size for all pages. Do not stretch or reconstruct the images afterward.
 5. Save the 14 PNGs in `images/powerbi/` using the filenames below. Replace all 14 together so the set comes from one session.

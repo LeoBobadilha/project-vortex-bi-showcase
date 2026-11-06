@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimDate.MonthStart",
-              "nativeQueryRef": "TradeDate",
+              "nativeQueryRef": "MonthStart",
               "active": true
             }
           ]
@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "VortexMetrics.Monthly Drawdown Proxy",
-              "nativeQueryRef": "Realized Underwater"
+              "nativeQueryRef": "Monthly Drawdown Proxy"
             }
           ]
         }
@@ -66,7 +66,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Month-end drawdown proxy from aggregate monthly C30 P&L'"
+                  "Value": "'Month-end drawdown proxy from aggregate monthly C30 P&L (PSC)'"
                 }
               }
             },

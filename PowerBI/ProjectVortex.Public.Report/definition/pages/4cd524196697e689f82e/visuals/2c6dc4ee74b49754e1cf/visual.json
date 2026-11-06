@@ -49,6 +49,24 @@
               "nativeQueryRef": "Net C30"
             }
           ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPortfolio"
+                    }
+                  },
+                  "Property": "PortfolioLabel"
+                }
+              },
+              "queryRef": "DimPortfolio.PortfolioLabel",
+              "nativeQueryRef": "PortfolioLabel"
+            }
+          ]
         }
       }
     },
@@ -66,7 +84,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Monthly outcome  -  selected portfolio'"
+                  "Value": "'Monthly C30 net result  -  P6 and PSC as separate series'"
                 }
               }
             },
@@ -257,6 +275,37 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#34536D'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DCE6F0'"
                     }
                   }
                 }

@@ -60,7 +60,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anonymized historical case exhibit'"
+                  "Value": "'Selected historical backtest case  -  anonymized exhibit'"
                 }
               }
             },

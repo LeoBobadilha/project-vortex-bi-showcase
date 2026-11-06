@@ -51,7 +51,7 @@ The report has 14 pages and 83 visual definitions. Its semantic model contains n
 
 ## Screenshots and documentation
 
-`images/powerbi/` contains one genuine Power BI Desktop capture of each of the 14 report pages, taken in one refreshed session and pixel-reviewed. Pages 04 and 05 are shown with the P6+SIZE+CE (PSC) portfolio selected. See `docs/screenshot-qa-2026-11-06.md` for the page-by-page review and `docs/screenshot-capture-runbook.md` for the automated capture procedure. An earlier capture set was withdrawn because it contained desktop or meeting overlays; `docs/screenshot-qa-2026-11-05.md` records that audit.
+`images/powerbi/` contains one genuine Power BI Desktop capture of each of the 14 report pages, taken in one refreshed session and pixel-reviewed. Page 04 compares P6 and PSC as separate series, and page 05 is PSC only; the report never combines them. See `docs/screenshot-qa-2026-11-06.md` for the page-by-page review and `docs/screenshot-capture-runbook.md` for the automated capture procedure. An earlier capture set was withdrawn because it contained desktop or meeting overlays; `docs/screenshot-qa-2026-11-05.md` records that audit.
 
 ## Repository relationship
 
@@ -71,4 +71,4 @@ The original [BI v1.0.0 release](https://github.com/LeoBobadilha/project-vortex-
 
 The available active private PBIR snapshot and public PBIP each contain 14 pages and 83 visual definitions. The separately reported 88-visual count could not be reproduced from that snapshot. See `docs/pbip-parity-report.md` for the page-level differences and validation limits.
 
-The current public `main` contains 14 clean page captures and the complete public-safe 14-page PBIP. The original v1.0.0 history still contains previously published screenshot blobs. No history rewrite or tag deletion has been performed. See `SECURITY_REVIEW.md` for current-tree controls and historical limits.
+The current public `main` contains 14 clean page captures and the complete public-safe 14-page PBIP. The original v1.0.0 history still contains the earlier contaminated screenshots, including meeting UI with participant names. No history rewrite or tag deletion has been performed. See `SECURITY_REVIEW.md` for current-tree controls and historical limits.

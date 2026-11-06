@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Drawdown is the decline from a prior equity peak to a later trough. The measure depends on the equity path and sampling convention.",
+                    "value": "PSC only. Drawdown is the decline from a prior peak to a later trough, and each measure below depends on its own path and sampling convention.",
                     "textStyle": {
                       "fontFamily": "Aptos",
                       "fontSize": "9pt",
