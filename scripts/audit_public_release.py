@@ -36,13 +36,12 @@ else:
  theme_name=report.get('themeCollection',{}).get('customTheme',{}).get('name')
  if not theme_name or not (ROOT/f'PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/{theme_name}.json').exists():errors.append('Declared public PBIR custom theme resource is missing')
  public_screens=list((ROOT/'images/powerbi').glob('[0-9][0-9]-*.png'))
- expected_screens={'01-Knowledge.png','02-Research.png','03-Executive.png','12-W06-Win.png','13-L01-Loss.png','14-L02-Loss.png'}
- complete_screens=expected_screens|{'04-Performance.png','05-Risk.png','06-Trade-Explorer.png','07-Validation.png','08-W02-Win.png','09-W03-Win.png','10-W04-Win.png','11-W05-Win.png'}
+ complete_screens={'01-Knowledge.png','02-Research.png','03-Executive.png','04-Performance.png','05-Risk.png','06-Trade-Explorer.png','07-Validation.png','08-W02-Win.png','09-W03-Win.png','10-W04-Win.png','11-W05-Win.png','12-W06-Win.png','13-L01-Loss.png','14-L02-Loss.png'}
  actual_screens={p.name for p in public_screens}
- if actual_screens not in (expected_screens,complete_screens):errors.append(f'Expected the exact reviewed six-image set or complete 14-page set; found {sorted(actual_screens)}')
+ if actual_screens!=complete_screens:errors.append(f'Expected the complete 14-page screenshot set; found {sorted(actual_screens)}')
  forbidden_blob='a8eca13931878c6b686c30f3b4890e0398d977ce'
  for image in [p for p in (ROOT/'images/powerbi').glob('*.png')]:
-  raw=image.read_bytes(); oid=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()
+  raw=image.read_bytes(); oid=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
   if oid==forbidden_blob:errors.append(f'Known contaminated screenshot blob is present: {image.name}')
  visual_files=list((ROOT/'PowerBI/ProjectVortex.Public.Report/definition/pages').glob('*/visuals/*/visual.json'))
  if len(visual_files)!=83:errors.append(f'Expected 83 PBIR visual definitions, found {len(visual_files)}')

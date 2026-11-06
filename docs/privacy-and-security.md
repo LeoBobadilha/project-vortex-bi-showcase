@@ -2,7 +2,7 @@
 
 The [public BI release](https://github.com/LeoBobadilha/project-vortex-bi-showcase) contains an aggregate-only 14-page PBIP with the clone-safe DataRoot placeholder. It excludes row-level trade ledgers, raw M5 archives, proprietary strategy code and exact signal rules, credentials, broker/account details and private operational paths. No broker, account or live-market connection is configured, and no external Power BI report is embedded.
 
-Six genuine clean Power BI Desktop captures are currently retained for pages 01–03 and 12–14. The other eight page images remain withheld until genuine recaptures pass visual review. The website displays six images and must not describe that selection as the complete report gallery. The public PBIP still contains all 14 pages.
+Genuine Power BI Desktop captures of all 14 pages are published here and on the website, with matching SHA-256 hashes. They use a window-only capture, so other windows and notifications cannot appear in them, and each passed pixel review.
 
 The website replay is a separate historical research model. It displays the source session date, 30 September 2022, with an explicit caveat that the source timezone is unauthenticated; it is not a certified B3 local timestamp. Exact source timestamps, private event identifiers and unshifted prices are not public. The date combined with recognizable OHLC geometry materially increases market-correlation risk. Off-grid modeled fills mean its S2 amounts are not exchange-executable P&L and are not part of the PSC benchmark.
 

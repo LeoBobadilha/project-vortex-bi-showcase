@@ -1,11 +1,11 @@
 {
   "reviewDate": "2026-11-06",
   "scope": "local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation",
-  "fileCount": 191,
+  "fileCount": 201,
   "pageCount": 14,
-  "publicScreenshotCount": 6,
-  "withheldScreenshotCount": 8,
-  "galleryComplete": false,
+  "publicScreenshotCount": 14,
+  "withheldScreenshotCount": 0,
+  "galleryComplete": true,
   "errors": [],
   "files": [
     {
@@ -20,8 +20,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 1233,
-      "sha256": "c2e08f0b4e78fe1f5d59b78f3d4c5107ec5eaffd2d311fe50c616eec0a1e6114"
+      "size": 1866,
+      "sha256": "7945d943a04f325cf8bb4ffc8c0232756ff227529e1c16701e7676d305f1c20f"
     },
     {
       "path": "data/annual_portfolio_results.csv",
@@ -60,8 +60,8 @@
     },
     {
       "path": "docs/getting-started.md",
-      "size": 1073,
-      "sha256": "3fce5086082789a34514fdfcc88d5332b6c1f5f5bec3c6fc223ea10534a8adf7"
+      "size": 891,
+      "sha256": "6c9b850e5906e61071840bcd7c61d60a9ddcf422a4901cbb1d64b1563ea6cbff"
     },
     {
       "path": "docs/knowledge-engineering.md",
@@ -95,13 +95,13 @@
     },
     {
       "path": "docs/power-bi-scope.md",
-      "size": 1365,
-      "sha256": "5c39957a93857ba62399057bf64f31dbc56ea586a33c448d6f2b49fca7591cd4"
+      "size": 1176,
+      "sha256": "8ff781a0e20bd6a7336124bed942210d5a8a38cf66276530dc6051c3e0aef963"
     },
     {
       "path": "docs/privacy-and-security.md",
-      "size": 1812,
-      "sha256": "239e50c30d8c9ce6a4d074eb63d19c5c8d4822d9262d84d4c99275bb45e847b4"
+      "size": 1718,
+      "sha256": "412be71b8b0bd494bfd366c0983b027fb055764f03ac33caae163a8b105cdb83"
     },
     {
       "path": "docs/research-pipeline.md",
@@ -115,18 +115,28 @@
     },
     {
       "path": "docs/screenshot-capture-checklist.md",
-      "size": 2970,
-      "sha256": "bd3883d89ed9117f214403e4f17fcd787fed41745584f50f2ee9fd4fab3c8b61"
+      "size": 2966,
+      "sha256": "f3de1edd26d7594bae96ae8a2dca0b34091bf00e97724d056ea23ed327683935"
     },
     {
       "path": "docs/screenshot-capture-runbook.md",
-      "size": 2895,
-      "sha256": "d954f10c47ae3353261837170540b0a420fd467cfba7afa1ff71e024a22d911c"
+      "size": 3506,
+      "sha256": "061abafa78628b7b5f8122c39d0d1b17dfe373a287e88804c7ad7a1b34a87a9a"
+    },
+    {
+      "path": "docs/screenshot-manifest.json",
+      "size": 2859,
+      "sha256": "5d503d83e08f21f57f8c1dea75cdfeb54631626c8d67b3242e08840362190016"
     },
     {
       "path": "docs/screenshot-qa-2026-11-05.md",
-      "size": 4370,
-      "sha256": "661a459d905a8301a61652ce54cf0414a11953748aff65e79c11d351b59cd104"
+      "size": 4469,
+      "sha256": "2af10debbfa96bf9c307052b2aefb8d10b9be3555dfa9a5b0e3f574639ca8812"
+    },
+    {
+      "path": "docs/screenshot-qa-2026-11-06.md",
+      "size": 3476,
+      "sha256": "e91a207357894847e3a38caf49272451bc347bd6ca8dc811afe5b86f2a1aae1d"
     },
     {
       "path": "docs/source-parity.json",
@@ -190,33 +200,73 @@
     },
     {
       "path": "images/powerbi/01-Knowledge.png",
-      "size": 262716,
-      "sha256": "9b52d91aa2cd2baa14f0ff502d24a222bece112b7824dc8a5c117fbdf26695e3"
+      "size": 258931,
+      "sha256": "cb31bc1dfd43397b53dfd5f8fe01fe0eef88467d823c7185b429f3e2e0e06e08"
     },
     {
       "path": "images/powerbi/02-Research.png",
-      "size": 243661,
-      "sha256": "bcdec29794b747feee23f95661b13d0b997dfe4da7e453f52490aaab66ca1e7c"
+      "size": 239755,
+      "sha256": "625bb42b482898bcc095d4528eb65a0ad09ab1f197f214ef1025e95e33595055"
     },
     {
       "path": "images/powerbi/03-Executive.png",
-      "size": 279899,
-      "sha256": "ce41fe81874a8e614a016b7e114659a11e7492c8a25ddd24544be2038cbd3e9a"
+      "size": 281868,
+      "sha256": "fbc69a88ed1284688c7e7a30785c48ed4524ee9b3be5d168756a55f186d0bff2"
+    },
+    {
+      "path": "images/powerbi/04-Performance.png",
+      "size": 295540,
+      "sha256": "3650ffe6e0772f5fdc032f06689933eb0ace5e9a41f8c632394d8a577066a731"
+    },
+    {
+      "path": "images/powerbi/05-Risk.png",
+      "size": 326771,
+      "sha256": "dcc462302aa25e94935492725e54dc298f2b327c63e31d31f4e7ee7f0a5d0b5e"
+    },
+    {
+      "path": "images/powerbi/06-Trade-Explorer.png",
+      "size": 390982,
+      "sha256": "9b64598c625b0ad380df8fbf9fd893485bd1f69a94e25501fd95da7176d96df6"
+    },
+    {
+      "path": "images/powerbi/07-Validation.png",
+      "size": 223866,
+      "sha256": "1dc922141d265d3cc9a67eb3215a72ca643905dbd60e9993c0841aa6dc78f794"
+    },
+    {
+      "path": "images/powerbi/08-W02-Win.png",
+      "size": 232947,
+      "sha256": "33b0a96be82a1710a90cc63ee013f4e84faed1b706320c4f74cd7e18a6ac7ed0"
+    },
+    {
+      "path": "images/powerbi/09-W03-Win.png",
+      "size": 229220,
+      "sha256": "e4195343f392c2cc8ae68dffbcc88e6c99884cfdd1e6fc4d42e555b90d8e3408"
+    },
+    {
+      "path": "images/powerbi/10-W04-Win.png",
+      "size": 234862,
+      "sha256": "4ea819a8fa178f66791ec487b01a46f929f0d788629893add699bf76db2c3a4f"
+    },
+    {
+      "path": "images/powerbi/11-W05-Win.png",
+      "size": 234805,
+      "sha256": "2f29f4acc7890cd7a47393a4fc59b4fef86e5efd707bbedc12d2ca74cc996b5a"
     },
     {
       "path": "images/powerbi/12-W06-Win.png",
-      "size": 233083,
-      "sha256": "194303c4a67dfde7cfd6d8a74043f75c81911d4c29bf813cda7039d5df7d858e"
+      "size": 235052,
+      "sha256": "7ce6587b8c9714bcfdd0ed25a26456f62033f8b12e0ab9864b81d751684700e5"
     },
     {
       "path": "images/powerbi/13-L01-Loss.png",
-      "size": 228923,
-      "sha256": "9b2fdf7d52b4edf2662d6ca1dbec294da760a56da4a05a00057f699d168b0a9c"
+      "size": 231145,
+      "sha256": "a44237caa2e0f6e16d40a83d56d452e13da36eb04df0c34eff9e1c20e0ca0218"
     },
     {
       "path": "images/powerbi/14-L02-Loss.png",
-      "size": 229446,
-      "sha256": "6feef2d2e0c676bd432ecca4e8eb4a0c25cee311e329b699a903f7c92f390fa8"
+      "size": 232004,
+      "sha256": "304153191d457c5b80d7e1058299dea6748eecbd3d4f1b6d12d7ab1919b755ce"
     },
     {
       "path": "images/research-workflow.svg",
@@ -905,28 +955,28 @@
     },
     {
       "path": "PowerBI/README.md",
-      "size": 3568,
-      "sha256": "df0681867843267e562f71ac34631588a2a5cdb960da8ff17136bde5ea3abf6e"
+      "size": 3385,
+      "sha256": "66887541fdbbf049fdeb4e5c3099787379ee01165d47d944653ced6f610fc80a"
     },
     {
       "path": "README.md",
-      "size": 5774,
-      "sha256": "aae61e0aecdef2a72606edb1608881bdc806bf716e6dc157575fb18e8ffa9598"
+      "size": 5873,
+      "sha256": "8e09beabf9955481960e54dd49f7e9f021fddc4078b0cb46be4ae28d8921981f"
     },
     {
       "path": "scripts/audit_public_release.py",
-      "size": 6402,
-      "sha256": "572fcb8ca64d82b5c3cf3cd20715c6d9e1fb6f8a9c448424db876d5b50c29d6e"
+      "size": 6318,
+      "sha256": "13b885265067dce84a62f89abdec2cabf94efda8aff0d6351b6d620d0d5c76ff"
     },
     {
       "path": "scripts/audit_screenshot_parity.py",
-      "size": 2871,
-      "sha256": "a5e9433ad93229d871b9d2cb7bd16368b0783784a72ba7ca6a231dabd19d5053"
+      "size": 2777,
+      "sha256": "8dcf05162620f7c9814eb4f7a955ea87a9b3bdd08db8cbffb1902cd93a598a3a"
     },
     {
       "path": "scripts/audit_screenshot_set.py",
-      "size": 2396,
-      "sha256": "772799f9691793775bc0631ddaa387e8c8188a64f89318d7f431e52bc275b554"
+      "size": 2660,
+      "sha256": "5dbef1ccb15a6630f64e35760b745a540bf969e6fcc12866ee7b263177aba3bb"
     },
     {
       "path": "scripts/build_monthly_drawdown_proxy.py",
@@ -940,8 +990,8 @@
     },
     {
       "path": "scripts/capture-powerbi-pages.ps1",
-      "size": 8993,
-      "sha256": "6bd51c9111f219a2458e8faf39f6e1b03b0c6d95adc7ed818dd5f5ee35cbbd41"
+      "size": 15734,
+      "sha256": "c52617cbabc90731218a78358d45d988ed251cb74df4fa9fbe3b6b2caaae761e"
     },
     {
       "path": "scripts/configure-data-root.ps1",
@@ -960,8 +1010,8 @@
     },
     {
       "path": "SECURITY_REVIEW.md",
-      "size": 3506,
-      "sha256": "366bfd8c905a3fb0f6efc4d6d2e07dc8d4583c28007d1837dab8479ad55fcf1e"
+      "size": 3378,
+      "sha256": "12cafe0d2dc9b6ece8fdbf3ac5edfc55224451f0193b48a02474dd53094c4122"
     }
   ]
 }

@@ -8,13 +8,10 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SIX = {
-    "01-Knowledge.png", "02-Research.png", "03-Executive.png",
-    "12-W06-Win.png", "13-L01-Loss.png", "14-L02-Loss.png",
-}
-ALL = SIX | {
-    "04-Performance.png", "05-Risk.png", "06-Trade-Explorer.png", "07-Validation.png",
-    "08-W02-Win.png", "09-W03-Win.png", "10-W04-Win.png", "11-W05-Win.png",
+ALL = {
+    "01-Knowledge.png", "02-Research.png", "03-Executive.png", "04-Performance.png", "05-Risk.png",
+    "06-Trade-Explorer.png", "07-Validation.png", "08-W02-Win.png", "09-W03-Win.png", "10-W04-Win.png",
+    "11-W05-Win.png", "12-W06-Win.png", "13-L01-Loss.png", "14-L02-Loss.png",
 }
 KNOWN_BAD_BLOB = "a8eca13931878c6b686c30f3b4890e0398d977ce"
 
@@ -43,8 +40,8 @@ def main() -> int:
         print(f"Screenshot filename mismatch: BI-only={sorted(set(bi)-set(site))}; website-only={sorted(set(site)-set(bi))}")
         return 1
     names = set(bi)
-    if names not in (SIX, ALL):
-        print(f"Expected the exact reviewed six-image set or all 14 page images; found {sorted(names)}")
+    if names != ALL:
+        print(f"Expected all 14 page images; found {sorted(names)}")
         return 1
     hashes = set()
     sizes = set()
@@ -64,7 +61,7 @@ def main() -> int:
     if len(sizes) != 1:
         print(f"Screenshot dimensions are inconsistent: {sorted(sizes)}")
         return 1
-    print(f"Screenshot parity passed: {len(names)} matching PNGs at {next(iter(sizes))}; complete={len(names)==14}.")
+    print(f"Screenshot parity passed: {len(names)} matching PNGs at {next(iter(sizes))}.")
     return 0
 
 

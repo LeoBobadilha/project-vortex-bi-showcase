@@ -22,9 +22,9 @@ The 14 pages cover seven core analytics and governance views, five winning case-
 
 ## Rebuild and validation
 
-The model tables and DAX live in TMDL. Public data extracts live in `../data/`. `../scripts/` contains the public model and report utilities. Six clean Desktop captures currently cover pages 01-03 and 12-14; genuine captures for pages 04-11 remain outstanding. The PBIP itself contains all 14 pages. See `../docs/screenshot-capture-runbook.md` for the authorized Desktop capture procedure and `../scripts/audit_screenshot_parity.py` for cross-repository hash checks.
+The model tables and DAX live in TMDL. Public data extracts live in `../data/`. `../scripts/` contains the public model and report utilities. Genuine Desktop captures cover all 14 pages. See `../docs/screenshot-capture-runbook.md` for the automated capture procedure and `../scripts/audit_screenshot_parity.py` for cross-repository hash checks.
 
-Validated in Power BI Desktop 2.159.883.0: the PBIP opens as a named report, refresh clears the initial model-load warning, all 14 page tabs render, and aggregate benchmark cards reconcile to R$20,395 net C30, R$23,551 gross, 324 records, 57.7% win rate, PF 1.951 and R$1,932 realized close-order maximum drawdown. The six retained screenshots are genuine native Desktop captures. They are not a complete 14-page screenshot gallery. The private report and private dataset are not part of this repository.
+Validated in Power BI Desktop 2.159.1231.0: the PBIP opens as a named report, refresh clears the initial model-load warning, all 14 page tabs render, and aggregate benchmark cards reconcile to R$20,395 net C30, R$23,551 gross, 324 records, 57.7% win rate, PF 1.951 and R$1,932 realized close-order maximum drawdown. The 14 screenshots are genuine native Desktop captures. The private report and private dataset are not part of this repository.
 
 Past performance, including historical backtests and simulated trading results, does not guarantee future results. Actual trading involves risk and execution conditions may differ materially from simulations.
 

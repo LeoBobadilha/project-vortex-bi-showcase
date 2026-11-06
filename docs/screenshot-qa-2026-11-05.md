@@ -1,5 +1,7 @@
 # Power BI Screenshot QA - 2026-11-05
 
+This audit is historical. All 14 images were later replaced; see `screenshot-qa-2026-11-06.md`.
+
 I inspected the pixels in all 14 page captures and the 14-panel contact sheet. The PBIP still contains 14 report pages; this audit concerns only screenshot assets. All page captures are 3240 x 1824 pixels. The contact sheet was 3200 x 1920 pixels and used the same image as the website's `report-gallery.png`.
 
 | File | Dimensions | PBIP page | Zoom / other overlay visible | Report content obstructed | Sensitive or unrelated information exposed | Replacement status |

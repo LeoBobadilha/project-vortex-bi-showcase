@@ -1,0 +1,91 @@
+{
+  "source": "Power BI Desktop 2.159.1231.0 window captures from one refreshed session on 2026-11-06, taken with scripts/capture-powerbi-pages.ps1",
+  "review": "All 14 images pixel-reviewed; see docs/screenshot-qa-2026-11-06.md. Re-review after any recapture.",
+  "slicerState": "Pages 04 and 05 captured with P6 + SIZE + CE selected",
+  "pages": [
+    {
+      "file": "01-Knowledge.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "cb31bc1dfd43397b53dfd5f8fe01fe0eef88467d823c7185b429f3e2e0e06e08"
+    },
+    {
+      "file": "02-Research.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "625bb42b482898bcc095d4528eb65a0ad09ab1f197f214ef1025e95e33595055"
+    },
+    {
+      "file": "03-Executive.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "fbc69a88ed1284688c7e7a30785c48ed4524ee9b3be5d168756a55f186d0bff2"
+    },
+    {
+      "file": "04-Performance.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "3650ffe6e0772f5fdc032f06689933eb0ace5e9a41f8c632394d8a577066a731"
+    },
+    {
+      "file": "05-Risk.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "dcc462302aa25e94935492725e54dc298f2b327c63e31d31f4e7ee7f0a5d0b5e"
+    },
+    {
+      "file": "06-Trade-Explorer.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "9b64598c625b0ad380df8fbf9fd893485bd1f69a94e25501fd95da7176d96df6"
+    },
+    {
+      "file": "07-Validation.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "1dc922141d265d3cc9a67eb3215a72ca643905dbd60e9993c0841aa6dc78f794"
+    },
+    {
+      "file": "08-W02-Win.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "33b0a96be82a1710a90cc63ee013f4e84faed1b706320c4f74cd7e18a6ac7ed0"
+    },
+    {
+      "file": "09-W03-Win.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "e4195343f392c2cc8ae68dffbcc88e6c99884cfdd1e6fc4d42e555b90d8e3408"
+    },
+    {
+      "file": "10-W04-Win.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "4ea819a8fa178f66791ec487b01a46f929f0d788629893add699bf76db2c3a4f"
+    },
+    {
+      "file": "11-W05-Win.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "2f29f4acc7890cd7a47393a4fc59b4fef86e5efd707bbedc12d2ca74cc996b5a"
+    },
+    {
+      "file": "12-W06-Win.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "7ce6587b8c9714bcfdd0ed25a26456f62033f8b12e0ab9864b81d751684700e5"
+    },
+    {
+      "file": "13-L01-Loss.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "a44237caa2e0f6e16d40a83d56d452e13da36eb04df0c34eff9e1c20e0ca0218"
+    },
+    {
+      "file": "14-L02-Loss.png",
+      "width": 3208,
+      "height": 1804,
+      "sha256": "304153191d457c5b80d7e1058299dea6748eecbd3d4f1b6d12d7ab1919b755ce"
+    }
+  ]
+}

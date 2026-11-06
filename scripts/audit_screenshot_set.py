@@ -48,7 +48,9 @@ def main() -> int:
         print("Duplicate image content detected across distinct report-page filenames")
         return 1
     manifest = {
-        "source": "Power BI Desktop captures; pixel review must be completed separately",
+        "source": "Power BI Desktop 2.159.1231.0 window captures from one refreshed session on 2026-11-06, taken with scripts/capture-powerbi-pages.ps1",
+        "review": "All 14 images pixel-reviewed; see docs/screenshot-qa-2026-11-06.md. Re-review after any recapture.",
+        "slicerState": "Pages 04 and 05 captured with P6 + SIZE + CE selected",
         "pages": records,
     }
     OUTPUT.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
