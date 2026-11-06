@@ -940,8 +940,8 @@
     },
     {
       "path": "scripts/capture-powerbi-pages.ps1",
-      "size": 8943,
-      "sha256": "dfb5f714a95b3170bfccd1542bfa80b0c4a9c30f3b5425faa629a5dae41e0de7"
+      "size": 8993,
+      "sha256": "6bd51c9111f219a2458e8faf39f6e1b03b0c6d95adc7ed818dd5f5ee35cbbd41"
     },
     {
       "path": "scripts/configure-data-root.ps1",

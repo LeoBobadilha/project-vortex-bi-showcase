@@ -3,7 +3,7 @@ param([string]$PowerBIDesktopVersion = '')
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
-Add-Type @'
+if (-not ('VortexCapture.Native' -as [type])) { Add-Type @'
 using System;
 using System.Runtime.InteropServices;
 namespace VortexCapture {
@@ -19,7 +19,7 @@ namespace VortexCapture {
     [DllImport("user32.dll", SetLastError=true)] public static extern bool GetWindowRect(IntPtr hWnd, out RECT rect);
   }
 }
-'@
+'@ }
 
 $pages = @(
   [pscustomobject]@{ File='04-Performance.png'; Page='04 - Portfolio Performance' },
