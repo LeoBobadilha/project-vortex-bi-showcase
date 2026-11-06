@@ -1,31 +1,23 @@
 # Public Release Security Review
 
-Review date: 2026-11-05. The BI repository is https://github.com/LeoBobadilha/project-vortex-bi-showcase; the companion website source is https://github.com/LeoBobadilha/project-vortex-portfolio.
+Review date: 2026-11-06. This review covers the public PBIP/PBIR/TMDL, aggregate data, registered chart resources, screenshot files, website references and repository documentation. It is a local source-and-tree review, not a claim of an external secret-scanner result.
 
-## Published release and screenshot remediation
+## Report and data scope
 
-- BI public `main`: `401a28a95c7ae9dc82ab3634911e8429ce761185`.
-- Website public `main`: `0b4b617d072d37e3ef8a668bca948b21bad4ce24`.
-- BI `v1.0.0` points to `a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d`; website `v1.0.0` points to `0fc9239bfd860c63cb60fa0d2186f09492c48545`. Both original refs contain earlier screenshot assets. BI commit `da3a78e` withdraws them from current main at `401a28a`; no history or tag was rewritten.
-- The current BI tree retains six inspected clean captures (pages 01?03 and 12?14). Captures 04?11 and the derived contact sheet are withdrawn from current `main`.
-- The website retains only the clean Executive Overview preview. Its screenshot gallery remains withheld pending genuine recaptures.
-- The successful Pages deployment is workflow run 42029504199. Historical image blobs remain obtainable from earlier public commits/tags; this current-tree fix does not erase them.
-- Eight genuine Power BI Desktop recaptures remain outstanding. The public PBIP retains all 14 pages and its semantic model.
+The report retains 14 pages, 83 visual definitions, nine authored semantic-model tables, ten relationships and 24 measures. Its DataRoot remains a clone-safe placeholder. Public model inputs are approved portfolio aggregates; there is no broker, account or live-market connection. Individual trade ledgers, raw market archives, private strategy source, credentials and operational account details are excluded.
 
-## Approved content and exclusions
+The six current report-page screenshots are genuine inspected Desktop captures for pages 01–03 and 12–14. Pages 04–11 remain unavailable pending genuine Power BI Desktop captures. The current `main` must not be described as a complete screenshot gallery. The PBIP itself contains all 14 report pages. Known contaminated screenshot content is checked by Git blob identity rather than rejecting a filename that could later hold a newly generated safe contact sheet.
 
-The report contains approved portfolio/month/year aggregates, a month-end drawdown proxy and eight anonymized embedded chart exhibits. The current public tree retains only six unobstructed report-page captures. It excludes private trade ledgers, complete portfolio files, raw M5 data, account identifiers, credentials, broker connections, proprietary strategy code and exact signal rules. The committed DataRoot is the clone-safe placeholder. Paper Live and live-account P&L are not claimed.
+## Companion website
 
-## Metric controls
+The [portfolio site](https://leobobadilha.github.io/project-vortex-portfolio/) is static and has no trading backend or broker connection. Its replay is a separate WIN research-model example, not a PSC, Paper Live or live-account result. The source market session date, 30 September 2022, is represented by source epoch timestamps; the source timezone is unauthenticated and the date is not a certified B3 local timestamp. Exact timestamps, internal event IDs and unshifted prices remain private. Publishing that date with recognizable candle geometry increases external market-correlation risk. The Entry 2 and modeled exit are off the five-point WIN tick grid; R$750.20 gross and R$738.20 after the distinct R$12 S2 assumption are adjusted-price model arithmetic, not executable performance. S2 is not C30.
 
-The selected P6+SIZE+CE benchmark is separate from P6: R$23,551 gross less R$3,156 C30 costs applied once equals R$20,395 net across 324 portfolio records and 526 contract units. Realized close-order DD (R$1,932), M5 close DD (R$2,077) and adverse M5 OHLC-envelope DD (R$2,113) remain distinct. Starting capital is undefined, so no percentage return is published.
+The website's six approved report screenshots are incomplete coverage, not a 14-image gallery. Historical screenshot blobs remain in earlier public Git objects and v1.0.0 refs; current-tree withdrawal did not erase history. No tag or public history was rewritten.
 
-## Local verification
+## Financial controls
 
-scripts/audit_public_release.py checks the public file tree, prohibited material, clone-safe configuration, key benchmark arithmetic, 14 page definitions, nine authored model tables, eight embedded cases, the six retained clean captures and 83 visual definitions. scripts/validate_pbip_parity.py verifies page, visual, theme, relationship and DAX structure against a reviewed public baseline. It can optionally compare a locally supplied private PBIR/model without writing private paths, identifiers, formulas or data to its output.
+The selected PSC benchmark remains separate from P6: R$23,551 gross less R$3,156 C30 costs applied once equals R$20,395 net across 324 portfolio records and 526 contract units. Win rate is 57.716%; profit factor is 1.950816. Realized close-order, M5-close and adverse OHLC-envelope drawdowns remain separately defined at R$1,932, R$2,077 and R$2,113. No percentage return is published without initial capital.
 
-The website has a separate static-content audit and reproducible build. No unrestricted Power BI sharing, broker connection or trading endpoint is configured.
+## Validation and links
 
-## Scope and limitations
-
-These are local source and public Git-tree checks, not a claim that GitHub secret scanning issued a clean scan. The v1.0.0 public baseline and commit ancestry were previously verified online; the screenshot hotfix is published on current main. The companion portfolio is deployed at https://leobobadilha.github.io/project-vortex-portfolio/ (successful workflow run 42029504199).
+`python scripts/audit_public_release.py` checks the PBIP structure, public aggregates, clone-safe DataRoot and the exact six-image or complete 14-image screenshot set. `python scripts/audit_screenshot_set.py` requires all 14 images, verifies names, dimensions and hashes, and writes the manifest. `python scripts/audit_screenshot_parity.py` compares BI and website copies. Pixel inspection remains a human review requirement. See the [PBIP parity report](docs/pbip-parity-report.md), [capture runbook](docs/screenshot-capture-runbook.md), [BI repository](https://github.com/LeoBobadilha/project-vortex-bi-showcase) and [Pages workflow history](https://github.com/LeoBobadilha/project-vortex-portfolio/actions/workflows/deploy-pages.yml).

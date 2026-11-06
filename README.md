@@ -55,7 +55,7 @@ The report has 14 pages and 83 visual definitions. Its semantic model contains n
 
 ## Repository relationship
 
-The companion [Project Vortex portfolio source](https://github.com/LeoBobadilha/project-vortex-portfolio) is maintained separately and links to this BI showcase.
+The companion [Project Vortex portfolio website](https://leobobadilha.github.io/project-vortex-portfolio/) and its [source repository](https://github.com/LeoBobadilha/project-vortex-portfolio) are maintained separately and link back to this BI showcase.
 
 ## About the author
 
@@ -67,11 +67,8 @@ Past performance, including historical backtests and simulated trading results, 
 
 ## Release provenance and parity
 
-Public BI release: https://github.com/LeoBobadilha/project-vortex-bi-showcase/releases/tag/v1.0.0
-Base commit: a1593c1e6f0fb86ec8c5cc18bc08f50b92cdf38d.
-Companion website release: https://github.com/LeoBobadilha/project-vortex-portfolio/releases/tag/v1.0.0
-Base commit: 0fc9239bfd860c63cb60fa0d2186f09492c48545.
+The original [BI v1.0.0 release](https://github.com/LeoBobadilha/project-vortex-bi-showcase/releases/tag/v1.0.0) and [website v1.0.0 release](https://github.com/LeoBobadilha/project-vortex-portfolio/releases/tag/v1.0.0) remain intact. Later corrections are tracked on the repositories' `main` branches; see the [website Pages workflow history](https://github.com/LeoBobadilha/project-vortex-portfolio/actions/workflows/deploy-pages.yml) for deployments.
 
 The available active private PBIR snapshot and public PBIP each contain 14 pages and 83 visual definitions. The separately reported 88-visual count could not be reproduced from that snapshot. See `docs/pbip-parity-report.md` for the page-level differences and validation limits.
 
-The published `main` includes the screenshot-withdrawal update at `401a28a95c7ae9dc82ab3634911e8429ce761185`. The initial `v1.0.0` tag remains unchanged; no new version tag is claimed. The website main update is `0b4b617d072d37e3ef8a668bca948b21bad4ce24`. Earlier public history still contains the original screenshot blobs.
+The current public `main` retains six clean page captures and the complete public-safe 14-page PBIP. Eight former captures remain withheld; the original v1.0.0 history still contains previously published screenshot blobs. No history rewrite or tag deletion has been performed. See `SECURITY_REVIEW.md` for current-tree controls and historical limits.

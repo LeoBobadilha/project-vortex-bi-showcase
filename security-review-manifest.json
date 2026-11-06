@@ -1,10 +1,11 @@
 {
-  "reviewDate": "2026-11-05",
+  "reviewDate": "2026-11-06",
   "scope": "local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation",
-  "fileCount": 188,
+  "fileCount": 191,
   "pageCount": 14,
   "publicScreenshotCount": 6,
-  "withheldContaminatedScreenshotCount": 8,
+  "withheldScreenshotCount": 8,
+  "galleryComplete": false,
   "errors": [],
   "files": [
     {
@@ -99,8 +100,8 @@
     },
     {
       "path": "docs/privacy-and-security.md",
-      "size": 1093,
-      "sha256": "14bfcc192523c77162374f1ffcd1df8dccc9aec185acd475a991b49402488102"
+      "size": 1812,
+      "sha256": "239e50c30d8c9ce6a4d074eb63d19c5c8d4822d9262d84d4c99275bb45e847b4"
     },
     {
       "path": "docs/research-pipeline.md",
@@ -116,6 +117,11 @@
       "path": "docs/screenshot-capture-checklist.md",
       "size": 2970,
       "sha256": "bd3883d89ed9117f214403e4f17fcd787fed41745584f50f2ee9fd4fab3c8b61"
+    },
+    {
+      "path": "docs/screenshot-capture-runbook.md",
+      "size": 2730,
+      "sha256": "8ad80c98888871e3e3bfe77522d0e75fa6314c2bc1b34c91bd1f86597466a5a7"
     },
     {
       "path": "docs/screenshot-qa-2026-11-05.md",
@@ -899,23 +905,28 @@
     },
     {
       "path": "PowerBI/README.md",
-      "size": 3266,
-      "sha256": "ca6a0ee55078354845be990099cc12ef821d986229a5f3d280533a34a9d844d4"
+      "size": 3568,
+      "sha256": "df0681867843267e562f71ac34631588a2a5cdb960da8ff17136bde5ea3abf6e"
     },
     {
       "path": "README.md",
-      "size": 5517,
-      "sha256": "0a8aa503b4de12ede7b9918fa416611db834e704e465ed4a17ecda89138cdcbb"
+      "size": 5774,
+      "sha256": "aae61e0aecdef2a72606edb1608881bdc806bf716e6dc157575fb18e8ffa9598"
     },
     {
       "path": "scripts/audit_public_release.py",
-      "size": 5934,
-      "sha256": "3f74118264797895a1576535424d2d576f9035093ec5e55f6916175863d1e5a9"
+      "size": 6402,
+      "sha256": "572fcb8ca64d82b5c3cf3cd20715c6d9e1fb6f8a9c448424db876d5b50c29d6e"
+    },
+    {
+      "path": "scripts/audit_screenshot_parity.py",
+      "size": 2871,
+      "sha256": "a5e9433ad93229d871b9d2cb7bd16368b0783784a72ba7ca6a231dabd19d5053"
     },
     {
       "path": "scripts/audit_screenshot_set.py",
-      "size": 1959,
-      "sha256": "40311b0c0bc97d04a5b5374d92acec5bd742d4852bd360d457615d55751f5edf"
+      "size": 2396,
+      "sha256": "772799f9691793775bc0631ddaa387e8c8188a64f89318d7f431e52bc275b554"
     },
     {
       "path": "scripts/build_monthly_drawdown_proxy.py",
@@ -926,6 +937,11 @@
       "path": "scripts/build_public_model.py",
       "size": 12813,
       "sha256": "fe6da705dfbcc7a2750a085cce506b12b2cb59e25a288f7242998b94aab35d5c"
+    },
+    {
+      "path": "scripts/capture-powerbi-pages.ps1",
+      "size": 7032,
+      "sha256": "de11d144b893aa579a1675e0482f629140b2b661b62faa31aa8b78a1944eaf53"
     },
     {
       "path": "scripts/configure-data-root.ps1",
@@ -944,8 +960,8 @@
     },
     {
       "path": "SECURITY_REVIEW.md",
-      "size": 3377,
-      "sha256": "7e90df2c51c1b476cf02325098627cfa5b20c94fa7682bb5caed11a7686cb8da"
+      "size": 3506,
+      "sha256": "366bfd8c905a3fb0f6efc4d6d2e07dc8d4583c28007d1837dab8479ad55fcf1e"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Project Vortex Public Power BI Project
 
-I built this report to examine historical performance, risk and the research process in a format that is easier to compare and audit. The [Project Vortex portfolio website](https://github.com/LeoBobadilha/project-vortex-portfolio) explains the broader engineering story.
+I built this report to examine historical performance, risk and the research process in a format that is easier to compare and audit. The [Project Vortex portfolio website](https://leobobadilha.github.io/project-vortex-portfolio/) explains the broader engineering story; its [source repository](https://github.com/LeoBobadilha/project-vortex-portfolio) is maintained separately.
 
 Open `ProjectVortex-Public.pbip` in Power BI Desktop. This independent 14-page project uses an aggregate-only semantic model and anonymized embedded case images.
 
@@ -22,7 +22,7 @@ The 14 pages cover seven core analytics and governance views, five winning case-
 
 ## Rebuild and validation
 
-The model tables and DAX live in TMDL. Public data extracts live in `../data/`. `../scripts/` contains the public model and report utilities. The six remaining clean Desktop captures are in `../images/powerbi/`; pages 04-11 await recapture. The PBIP contains all 14 pages.
+The model tables and DAX live in TMDL. Public data extracts live in `../data/`. `../scripts/` contains the public model and report utilities. Six clean Desktop captures currently cover pages 01-03 and 12-14; genuine captures for pages 04-11 remain outstanding. The PBIP itself contains all 14 pages. See `../docs/screenshot-capture-runbook.md` for the authorized Desktop capture procedure and `../scripts/audit_screenshot_parity.py` for cross-repository hash checks.
 
 Validated in Power BI Desktop 2.159.883.0: the PBIP opens as a named report, refresh clears the initial model-load warning, all 14 page tabs render, and aggregate benchmark cards reconcile to R$20,395 net C30, R$23,551 gross, 324 records, 57.7% win rate, PF 1.951 and R$1,932 realized close-order maximum drawdown. The six retained screenshots are genuine native Desktop captures. They are not a complete 14-page screenshot gallery. The private report and private dataset are not part of this repository.
 

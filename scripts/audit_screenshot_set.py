@@ -39,6 +39,14 @@ def main() -> int:
     if len(dimensions) != 1:
         print(f"Inconsistent screenshot dimensions: {sorted(dimensions)}")
         return 1
+    width, height = next(iter(dimensions))
+    if width < 1920 or height < 1080 or abs(width / height - 16 / 9) > 0.01:
+        print(f"Screenshots must be at least 1920x1080 and close to 16:9; found {width}x{height}")
+        return 1
+    digests = [str(row["sha256"]) for row in records]
+    if len(set(digests)) != len(digests):
+        print("Duplicate image content detected across distinct report-page filenames")
+        return 1
     manifest = {
         "source": "Power BI Desktop captures; pixel review must be completed separately",
         "pages": records,
