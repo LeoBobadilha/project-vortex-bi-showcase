@@ -26,6 +26,11 @@ def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def canonical(path: Path) -> bytes:
+    """Text as Git stores it, so hashes match on Windows and in a fresh clone."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
@@ -105,7 +110,7 @@ def report_structure(report_arg: Path, model_arg: Path) -> tuple[dict, dict]:
     visual_hashes = []
     for path in all_visuals:
         rel = path.relative_to(report).as_posix()
-        visual_hashes.append((rel, sha(path.read_bytes())))
+        visual_hashes.append((rel, sha(canonical(path))))
     page_order_hash = sha(json.dumps(page_rows, sort_keys=True, separators=(",", ":")).encode())
     visual_definition_hash = sha(json.dumps(visual_hashes, separators=(",", ":")).encode())
     structure = {
@@ -114,7 +119,7 @@ def report_structure(report_arg: Path, model_arg: Path) -> tuple[dict, dict]:
         "pageOrderAndTypesSha256": page_order_hash,
         "visualDefinitionsSha256": visual_definition_hash,
         "customThemeName": theme_name,
-        "customThemeSha256": sha(theme_file.read_bytes()),
+        "customThemeSha256": sha(canonical(theme_file)),
         "relationshipCount": relationship_count,
         "relationshipsSha256": sha(relationship_text.encode()),
         "authoredTableCount": len(table_files),
@@ -194,7 +199,7 @@ def main() -> int:
         issues.append(f"Public visual count must remain 83, found {current['visualCount']}")
     if args.write_baseline:
         args.baseline.parent.mkdir(parents=True, exist_ok=True)
-        args.baseline.write_text(json.dumps(current, indent=2) + "\n", encoding="utf-8")
+        args.baseline.write_text(json.dumps(current, indent=2) + "\n", encoding="utf-8", newline="\n")
     elif args.baseline.exists():
         approved = load_json(args.baseline)
         for key, value in current.items():
@@ -210,7 +215,7 @@ def main() -> int:
         parity = compare_private(args.private_report_root, args.private_model_root, current, details,
                                  args.reported_private_visuals)
         args.parity_output.parent.mkdir(parents=True, exist_ok=True)
-        args.parity_output.write_text(json.dumps(parity, indent=2) + "\n", encoding="utf-8")
+        args.parity_output.write_text(json.dumps(parity, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     result = {"publicStructure": current, "issues": issues, "privateParity": parity}
     print(json.dumps(result, indent=2))

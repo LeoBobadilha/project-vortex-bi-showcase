@@ -1,7 +1,7 @@
 {
   "reviewDate": "2026-11-06",
   "scope": "local public BI working tree; PBIP/PBIR/TMDL; public aggregates; images; scripts; documentation",
-  "fileCount": 201,
+  "fileCount": 202,
   "pageCount": 14,
   "publicScreenshotCount": 14,
   "withheldScreenshotCount": 0,
@@ -15,13 +15,13 @@
     },
     {
       "path": ".gitignore",
-      "size": 607,
-      "sha256": "a6cf3a612493b68823cb263bfb10f9afe5ddc072ba5454e1c57ef08ec4ce58dd"
+      "size": 644,
+      "sha256": "9bb0f6a662d413821a26a3dbc094aab806c41fc33e8bbaac7b4b3e7b49fcc7c0"
     },
     {
       "path": "CHANGELOG.md",
-      "size": 1866,
-      "sha256": "7945d943a04f325cf8bb4ffc8c0232756ff227529e1c16701e7676d305f1c20f"
+      "size": 2882,
+      "sha256": "4618c23747f41f725135d585c5cbf6e1a8c2868fc28f7fe4158b47830994bdd6"
     },
     {
       "path": "data/annual_portfolio_results.csv",
@@ -35,8 +35,8 @@
     },
     {
       "path": "data/monthly_drawdown_proxy.csv",
-      "size": 4094,
-      "sha256": "c7a4870fe2d6a66a562db6da8821561a0878794ef618e86b5e70513ec56a73f1"
+      "size": 3978,
+      "sha256": "c6ccf1b473e8935f30b540c4763095d65ee47726faa40a40cae05715c1286ddc"
     },
     {
       "path": "data/monthly_portfolio_results.csv",
@@ -45,8 +45,8 @@
     },
     {
       "path": "docs/architecture.md",
-      "size": 436,
-      "sha256": "de248b62e2d6476d1c59e0b698749725f9c9840a9a0f9b45beac5c885e206355"
+      "size": 435,
+      "sha256": "19d49c6d5ee5daa6c28a69f2b2bb6494a39971f92bbd5b8b830ad3259a422280"
     },
     {
       "path": "docs/benchmark-methodology.md",
@@ -55,8 +55,8 @@
     },
     {
       "path": "docs/data-model.md",
-      "size": 850,
-      "sha256": "814ca6b53a25a61add302b0df19843bde2f4e905c72ca468fde90648953d9a7e"
+      "size": 849,
+      "sha256": "3b80b842a4cee4907f018766267d654d05438096c74442ec442bf8dd272684d3"
     },
     {
       "path": "docs/getting-started.md",
@@ -75,8 +75,8 @@
     },
     {
       "path": "docs/metrics-and-dax.md",
-      "size": 3462,
-      "sha256": "1e47f758c77c10e986129ca421d3796b396234a2f70cc5e4087495fe3354c7cf"
+      "size": 4753,
+      "sha256": "7dbb75856f07691c735e689af414b4f08038a5c38f08663a648d828033259712"
     },
     {
       "path": "docs/pbip-parity-report.json",
@@ -85,23 +85,23 @@
     },
     {
       "path": "docs/pbip-parity-report.md",
-      "size": 4124,
-      "sha256": "375225f685082a6c2ff7b0d64b50def63ff57e86421312aa1203f7e41c26d28f"
+      "size": 4571,
+      "sha256": "cb47decb9fc0603721af0975e4aaee9a4075b45ee7c44af9f757f94ca69aea2b"
     },
     {
       "path": "docs/pbip-structure-baseline.json",
-      "size": 641,
-      "sha256": "23a0a6eac71570d86a14392f76bcffb6d379567505d1de9aac2aa9ba84d8cc3a"
+      "size": 628,
+      "sha256": "f30e4d6e7f221d87b12c67eaa8b479fe6d4d0f30cc853cc1151f0d542d19f25e"
     },
     {
       "path": "docs/power-bi-scope.md",
-      "size": 1176,
-      "sha256": "8ff781a0e20bd6a7336124bed942210d5a8a38cf66276530dc6051c3e0aef963"
+      "size": 1284,
+      "sha256": "b9adf39e16b7717b7e8fedd2b5d3fde6b1924ed3e9724d252ae3a4b199421ec4"
     },
     {
       "path": "docs/privacy-and-security.md",
-      "size": 1718,
-      "sha256": "412be71b8b0bd494bfd366c0983b027fb055764f03ac33caae163a8b105cdb83"
+      "size": 1898,
+      "sha256": "5bf77c6c39141df476ce0819fa9563765cc1c2c39333e9c3d2e804b36157467b"
     },
     {
       "path": "docs/research-pipeline.md",
@@ -115,28 +115,28 @@
     },
     {
       "path": "docs/screenshot-capture-checklist.md",
-      "size": 2966,
-      "sha256": "f3de1edd26d7594bae96ae8a2dca0b34091bf00e97724d056ea23ed327683935"
+      "size": 2936,
+      "sha256": "81dce20820f392940b8e53e43efc04cda25bad6766a1e150f72ca120d91edc35"
     },
     {
       "path": "docs/screenshot-capture-runbook.md",
-      "size": 3506,
-      "sha256": "061abafa78628b7b5f8122c39d0d1b17dfe373a287e88804c7ad7a1b34a87a9a"
+      "size": 3413,
+      "sha256": "a97f21a57a5ec0d311ae78a7eb64c54fbdd2431ee6df5959ac73faf0bf4139b0"
     },
     {
       "path": "docs/screenshot-manifest.json",
-      "size": 2859,
-      "sha256": "5d503d83e08f21f57f8c1dea75cdfeb54631626c8d67b3242e08840362190016"
+      "size": 2812,
+      "sha256": "9477f149d682d61cf679e285d402e823bb11b599bf018c80aa37bf13c6373932"
     },
     {
       "path": "docs/screenshot-qa-2026-11-05.md",
-      "size": 4469,
-      "sha256": "2af10debbfa96bf9c307052b2aefb8d10b9be3555dfa9a5b0e3f574639ca8812"
+      "size": 4437,
+      "sha256": "e9f6acf2ff11903e7d12d88789dd7a3b3bcbb0259f3d4216023d11729a35d9c2"
     },
     {
       "path": "docs/screenshot-qa-2026-11-06.md",
-      "size": 3476,
-      "sha256": "e91a207357894847e3a38caf49272451bc347bd6ca8dc811afe5b86f2a1aae1d"
+      "size": 3669,
+      "sha256": "cad88d47e7e7829946e3eb589cb617364ad50a56e10c73572861e36995806a87"
     },
     {
       "path": "docs/source-parity.json",
@@ -205,28 +205,28 @@
     },
     {
       "path": "images/powerbi/02-Research.png",
-      "size": 239755,
-      "sha256": "625bb42b482898bcc095d4528eb65a0ad09ab1f197f214ef1025e95e33595055"
+      "size": 240917,
+      "sha256": "8808dd5daefac2e33492752475b9f024deac04006f4b9908d9b8de4cdeeba700"
     },
     {
       "path": "images/powerbi/03-Executive.png",
-      "size": 281868,
-      "sha256": "fbc69a88ed1284688c7e7a30785c48ed4524ee9b3be5d168756a55f186d0bff2"
+      "size": 300397,
+      "sha256": "1a9678540bed20b5866251127c22fd9600596c26db6311ad47083140592aa919"
     },
     {
       "path": "images/powerbi/04-Performance.png",
-      "size": 295540,
-      "sha256": "3650ffe6e0772f5fdc032f06689933eb0ace5e9a41f8c632394d8a577066a731"
+      "size": 412630,
+      "sha256": "3ad6a4b97b482cde5fb6015878380bc3bdbf9d3709b8055d0eba98ebff29a952"
     },
     {
       "path": "images/powerbi/05-Risk.png",
-      "size": 326771,
-      "sha256": "dcc462302aa25e94935492725e54dc298f2b327c63e31d31f4e7ee7f0a5d0b5e"
+      "size": 343430,
+      "sha256": "6357f895a7231bd82416affc21c5c84dca0eab9de400c56ba2a6d24c0ac3f20b"
     },
     {
       "path": "images/powerbi/06-Trade-Explorer.png",
-      "size": 390982,
-      "sha256": "9b64598c625b0ad380df8fbf9fd893485bd1f69a94e25501fd95da7176d96df6"
+      "size": 417229,
+      "sha256": "f54118f59bf8e7e6f4aac47a62dd1d241ac9c1fa7d9338e0655726e8c85ecc14"
     },
     {
       "path": "images/powerbi/07-Validation.png",
@@ -235,38 +235,38 @@
     },
     {
       "path": "images/powerbi/08-W02-Win.png",
-      "size": 232947,
-      "sha256": "33b0a96be82a1710a90cc63ee013f4e84faed1b706320c4f74cd7e18a6ac7ed0"
+      "size": 257644,
+      "sha256": "6ef01ebd3b893fbb5d46325563e43079e11bf4aa4e4de3586e1c2da16880ad96"
     },
     {
       "path": "images/powerbi/09-W03-Win.png",
-      "size": 229220,
-      "sha256": "e4195343f392c2cc8ae68dffbcc88e6c99884cfdd1e6fc4d42e555b90d8e3408"
+      "size": 252794,
+      "sha256": "8ef299f9b15c4a453348b2e267eefe604d68c3830b0c7db91514bbee5bd75cb9"
     },
     {
       "path": "images/powerbi/10-W04-Win.png",
-      "size": 234862,
-      "sha256": "4ea819a8fa178f66791ec487b01a46f929f0d788629893add699bf76db2c3a4f"
+      "size": 260011,
+      "sha256": "fe6d119360bee5c1a101704cef223e303aad3a6a402818ad881c50df4402e262"
     },
     {
       "path": "images/powerbi/11-W05-Win.png",
-      "size": 234805,
-      "sha256": "2f29f4acc7890cd7a47393a4fc59b4fef86e5efd707bbedc12d2ca74cc996b5a"
+      "size": 260679,
+      "sha256": "117d7c2bf6b1b08d15ea49fab6e448a1476297856c5f674f0c68e154fe93921a"
     },
     {
       "path": "images/powerbi/12-W06-Win.png",
-      "size": 235052,
-      "sha256": "7ce6587b8c9714bcfdd0ed25a26456f62033f8b12e0ab9864b81d751684700e5"
+      "size": 259807,
+      "sha256": "9c4a6eac898b4f7711416285a52d84ada7cb62362d9f7da2a1b87dfa4111c013"
     },
     {
       "path": "images/powerbi/13-L01-Loss.png",
-      "size": 231145,
-      "sha256": "a44237caa2e0f6e16d40a83d56d452e13da36eb04df0c34eff9e1c20e0ca0218"
+      "size": 255594,
+      "sha256": "72a140f6fd5fe060f7fc664355014dadf6c41f7e77b05675b6d6076872cb96f3"
     },
     {
       "path": "images/powerbi/14-L02-Loss.png",
-      "size": 232004,
-      "sha256": "304153191d457c5b80d7e1058299dea6748eecbd3d4f1b6d12d7ab1919b755ce"
+      "size": 255335,
+      "sha256": "1546b0c436657569d2282c26f422c15772bb71356b9b73f50947a2b62f1e49d9"
     },
     {
       "path": "images/research-workflow.svg",
@@ -280,523 +280,523 @@
     },
     {
       "path": "PowerBI/Documentation/Data-Model.md",
-      "size": 843,
-      "sha256": "aabfda02534d2cf644b3d5731e7cc2473a401f76e186231f68d4456f3102ef40"
+      "size": 836,
+      "sha256": "afc5a4310026ca37b5306cf96708203ed3847b062a78ebb3f6729349d4cac4ea"
     },
     {
       "path": "PowerBI/ProjectVortex-Public.pbip",
-      "size": 192,
-      "sha256": "8231dc84cf376ec484165db31c1fc46778d5c9acfbc543919874651be5873610"
+      "size": 180,
+      "sha256": "5131517b462be6738ba465bf784f9bf4316540c9ffca5bb131a6a31e020d9483"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/.platform",
-      "size": 325,
-      "sha256": "e92395990dec5590875330389d22b7e51a8da187c6af05ee3e191515163e2892"
+      "size": 315,
+      "sha256": "265269bfcbf182b8ee652ea8638d89841356aaad318d6cc8b842e3d07d1d2925"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/04b9e378e8104a3ca887/page.json",
-      "size": 788,
-      "sha256": "1e1b576c578f9cbfd911e35d4a5de083897deb4f24d8884c02e2bb8ec293d931"
+      "size": 756,
+      "sha256": "f5c97ac1108177b302596ed8862fa974c8f81dd584885f7d6ea70c096912db0c"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/04b9e378e8104a3ca887/visuals/21c7fb93394a4cf284be/visual.json",
-      "size": 3672,
-      "sha256": "4c527556c38b9cef6e813e4febd592cbca07739288ca3ab6b540b0254ec237b3"
+      "size": 3543,
+      "sha256": "7858eb99a024ea74384661467a0ff4e348fde7a149ef1e9a1fc9f2f6a6345504"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/04b9e378e8104a3ca887/visuals/703316b1d19740d4ab50/visual.json",
-      "size": 1946,
-      "sha256": "d3d5231a7c1c5cf8efce46c1aa1a8e301eaf348122acfcebc0247d54af2f353c"
+      "size": 1874,
+      "sha256": "056a1415ad6e7566c63ac6fcebf2695be1dde08a6ab9c220a6febd2bdc1423ca"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/page.json",
-      "size": 782,
-      "sha256": "5a2ba2cc639a0d676321a1dcc93a34304947d721979ae26636a2564d6b76ee1d"
+      "size": 749,
+      "sha256": "44eb05767b1955b47d28d5915968046625ef2f34114b7c92b89b8230262a6350"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/04d55d3e89c513c55d2b/visual.json",
-      "size": 1946,
-      "sha256": "d58ce2bc398eda48a6760ef467992ca5eac30fa125e293b4422118e11864e746"
+      "size": 1874,
+      "sha256": "435f600af13c2f55f0fead73ad76dee4281bf93fb95a1cd9561852ad5ddff364"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/0898997d3ed33a425c16/visual.json",
-      "size": 5113,
-      "sha256": "2558faf93eec069dca918ea5874f4750e12c9779526408e7388a858999281fef"
+      "size": 4896,
+      "sha256": "a20374bc994ae9dd4b300340451b4d49c0dc75357d73c825137c026103f3ed36"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/108c12fecad4f6a8adb9/visual.json",
-      "size": 6563,
-      "sha256": "59f5f48d667847fcb8948b1f80e578d1e9b91ecdac947c9aa63238d1d771742c"
+      "size": 6298,
+      "sha256": "26a340f85715ae5047abed725a8586dc175d1382ecf8901eb3b4795781a2ae4f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/4682594805cbc0ff3444/visual.json",
-      "size": 5104,
-      "sha256": "08a76e00e6acf4fd8eacb8987ab73e580ea6457cc10e5fbc3612964bde0162e6"
+      "size": 4887,
+      "sha256": "c754503ee8f9179906402057046d09d8ee97782d693e203ec3167ec363ebda3d"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/5c0f2a9715fd7aa99b27/visual.json",
-      "size": 1885,
-      "sha256": "895213661429849e032d66d60d69a86b670ab9af08fd8f8b2e471ea90ff90fc1"
+      "size": 1813,
+      "sha256": "9315c84f7c8f98e5cd09182024b9d92002ce46ac491d19d4c913608a00d77d04"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/7cb604d8cd5746af3aba/visual.json",
-      "size": 1751,
-      "sha256": "79111156ca8ad8d8897aeaf9488495caf538da9b15e307a36c84585bcd793655"
+      "size": 1679,
+      "sha256": "f882c880dad6b2c13f9530863ff5cec5287590ba66701ee9f9f4e0fee5c87ebd"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/7feec530fe9543dbefab/visual.json",
-      "size": 1723,
-      "sha256": "ecd71fc61a273017c1499024b57b5ac6bbf8710754ea3b13042e73df085e202c"
+      "size": 1739,
+      "sha256": "92ba13bf93e9fb48ef02477999689fe622e66ff3b2caff8cf30d8914300446f3"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/82dfb13f3360433b356d/visual.json",
-      "size": 5129,
-      "sha256": "12f3c370f9d61763daf5a951c3f78ee95be09d046edbd10a6ba4226cee4b1329"
+      "size": 4912,
+      "sha256": "6f61064fa3f35b724edfedbee2fe6836b6ab2ccb0358819c16e454b95abd1ffc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/8a69139619f1fe1ea954/visual.json",
-      "size": 1729,
-      "sha256": "4a1bc56b4fc1834869ee0020068125393a8222b92054b3b0af483cca9e2eac5a"
+      "size": 1736,
+      "sha256": "c8c307265a58eccb7500ff74b1c306fc52a0cc417fa275c18c4ae6f931e36a9d"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/8f97e9731e84c3e733c0/visual.json",
-      "size": 5117,
-      "sha256": "44edf9e7dcece8686334aebc7c3fb86048460f74ab457ab721eafa1b34bcf012"
+      "size": 4900,
+      "sha256": "7e92c91eabe2a223a5d57a28c7b5b3e920fe1f2d566ed54d9b5b848165720cc4"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/9ba43b14ed096df8ff21/visual.json",
-      "size": 5109,
-      "sha256": "73a57145d28cef6b49f5e74e35568ce3431f5f83831b65f8b30b42571362fb1d"
+      "size": 4892,
+      "sha256": "94b7b57ee37f4c48db65661abbc49c0e471e07db8009d4e134c4586b9f190efc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/b2efdce5d63bf8e179cb/visual.json",
-      "size": 5198,
-      "sha256": "5802be395abc188cef0376c38ca2a5f7306320199321c6bab943e3efec76f35c"
+      "size": 4981,
+      "sha256": "d4d002f67c177b8ff794c0e84928accaf80767c5cf1eb13420c5dcd6a967d234"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/d90c9129887bb93488e2/visual.json",
-      "size": 1851,
-      "sha256": "94e2dfa2a3ba50374e7d53dc027bbec04ea57a808554ccb49fe6002fb4d43d12"
+      "size": 1779,
+      "sha256": "46647505222877cd9e2dcf7934172442006f91d07959b8901a635886c19d3ce7"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/f7197d4328078582ab03/visual.json",
-      "size": 4741,
-      "sha256": "ee99edda6c25c4f3a6fa1afa3698d3a727556b05f47c494d04a84c0375eac738"
+      "size": 4943,
+      "sha256": "d18860d70e9f02048f19e8895d6ee0c13abcb121e40006259e5745f82b1bec75"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/109c48aaf0b208042ae1/visuals/f9d83f6a0f5dcfbad3b7/visual.json",
-      "size": 7246,
-      "sha256": "0b0215f9102112881f4ea5fe27ffa6f9454da55d04670fa732d36259c254662e"
+      "size": 6945,
+      "sha256": "25ec75213c59a592d7999af90295e9316cd8217c3aa2cd288fac7a50feac14e8"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/page.json",
-      "size": 792,
-      "sha256": "1792b88dff61b4298227bd7a1f1565ed86fcb9b3f6cf11226081d15110b34563"
+      "size": 759,
+      "sha256": "29244a13a79b3548a7c19ce540435e6ce9ec7d37e2d7646b524fabe43f4952a3"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/2e542f1e169923b816c2/visual.json",
-      "size": 7030,
-      "sha256": "d0906f68271234997ec2e160d9628529a8ea4162b9ed82edd7377d849efa8e1e"
+      "size": 7426,
+      "sha256": "613497f7c40f369434f65321a823af18cd8db54b784cfd7f88f9054ec7f9d6f3"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/311c44aa64e3823428e4/visual.json",
-      "size": 1946,
-      "sha256": "09f2ce0b22b1a21400dd9402e7676241d33a19c193370d135e1543e05473ed5f"
+      "size": 1874,
+      "sha256": "57c63e96580cf5d3cf020a5680a2e85e819025e7e83b6312da6f85ab3db393c5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/407583f7958cf7b2185c/visual.json",
-      "size": 1941,
-      "sha256": "ae5d323a0374d549ce85f37b888546f2abd40fdaa4f050c016a82e90da6aa1fa"
+      "size": 1869,
+      "sha256": "6971a7bb313a48809330a7808efbdbb2dc684c8f51d147620e1afcd0e852b03c"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/42a2204c32b196a2a1d0/visual.json",
-      "size": 1867,
-      "sha256": "d6450715a822d727add7a0806a61c07e7ac5856a0cc46c06790a0b72fe750c71"
+      "size": 1795,
+      "sha256": "7621c86b8261be1d6795f453ca1daef0b3eaf96526eef9f8c9217fb53a44670f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/6a8fe87e4132e1bbac03/visual.json",
-      "size": 1761,
-      "sha256": "d81b5b2bd6cf5b7e632e48eab92696092082b3433910d51353b2bead0ab5c473"
+      "size": 1689,
+      "sha256": "75ee3dfabfe6b20c861d2755095bc43b4294a2afd447fa81769bfa1a4bcf4a26"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/8acee32194fc0843a9a3/visual.json",
-      "size": 1839,
-      "sha256": "ba568d55a504eb3608a47f0eb77e830d0645d7d50e5dc0929fee82e73693b22b"
+      "size": 1767,
+      "sha256": "84b1d2be9f54417fa83d5df172182e6a48ef802e242c95166cd55319bf574acb"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/badf4686edea38bbca13/visual.json",
-      "size": 1760,
-      "sha256": "f2e3fcf41dc1052c36422b82422aeb8fa9aa65a93b88ade5524b6eac20206398"
+      "size": 1689,
+      "sha256": "f2f5a68425b1ab5279e101d6e6407808b355b253dd72669d38cd75b54f8aedde"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/c3aa777bd63664440978/visual.json",
-      "size": 1992,
-      "sha256": "57e335c3bf5d6a2ad1d4feebbab9e7045216cf42f088e8f064fd9949cb9d6f97"
+      "size": 1920,
+      "sha256": "284375596842d34ecd46f49b3b281952c6f221c3e2292a49e96fd745eebba59d"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/2399b12483861fe6a079/visuals/ebb6d3977f41b033b5c2/visual.json",
-      "size": 1960,
-      "sha256": "c29a2ea7c28c38f097e08cec30cc05ab1bc7d4b1cfd23a403f1fa9f5ae5f5ced"
+      "size": 1888,
+      "sha256": "178522030398809ebff26f9772730ab9bbe5df2dfc7fdad18cf1924e05a3b2b5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/286dcaf4b1db4777b9c2/page.json",
-      "size": 789,
-      "sha256": "0f8bd09d94dd16bd8cbf9cc57f3ddad4563caaa230e1b54c41d5bfd4f2061dde"
+      "size": 757,
+      "sha256": "c23462aed75e08f12dd54e3e90dfbcc7c071a960f06abde7ccaee091129f6706"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/286dcaf4b1db4777b9c2/visuals/44832581916f486abf1d/visual.json",
-      "size": 1946,
-      "sha256": "f2e807cf0062e45ab656986175d99d704e02a434250e7bc90155ef6e9aa4a874"
+      "size": 1874,
+      "sha256": "568843792323703bed632f8508a54c14c5d71c6c84962e59682a31832f998851"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/286dcaf4b1db4777b9c2/visuals/7384275727b7407fb73a/visual.json",
-      "size": 3672,
-      "sha256": "f690b72e89a8e107a57213be1dbc35a31e6ca841afbed76bf9f88818ef7073a3"
+      "size": 3543,
+      "sha256": "3fe78e2342315ffaef351cf24de2841908e686feac58f6d7cca4fee74175fdf1"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/3eb5f0c4fba34c07b73d/page.json",
-      "size": 789,
-      "sha256": "0cae7d7227860cae458aabdedae9bd1a75343e9a51dfca75639d7570f826865a"
+      "size": 757,
+      "sha256": "25c5276491b487e7071c03f242e3068433fd713f96cdf30018e8a4658f4a57c8"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/3eb5f0c4fba34c07b73d/visuals/2f6b333644cb4c6fbb91/visual.json",
-      "size": 1946,
-      "sha256": "3489f0fd0a2e8b275e74681c46042bd2b323c19931212959f8d79f403cfddae1"
+      "size": 1874,
+      "sha256": "441001785adbf2b76a42c2136d7c24b1e66fed6605fbab353c3c3c64e03025e1"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/3eb5f0c4fba34c07b73d/visuals/bea65eb828d343e79eb6/visual.json",
-      "size": 3672,
-      "sha256": "f1e4f5d9207e91666a3b7d8e54b33c8c9b4a16f6c336b4b2d7c7482f8ce57172"
+      "size": 3543,
+      "sha256": "013bd50934d50cb8255e36b7d7ae215019c7d07d05f6faa4c5caf4482788371e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/page.json",
-      "size": 785,
-      "sha256": "70ac43fecc3efc9d38069aadd9521e380927383e3c7e6d7eefb82ae30ec2a4f2"
+      "size": 752,
+      "sha256": "15971c83a1241119fbf0de1bd4ce915910a4bc1d6ac2e3eeb7d2c3474e12ecde"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/028a886a16e550e3bcf6/visual.json",
-      "size": 1754,
-      "sha256": "9a6299445b90cf2395328ce662f7fc72c35943a740f0c557cb050055ba577dea"
+      "size": 1682,
+      "sha256": "cdcd9b09ebf7fdd3babc13f7b10166fc4cc71db988ab805f0b59b36e50d2fe57"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/2c6dc4ee74b49754e1cf/visual.json",
-      "size": 6524,
-      "sha256": "3a8eda403f7a0a207aaac08169b9c2b2ea95f13b9e102942b04890014108fef1"
+      "size": 7453,
+      "sha256": "ac928b57710ca713e3ebe0e643d3b76b256b9c5ade53c32f816edf5a6a95427b"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/3f94a4db8aa7880bb3d9/visual.json",
-      "size": 1861,
-      "sha256": "9000fe88c36a4e537f63a915c5348192ec56013fe4f3bac01949a98067dde714"
+      "size": 1790,
+      "sha256": "2f4764dfab75adf2031decb4a67dcfb5c86066b62e5273cd38d425351ff1cd95"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/471e8f6f5b15b8d9ab44/visual.json",
-      "size": 1783,
-      "sha256": "39880d35eb7bb302b5fc3fdbb8158112f61155a5fd98248c3f4daef32644f060"
+      "size": 1855,
+      "sha256": "afa0f5d0377bffed012e908e9ee63585acac801f2eea2d49ca3a037a1d604eff"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/60f06f832fef1d3bf60c/visual.json",
-      "size": 4742,
-      "sha256": "f61ee78b7d4a642353028bcefad6c6f453023fd1a6f0c1cfd3e12956064408a5"
+      "size": 4944,
+      "sha256": "258397c7787df301447d68a30788c7ee2ba71a01d24b2635fbea5a43a2d202e0"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/791db7f36a0f4d61a49a/visual.json",
-      "size": 5588,
-      "sha256": "fdbb67a2c982c7e7650a3408933fce58b63bf6b6c5f8cb8d18c651a21a431f0b"
+      "size": 6078,
+      "sha256": "f1707267ffcefbc9a6cb28e2489ce7f6c96c243246dbc696c441dc9db6e0cf27"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/a65255a09d1f5502d6b5/visual.json",
-      "size": 7030,
-      "sha256": "4837346e3249b156957514b32abe88ff7ce5f1f6bc642768f81eb50d68d20d0c"
+      "size": 7425,
+      "sha256": "8dda1cdca1627ddcb5507bc39c7a69a7246b95233b36f02b4a54240ccfd89f65"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/bc865ad75f9be78ad065/visual.json",
-      "size": 1946,
-      "sha256": "6f817733d1a20b907d0d272413ff4d303c3fde77410f638b195ed82d42ffd1d2"
+      "size": 1874,
+      "sha256": "6d8623a91f14e1603f3aa44011dc957c193a6747d5b269b48ad817dffb1a2891"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/4cd524196697e689f82e/visuals/e8b108e6ff5077fa6dc5/visual.json",
-      "size": 4786,
-      "sha256": "87a323c83bbe53381c9b92d36b3e8460f062386f641dec0f17615273a60ea991"
+      "size": 4988,
+      "sha256": "c93e782de6cbcd3e6856a6b3a0d7daada5885bd5189a910f6afa5c321a3364f9"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/76c45fce023647689199/page.json",
-      "size": 789,
-      "sha256": "fbf1626a306f6bf793b6f92b349516fd36f8b303fa648750a42b9ad9db332dfd"
+      "size": 757,
+      "sha256": "3419505f1591a26e9240d5f778cbad1c81779db64b329e8b2495841393f9d080"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/76c45fce023647689199/visuals/618220b7a7554e24a9b6/visual.json",
-      "size": 1946,
-      "sha256": "6f0cc788f661346fae7f059dc3a3fb81ddfc36cadf79f5f94f11c85cee0e0f35"
+      "size": 1874,
+      "sha256": "a6a9cc9911409f0ed848d044dee4484172e843dfeed4f18c8dcd3a065aa96500"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/76c45fce023647689199/visuals/71f89f4004bd4f8caea9/visual.json",
-      "size": 3672,
-      "sha256": "9bb0d9224c2c37cdf91503f7f229674fd3d29a5dc0acb1989798957d3efd0e13"
+      "size": 3543,
+      "sha256": "c2757af2a4d0795183da0169fcf8a668ca2708a435702423c454619038baec4c"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/79bf48bfffc446289eee/page.json",
-      "size": 788,
-      "sha256": "a99d613613564a1f26b0de306319173ec0c9994a32120f4111991a166cfbba26"
+      "size": 756,
+      "sha256": "e7eda2c94cbae8e3ea00807110d6e3dc93a25fba16ccbbe0def5158a20e8a18c"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/79bf48bfffc446289eee/visuals/4110daee752540bfa6b5/visual.json",
-      "size": 1946,
-      "sha256": "8b998c689dff6dcaa87cb26ee7cca90bcb420dac159664954b6ff59006a416d9"
+      "size": 1874,
+      "sha256": "b042c39b70f97958b8fb3338bc3ab63eb8d0ad18a5b328b248d2bb6a1cb8d327"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/79bf48bfffc446289eee/visuals/4eaba876a5fc4fe28a77/visual.json",
-      "size": 3672,
-      "sha256": "d6d85fd7760d1f19bb31aaa3eded2a52f5d6258a1259e3a4ceb8aac627f33d8b"
+      "size": 3543,
+      "sha256": "592013d67fd99be1821f255e0260272882a54aadec3efa78062694ce756fba0a"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/page.json",
-      "size": 788,
-      "sha256": "97a200f2b7a26f564115bb42f5c300910015fe24209d279a5e6daed4e1169767"
+      "size": 755,
+      "sha256": "0e60acb4c35bc20c472ab00ccaf1853be37783cdc358aa2304ce302b05e48ed6"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/38357ec73c5ec2f8907e/visual.json",
-      "size": 1757,
-      "sha256": "ef6729c455914bc9699c49465a278717610fb963e191bdbc01b733a8d436815e"
+      "size": 1685,
+      "sha256": "ba213015465638ac254d3dd1b58bf9d9d3bf3b1a05aea80d0ae909f9871edac3"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/56bbbf196f7e2de1caf4/visual.json",
-      "size": 2008,
-      "sha256": "0a25d116cd5aa45fae8da3cef87784677872ce11bc1ffddf93ca18c14619d2a8"
+      "size": 1936,
+      "sha256": "f3a0b8292bcfcc17e28a082cc5a4f619ee1ca43f901b87f6a63b81258ef56754"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/5c08b50b39bf97eed948/visual.json",
-      "size": 2036,
-      "sha256": "20a8bb2409b68ab059b6e06567a1534fddfd7ecbe497623c989e401b6ee9dcc2"
+      "size": 1964,
+      "sha256": "ef33ebd697b9948ef6334ead41a32e5a99435ffafde6a98301eb6985b74c7d5e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/7ea524d5ee07c6ce2881/visual.json",
-      "size": 1831,
-      "sha256": "9182bdcb386813e3e3e4ada6758888b1429ac6a2177be3b1e2ec2bc8754bfab8"
+      "size": 1759,
+      "sha256": "04f8af163166b12783dee06eeb5211c5846da0482d3c9906fe325e08cf636d60"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/7ef42e9605d60a3adc77/visual.json",
-      "size": 2004,
-      "sha256": "a29b76bc7437d3bd7d58ad18a71882a31c35c3794691f2f15da344f54bc3aead"
+      "size": 1932,
+      "sha256": "6ba32b6f558278e84d66a5958ffc3e1634ef49e75a9d77e2955a13e02f3862cc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/aebb3ffb3ab1b5e12454/visual.json",
-      "size": 2134,
-      "sha256": "bea0be59e440fe7e65c012fccf65248745aa4176ab033f8e74fef1d0d133f896"
+      "size": 2062,
+      "sha256": "649a184abc00b8509275d6a17c5bea11973717754dff71bf58b108ebe184895e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/c6fd2bc0dc86d5e6d887/visual.json",
-      "size": 1843,
-      "sha256": "a1657a1aa532cffd399c98c827abf52e20229a4be0dff33bee14bc86f3f1951f"
+      "size": 1771,
+      "sha256": "e45f935ece84bce126fa944989b1c16a4789e8be763b378b757b537509e9652a"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/7b1ee5c32a29a43de4f3/visuals/e381a2ad7f4388a04ca8/visual.json",
-      "size": 1946,
-      "sha256": "65398e666a850b2ea39f61947c07a4418f87a5f1cb2e0868e0f27c316a0949e1"
+      "size": 1874,
+      "sha256": "82df20e6174cceab58965a07c29e14e49848560c90f4b822e619756638cc03cd"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/page.json",
-      "size": 795,
-      "sha256": "137bb901c1d088e272aab277b48666ede5a0f45cc675c71833b3cf5323a3a2cf"
+      "size": 762,
+      "sha256": "60d7feda7c23899e341815c3bd18d9c9f4f388eb59c5d2c72479d093c86a57e8"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/1de278f307c82f5f689c/visual.json",
-      "size": 1946,
-      "sha256": "b63457fdb1202cf386e9514902fd487a8b45cdbce87334bc00a19bbc282ca1f1"
+      "size": 1874,
+      "sha256": "d85d506af60b2a25bf566e65a12e9d7ff0094d7115854537103eb1cc5dc68c40"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/37f1af0196da5536f17c/visual.json",
-      "size": 1955,
-      "sha256": "0379f0767e379e504292244aed7ddcafa32b8383add5bf911d24740fe8e001ed"
+      "size": 1883,
+      "sha256": "858921ea6e0f9f9ceda3e21fc120fb0e2c59682e44791f9b6e29b2d1b4d5044f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/42bb67d8c40bf1aaff1a/visual.json",
-      "size": 1764,
-      "sha256": "9c23147b1ce54799f8a1107437b3c89516821454d88950f97006a678845e48c2"
+      "size": 1692,
+      "sha256": "48977729616c9639ad000ccc15d470c07cdf1a6fd39ac06276a77811787fc5e5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/5b1b23c85b5e8f5c9c1e/visual.json",
-      "size": 1951,
-      "sha256": "4846be918a45c4a520b94041f8be6e56a138363680cc359431ed9c247d4465f1"
+      "size": 1879,
+      "sha256": "e033ee964148c907374bad2ab0d075599bc1f205549a64e02e3bc902a32c0970"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/9ef53d09c1f8280ce9bd/visual.json",
-      "size": 1832,
-      "sha256": "4f20999d8d5c0d1675a19d704c9264b4f4131733fb88d817fc120ee8b17fc656"
+      "size": 1760,
+      "sha256": "465db604be4144ba79968c1f1218aaea2b7f6e93ae0fb798e47cacd8f23b6ba5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/befac5967dced2a750e4/visual.json",
-      "size": 1843,
-      "sha256": "0920f63b39dafb332f0a2e2ad8b55c54b3333bf6cce813d86900278927da1dec"
+      "size": 1771,
+      "sha256": "60e4432578d34212f9f4138650c956902ec38ca786b3585dd1d5fb0d4b75efdc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/c0f71e7a9c4c9695b13b/visual.json",
-      "size": 1891,
-      "sha256": "bfa6fa1e7da71c692210e8ce783d409188436668f7231849eb5e78b3767cf582"
+      "size": 1820,
+      "sha256": "8da3a9c0002525b5e1ee348c9e61507cab70d525004949cf2dc16ad43f856b43"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/90b610090752a26f2b72/visuals/cec3c5c8b837011df6df/visual.json",
-      "size": 4186,
-      "sha256": "436f08e9033198506042dc60bb3557ea80dca2230d1ca1996f59fd415ce09bbd"
+      "size": 4019,
+      "sha256": "81bc67e082e284b65b2a26f87eaa89c7ccef5a718fcfcddcb0b145999cce296c"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/page.json",
-      "size": 779,
-      "sha256": "e04afdcf0d787505eb1dc38bb405df770a0fc32ecefde3cfc07b636163d58ee2"
+      "size": 2170,
+      "sha256": "1dc20a1aa061123917fc3e44342417f175c5af92fc2e90ae4daadc0d92aac438"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/0ef313d6f92721d9f77f/visual.json",
-      "size": 5179,
-      "sha256": "8954d4b4bd28f75d5d98786a0d7bbf98e8d7457a1257105d4e9f95473b22c782"
+      "size": 4962,
+      "sha256": "5af0f3705b6522c088d5bdbc29d9b6635a79aedc2857cc4798343223053b6a0f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/305d3d9c18fc3d58dfa3/visual.json",
-      "size": 5143,
-      "sha256": "f58b62ef4ce57c9a73c28716978b2219b83447fc09a26225376e78339539eef0"
+      "size": 4926,
+      "sha256": "d0661bf5a7bcae91fbfc177022175c66a8af39ad6eb56e950b06a498f8a661f5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/34e43529d76664dff4fc/visual.json",
-      "size": 6571,
-      "sha256": "ca51dc43fc6ea7651fd6c179719838fd9e403ab7c12daa6ff6badd863620af02"
+      "size": 6313,
+      "sha256": "218a063cf9c4768cd16f683c565e53b0698db2065740ec5816659cd28e9b86df"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/65a601a27254742f1a2a/visual.json",
-      "size": 1865,
-      "sha256": "6e6a9f42ee77e547e690ee92b0cf3a1158a52d7815639552b9607d4c056b1f2c"
+      "size": 1805,
+      "sha256": "5f93a623b3deacd9588f8d9573ebfb6ef469a7b1475bc503d8102c245cbc55bc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/71e5ff885ba92699b394/visual.json",
-      "size": 5151,
-      "sha256": "d598295e2df0c7ce3f1cec2e6caa42d11332a47816f46af9a27472adfc31c1a0"
+      "size": 4934,
+      "sha256": "98aa69ab24115d85f51002f349b80cc4b9c30fcb676f57f9fe5fe0ba679b180e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/84f8a87eeeefaaea8cb1/visual.json",
-      "size": 1913,
-      "sha256": "a312dcba726cc2d39fab45298f0e1597a0d0e88dc9c8fd939ca284f43d606681"
+      "size": 1872,
+      "sha256": "5ebb536a319aafe5082dd89d0d5761faa34070f897ed6c71156fd4ba190ab9ec"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/9821f08cd5d3fffb3164/visual.json",
-      "size": 1946,
-      "sha256": "20168013fd9a90c65d33e453810ac2a540923d60452add20b8757d3cc1e4766d"
+      "size": 1874,
+      "sha256": "935614641de108dd67a832994e932059d95514efc179830b03f21c989d95da0e"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/a2fd6db5a1b85c35e745/visual.json",
-      "size": 1748,
-      "sha256": "a3245c2bc5c768d13b9b97a04baf041c563d423a37102e05f7ada8d7c92eb4f6"
+      "size": 1676,
+      "sha256": "844093c81da8178e40e9d2d92037336e14c582f4c2d0b800166589d4fe21db54"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/b3bfe8c0ae540f2f6390/visual.json",
-      "size": 6509,
-      "sha256": "a8255f17e40d7109fad8a840d8a7270c46d35f4be4cdf7e09171f82e78036e40"
+      "size": 6251,
+      "sha256": "848394f74598c61f0abbdb01248b4e0a2afacc68c3f10b41f7e6c264ba496e2f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/c415376ee5a67c43bfd4/visual.json",
-      "size": 6577,
-      "sha256": "c2c2b1e4ae5b598c3d9fb61cdc16f07e48bb579da6421cc790c7a9d010308216"
+      "size": 6332,
+      "sha256": "31ec02a64f2e0fed358bf42473a75dd37fa5d14f30cb7e2a81122cbe7ed2dfa2"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/ef6a3c5431ce7138ce57/visual.json",
-      "size": 5119,
-      "sha256": "d8ed6bbcd278dce4347871fb012f88c13f469f63fe4613d7369489d3d3071ef7"
+      "size": 4902,
+      "sha256": "058776cf08c214d58fe8e252862fd640cb5b3a0d88a34cf390972eb43353ac13"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/a56c2540ee69d2be7379/visuals/f1d5770236f7075185a9/visual.json",
-      "size": 4786,
-      "sha256": "f8893d29c73dc8d3ac4629dabc1eba39c7914f8d073ce6498a24b3d58989b31b"
+      "size": 2538,
+      "sha256": "21bcbb229481b39e46eec1aa299790c804cd1bde324d56614d633c48b3e75d77"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e0ff26314f634d688321/page.json",
-      "size": 789,
-      "sha256": "fe710512c4933acb649e69a9ecdf6a69ae86425ac6017ddee3c8ae12cb3f5bf2"
+      "size": 757,
+      "sha256": "b3f65a5e01dc55773f9db4998aa12a6eb6acbe466e86555f3f2c20f79d536592"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e0ff26314f634d688321/visuals/667810bcf1e3468685c4/visual.json",
-      "size": 3672,
-      "sha256": "fe2188bb6b72c17d4efab95a34c3a724d628917bb1b37ceaf26df0b0a27b11b0"
+      "size": 3543,
+      "sha256": "75f74d1fad46e8a67a14153a24ac77611e30036a25ba4892fee75b95218a44be"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e0ff26314f634d688321/visuals/6d7d470a5b96437fbdfb/visual.json",
-      "size": 1946,
-      "sha256": "866660cb343d5da19fa20324264d8eb57646e053de52a62b9a74d9f75b49ed16"
+      "size": 1874,
+      "sha256": "957d16a34fe79e58034e05fb66efb62479c7144d6540c473297ccd2e7b7977a7"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e30f4fb53ab14b988adc/page.json",
-      "size": 789,
-      "sha256": "91b58fb457516899ce92871555add6f580abb001562a7d3c121f032261596df8"
+      "size": 757,
+      "sha256": "c97f9f8e454f9714481cad9cb999fc3a229cbea4d4e1d1e023523c868636f15f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e30f4fb53ab14b988adc/visuals/d7513add0cce496c9515/visual.json",
-      "size": 1946,
-      "sha256": "d6db9afb5bb7bf42fcfc444f82a12a21841ff71891e79b46c1735070ee1d7368"
+      "size": 1874,
+      "sha256": "68df45abd1c3df026a9f5a6cfcd7279c0cf0adebdc98060d2d59d232f19bccc6"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/e30f4fb53ab14b988adc/visuals/d9556830796845fd9317/visual.json",
-      "size": 3672,
-      "sha256": "6f5181eb325676b8692ecb613f44da9fb1a8defa53ef38cf32291dde83927afd"
+      "size": 3543,
+      "sha256": "2251f972c6924d7bb5f54a39a42d363c2bb44f1d80662a5d9dc823da2ad215bd"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/page.json",
-      "size": 778,
-      "sha256": "4fd859d751d8c9042fc477eaba3f33870e0affa1c21ba4bd2798ec08fe88b43c"
+      "size": 745,
+      "sha256": "a4d99a070360525ebe2880632b9e14418a93616c899c3fc61cb722adda2a6a2f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/110e9eaeab317afe5022/visual.json",
-      "size": 1878,
-      "sha256": "bd1249e1e50f96ff3fe053f5f3bd6cc9c60bc79bc784fd928fcf5fb1fdbd02b6"
+      "size": 1819,
+      "sha256": "b4b7cb4a683a2d4a6ef3f99d4a6f2a80f9f4046ebc83ad29b661bff194b07414"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/161df6267d1bdd8a1d95/visual.json",
-      "size": 1946,
-      "sha256": "393a9a1a23db5091f6a388d9a0a3f60e87fc4c0c5f9590ecf1653b305a9010f8"
+      "size": 1874,
+      "sha256": "dace71b87499c104c7b061ac690bfff6dd76883f498c335ac4b0dc2d02b96c1f"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/1cc87b73b0767d223417/visual.json",
-      "size": 6736,
-      "sha256": "650a35fd84cd4b2510de498b836d47e4c4d3f267695d5f646a9e51b2f9016981"
+      "size": 7682,
+      "sha256": "9c4cb6283694cbf4f51a394475c91e2e27eda309fff64034819b1aed142b5163"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/1d4403ec141be2dbedfe/visual.json",
-      "size": 5163,
-      "sha256": "541eada6ab9de754e6e882cc6af185f224e611e932404e9d31c086d0011bd5b4"
+      "size": 6323,
+      "sha256": "c26d3925069e6342282eaeaca273f4f59583a7c416b8db1c71ced7fd22ff67ec"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/346a0681ef929fe7d4c1/visual.json",
-      "size": 1851,
-      "sha256": "56668b5bb5ae9a4499510a999d83885aa9f5b03a609aa4fc0c3e59d21660ef0d"
+      "size": 1836,
+      "sha256": "ab7fb07428073870e3ed0addb5cbb7d1d6b8e22de282216310f0ef3c14bc89e9"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/6b305e86c0cc69739ce4/visual.json",
-      "size": 5166,
-      "sha256": "869d7a17a8c3a840b59b7f608420ff32dc24de64c2c136a7d8063488a1bfb02a"
+      "size": 6326,
+      "sha256": "78295f00dffc37d5a282cd57ee1b7984b0bf1be69876e2d48b40de88f62760dc"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/94dd60bfc24ec2eb8c66/visual.json",
-      "size": 3677,
-      "sha256": "b39ae04b6d4a9cdb3351bb0afcb29f40fe7e00b8cc0bb4c840917e88c8118ab6"
+      "size": 3548,
+      "sha256": "e044402586dbd4bbdc89853f0c7f608ad98732fc3ae9e9d82abeabc2c3e108ba"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/eef9d2b20ee28923593a/visuals/fc19763bcfe72c529369/visual.json",
-      "size": 1767,
-      "sha256": "933ee2f85045e8e9030686f35424fcfb966071b65a57b0d23fc7c80c22156eb6"
+      "size": 1708,
+      "sha256": "5767bd5185d200e4bc5230456ff525d619bdebac31d199a79a02243cdcc69195"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/pages/pages.json",
-      "size": 601,
-      "sha256": "5aa0c3c0f619c278d981867c0474acc5e04850b786f2cd2fa9abb971306e73d2"
+      "size": 582,
+      "sha256": "527d2429f9ff8556a62e5973c9e02f25501abaff33d80bdbf60cf1292f41bc0d"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/report.json",
-      "size": 2248,
-      "sha256": "81a5e819a7bf244de6bb76f5198718ea8a13580ccc9aa3bad55ec89e431eb1b5"
+      "size": 2158,
+      "sha256": "7b7726f252233feb340ce17870b4ade7f2874d2a748e3cb6c016b1769be078e8"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition/version.json",
-      "size": 152,
-      "sha256": "c8bdd966a85f1eaab4312d2096b6d7b508243e4d7bc5a4d25af3cfcb1056a4e7"
+      "size": 149,
+      "sha256": "32bc72b8e7996a054f96e655c8dd8fda82e5f502532610b45bc21a18cffe30b6"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/definition.pbir",
-      "size": 127,
-      "sha256": "87dbabafd4fddcd4615825b74103651147d8c949d558446145e5fa28853e3e8a"
+      "size": 120,
+      "sha256": "d3f90a478df6a5e44f34eae96a360135d90e4dd8fd642c5ec3d517ed85fcbdd5"
     },
     {
       "path": "PowerBI/ProjectVortex.Public.Report/StaticResources/RegisteredResources/L01_Embedded.png",
@@ -845,108 +845,108 @@
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/.platform",
-      "size": 337,
-      "sha256": "761573ba54e08f911da5b8eb32aba6793dd4105bf444fcf82acf473d645ad7be"
+      "size": 327,
+      "sha256": "ab8559b109a050542ea5740a959e6ea37bcaf4f259932a582ad1e5538acad032"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/database.tmdl",
-      "size": 39,
-      "sha256": "4e8a3078f0431083d2cd951e5b1b45f9ad48a56741c9a06dd25445ad7827f0f3"
+      "size": 36,
+      "sha256": "a49a9ee7a6da97261723a327a59ed384194814264958e98b34a3c6635a39c5f5"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl",
-      "size": 212,
-      "sha256": "59f7786757af9a78d797981ffc91a2797291f63b871284019451b254380c314f"
+      "size": 208,
+      "sha256": "e7ccfa2bfc30e0d6589e637d08e110b7f238477abd508b2e939e8b1d6f9679d4"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/model.tmdl",
-      "size": 1026,
-      "sha256": "65a8f0535ca65c178724375bbf542b454dfcf82422d05c0b2fd7ed55b9646a7a"
+      "size": 997,
+      "sha256": "4bb3178feb798f332da3553fc654fbeb3fff3d7f239b04c3d5b589f54046f88f"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/relationships.tmdl",
-      "size": 1401,
-      "sha256": "0c1aa1e5373d63acea55ece3d61e5bb49528c9f99568818cf781b2962d98103a"
+      "size": 1357,
+      "sha256": "f264d47ee71ba98c77acb304887513e9fefb9c3aa71056ee479a8b4584cc3e6a"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/Benchmark.tmdl",
-      "size": 4726,
-      "sha256": "bc7777b1a02081ec99f2c8d6528e666ccbd34e9ade448b467b5a831c008a12af"
+      "size": 4572,
+      "sha256": "e059fef2df1c7daffc7c617daf9fadb9e0ea3b7e6d097f72c33d4932bffde1c8"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/DateTableTemplate_29bf80d1-88d9-4bc0-bdd6-90083529a7e6.tmdl",
-      "size": 2746,
-      "sha256": "a7c1fa46e235fc0c050fafc2e663220e1ce0de5194aab64b7b1ad5e638c2e33f"
+      "size": 2628,
+      "sha256": "6faca7be6143f5f41b2ad318e3e29b480e6d0565eb92e720f8c254734638e8fe"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/DimDate.tmdl",
-      "size": 2297,
-      "sha256": "dde5fe803d406c314f05744fbadfab10721962e9e0ff0d3ada4864ad6d263ec7"
+      "size": 2220,
+      "sha256": "143a1f350a8fbb1cb5a458a510436834d3bb93b8592431ddec488af88da0e7d7"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/DimPortfolio.tmdl",
-      "size": 758,
-      "sha256": "7efa78af1ed6a8ad9ec1f9a9166b4865d3aa4a90bec6af8ca4cffd42e25bf5ff"
+      "size": 731,
+      "sha256": "64a1f5751a39ac116cfd30b881c3c119580527ba97c069acfc5aa333173a057a"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/FactAnnualResults.tmdl",
-      "size": 1900,
-      "sha256": "06cbb5118eb27149e07e81c11b60b9d31594a525399ad805f36762512cd96fcd"
+      "size": 1837,
+      "sha256": "3db4ca35bdac9b2ad7a16aa8f7f51094e0d9f49b9dab7e6c56d93f0c97fa1551"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/FactCaseGallery.tmdl",
-      "size": 2526,
-      "sha256": "3b7c8ac39f92eb624b59e3ddc8c205724938ff0d4d68cc4c115a2891286a6693"
+      "size": 2489,
+      "sha256": "adffb0a948615a4dfd99c784bc69cce3ce089a0452f6ab5ab79b2db1af2e880d"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/FactForwardValidation.tmdl",
-      "size": 765,
-      "sha256": "69beb4cb94a64972ee185f3b6d63651f56576dda145b658f3b2bacb363890afd"
+      "size": 740,
+      "sha256": "d76c235a5a21af952c87c46fa9f1772f595820fde825d3a8300764a4bf845af3"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/FactMonthlyResults.tmdl",
-      "size": 2246,
-      "sha256": "c12d8a767a2b3632127de0ddcbe8823f057fa96f17d219f10703661abd5da7e4"
+      "size": 2174,
+      "sha256": "0b649bf45ef7dd0e803ee30cb23155142b82df5eddfc4731c40d4ba87c1089c0"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/FactMonthlyRiskProxy.tmdl",
-      "size": 1739,
-      "sha256": "1e2e79c35c5ad0ccaffda12fca83635cf50beb7b4684c3fed0202e8ebaa71fa4"
+      "size": 1688,
+      "sha256": "3fe4df3761e1e68a78b1dae627ef24ec49c2557ea117efb1e3eafecb24151e3a"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/LocalDateTable_0ded72c9-a30a-4e62-9f25-43b1e9acb79d.tmdl",
-      "size": 2767,
-      "sha256": "0749f5eaccd6ee085079dfc80a13067fbca2e55ccd5da3bd7dc8adb8a9aa1326"
+      "size": 2651,
+      "sha256": "d6ee5dc0350ae5ae2c7aa19a7fa533aadfce4e048a7c8522b2944419cbadd3e2"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/LocalDateTable_2727ff58-a2e6-4f55-9187-71b85ebd484e.tmdl",
-      "size": 2755,
-      "sha256": "b6a6d76ba9a56ed41bc4431515883e093f51aba18c5bb96f365aaf6b6ddbf913"
+      "size": 2639,
+      "sha256": "f8717621cdf3199675d09927a583b5c9e5c190a7fc7092ee0b23023acf38269d"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/LocalDateTable_c452d25d-146f-41cb-b980-749a251c9cec.tmdl",
-      "size": 2769,
-      "sha256": "7d0b85432d6d40d2bbbc2aef31e6bcf3b8029ebb8438f646fdbdad1d00a36d78"
+      "size": 2653,
+      "sha256": "0d5f8a151bec159dc316866e9e5fa8bab8bd74d6e4ffa42b5ede20c4b9da7683"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/LocalDateTable_d3621f3a-a88d-4c03-bad5-16c047ece320.tmdl",
-      "size": 2773,
-      "sha256": "546b3ae057c27c3437ce637ead844be5e306a0da21a21a5522833eef83df9a36"
+      "size": 2657,
+      "sha256": "ccdcab01ae84b0bdcdea38e4b690576227482ece882e0a271b156d686cf28d42"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition/tables/VortexMetrics.tmdl",
-      "size": 4844,
-      "sha256": "b8f20a43df54033a31deb5035f66ff5071301bb62d6ca07a0dd3a7497cfc5eb6"
+      "size": 5250,
+      "sha256": "86dca21f5bdb05d992b269448a61cc84a8ab5fceca461167ab76c1edd530f58b"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/definition.pbism",
-      "size": 43,
-      "sha256": "ed99ec078efd2ff27fc1c65cc97902138d7d3c438acdb7770ae37dc71c7f06c8"
+      "size": 40,
+      "sha256": "00dc543752fb328e18e9967a25d0b39f5aecef9179ae94e4ed15eb7e078c7944"
     },
     {
       "path": "PowerBI/ProjectVortex.SemanticModel/diagramLayout.json",
-      "size": 3661,
-      "sha256": "7cbce61be941c3a44d345a7880fc6cf26f79f1ad401e632ab9af6168837da274"
+      "size": 3523,
+      "sha256": "5ac9f349162f5159ea96f4a9d527e6639bb7ba85d51ef7322ba0c854c5ac3d96"
     },
     {
       "path": "PowerBI/ProjectVortexTheme.json",
@@ -955,18 +955,23 @@
     },
     {
       "path": "PowerBI/README.md",
-      "size": 3385,
-      "sha256": "66887541fdbbf049fdeb4e5c3099787379ee01165d47d944653ced6f610fc80a"
+      "size": 3348,
+      "sha256": "74c2701920371dccc69c0ebb75dfd213400b17bf97af5d43bf76b28cc7ed078e"
     },
     {
       "path": "README.md",
-      "size": 5873,
-      "sha256": "8e09beabf9955481960e54dd49f7e9f021fddc4078b0cb46be4ae28d8921981f"
+      "size": 5876,
+      "sha256": "a3272765eff32df1eaadadb74cb08b211ec4ba6386685d0e90a47b42a407bc1d"
     },
     {
       "path": "scripts/audit_public_release.py",
-      "size": 6318,
-      "sha256": "13b885265067dce84a62f89abdec2cabf94efda8aff0d6351b6d620d0d5c76ff"
+      "size": 6673,
+      "sha256": "4d6908866884fbaa2ebda961fd0d6a75daf51a430c1d72e4e4f7cd7a11b09530"
+    },
+    {
+      "path": "scripts/audit_report_semantics.py",
+      "size": 5712,
+      "sha256": "37be6b0ccfa64901a480c5bc579483a303214e088f6652b3e708a6dd2d47fbf2"
     },
     {
       "path": "scripts/audit_screenshot_parity.py",
@@ -975,43 +980,43 @@
     },
     {
       "path": "scripts/audit_screenshot_set.py",
-      "size": 2660,
-      "sha256": "5dbef1ccb15a6630f64e35760b745a540bf969e6fcc12866ee7b263177aba3bb"
+      "size": 2718,
+      "sha256": "92c66a79da317a5e8394e93babeba527ad20655b82e14a508bf5a2f31c4dbd6d"
     },
     {
       "path": "scripts/build_monthly_drawdown_proxy.py",
-      "size": 1386,
-      "sha256": "6b6ffeafdcc596d98fedd93b55b0535d8947a14aae69b8e64ab757eca4459f05"
+      "size": 1385,
+      "sha256": "0c144bc6d0b558904e4c5abf313c629dd1bbb000afff3ff4b31e62d73390ab42"
     },
     {
       "path": "scripts/build_public_model.py",
-      "size": 12813,
-      "sha256": "fe6da705dfbcc7a2750a085cce506b12b2cb59e25a288f7242998b94aab35d5c"
+      "size": 13328,
+      "sha256": "1b288ad02ee8d119c0ad11ed2ef75e1da71b8ed3be604a4c2d007b7ed856be3f"
     },
     {
       "path": "scripts/capture-powerbi-pages.ps1",
-      "size": 15734,
-      "sha256": "c52617cbabc90731218a78358d45d988ed251cb74df4fa9fbe3b6b2caaae761e"
+      "size": 14219,
+      "sha256": "e710c082c8f8a5dd1407b27324b8c32669b097ab27502a801b18f4e99d1fa3a6"
     },
     {
       "path": "scripts/configure-data-root.ps1",
-      "size": 1257,
-      "sha256": "8f224664b8d65ef65e5a8f61eda4878b22d9433dcd3bc81564667b6c12b33cad"
+      "size": 1243,
+      "sha256": "2fdf340dbe933de61f050cef1bf5fa2de67467dc4f224dcccc83b918fb9d2b2c"
     },
     {
       "path": "scripts/sync_public_pbir.py",
-      "size": 13525,
-      "sha256": "d0fe5ee5286037f8d0269d1cc11a13ede4c983f1cfff05f17f16a1c37640a37f"
+      "size": 13561,
+      "sha256": "ccaf1ade35354dfc38e2c29465c3f77b84d3891d00d623861636c2f085d49097"
     },
     {
       "path": "scripts/validate_pbip_parity.py",
-      "size": 10856,
-      "sha256": "c31779b999a1bb856c9a3bf4b494cb185766211bd4b703f989bf4c503c75b137"
+      "size": 11053,
+      "sha256": "1e563a13235c50ef9a4ac5e5cfa909095a1bea83386b98b32e13558d6e7964ab"
     },
     {
       "path": "SECURITY_REVIEW.md",
-      "size": 3378,
-      "sha256": "12cafe0d2dc9b6ece8fdbf3ac5edfc55224451f0193b48a02474dd53094c4122"
+      "size": 3925,
+      "sha256": "8c8b2637ef48341df980f049c364bd0db89e01b7ec8f16816383e357ea6a85d7"
     }
   ]
 }

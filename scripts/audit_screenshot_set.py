@@ -53,7 +53,7 @@ def main() -> int:
         "slicerState": "Default state: slicers show All; page 04 shows P6 and PSC as separate series, page 05 is PSC only",
         "pages": records,
     }
-    OUTPUT.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    OUTPUT.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Validated {len(records)} PNG files at {next(iter(dimensions))}; wrote {OUTPUT.relative_to(ROOT)}")
     return 0
 

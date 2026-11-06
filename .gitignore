@@ -18,3 +18,7 @@ PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl
 !PowerBI/ProjectVortex.SemanticModel/
 !PowerBI/ProjectVortex.SemanticModel/**
 !PowerBI/ProjectVortex.SemanticModel/definition/expressions.tmdl
+
+# Python bytecode
+__pycache__/
+*.pyc
