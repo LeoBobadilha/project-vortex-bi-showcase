@@ -120,8 +120,8 @@
     },
     {
       "path": "docs/screenshot-capture-runbook.md",
-      "size": 2730,
-      "sha256": "8ad80c98888871e3e3bfe77522d0e75fa6314c2bc1b34c91bd1f86597466a5a7"
+      "size": 2895,
+      "sha256": "d954f10c47ae3353261837170540b0a420fd467cfba7afa1ff71e024a22d911c"
     },
     {
       "path": "docs/screenshot-qa-2026-11-05.md",
@@ -940,8 +940,8 @@
     },
     {
       "path": "scripts/capture-powerbi-pages.ps1",
-      "size": 7032,
-      "sha256": "de11d144b893aa579a1675e0482f629140b2b661b62faa31aa8b78a1944eaf53"
+      "size": 8943,
+      "sha256": "dfb5f714a95b3170bfccd1542bfa80b0c4a9c30f3b5425faa629a5dae41e0de7"
     },
     {
       "path": "scripts/configure-data-root.ps1",
