@@ -1,6 +1,6 @@
-param([switch]$AllPages, [string]$PowerBIDesktopVersion = '')
-$ErrorActionPreference = 'Stop'
+param([string]$PowerBIDesktopVersion = '')
 
+$ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 Add-Type @'
@@ -21,23 +21,50 @@ namespace VortexCapture {
 }
 '@
 
-$all = @(
-  [pscustomobject]@{ File='01-Knowledge.png'; Page='01 — Knowledge & Intelligence' },
-  [pscustomobject]@{ File='02-Research.png'; Page='02 — Autonomous Research Pipeline' },
-  [pscustomobject]@{ File='03-Executive.png'; Page='03 — Executive Overview' },
-  [pscustomobject]@{ File='04-Performance.png'; Page='04 — Portfolio Performance' },
-  [pscustomobject]@{ File='05-Risk.png'; Page='05 — Risk & Drawdown' },
-  [pscustomobject]@{ File='06-Trade-Explorer.png'; Page='06 — Trade Explorer' },
-  [pscustomobject]@{ File='07-Validation.png'; Page='07 — Forward Validation & Governance' },
-  [pscustomobject]@{ File='08-W02-Win.png'; Page='08 — Winning Case W02' },
-  [pscustomobject]@{ File='09-W03-Win.png'; Page='09 — Winning Case W03' },
-  [pscustomobject]@{ File='10-W04-Win.png'; Page='10 — Winning Case W04' },
-  [pscustomobject]@{ File='11-W05-Win.png'; Page='11 — Winning Case W05' },
-  [pscustomobject]@{ File='12-W06-Win.png'; Page='12 — Winning Case W06' },
-  [pscustomobject]@{ File='13-L01-Loss.png'; Page='13 — Losing Case L01' },
-  [pscustomobject]@{ File='14-L02-Loss.png'; Page='14 — Losing Case L02' }
+$pages = @(
+  [pscustomobject]@{ File='04-Performance.png'; Page='04 - Portfolio Performance' },
+  [pscustomobject]@{ File='05-Risk.png'; Page='05 - Risk & Drawdown' },
+  [pscustomobject]@{ File='06-Trade-Explorer.png'; Page='06 - Trade Explorer' },
+  [pscustomobject]@{ File='07-Validation.png'; Page='07 - Forward Validation & Governance' },
+  [pscustomobject]@{ File='08-W02-Win.png'; Page='08 - Winning Case W02' },
+  [pscustomobject]@{ File='09-W03-Win.png'; Page='09 - Winning Case W03' },
+  [pscustomobject]@{ File='10-W04-Win.png'; Page='10 - Winning Case W04' },
+  [pscustomobject]@{ File='11-W05-Win.png'; Page='11 - Winning Case W05' }
 )
-$pages = if ($AllPages) { $all } else { $all | Where-Object { $_.File -in @('04-Performance.png','05-Risk.png','06-Trade-Explorer.png','07-Validation.png','08-W02-Win.png','09-W03-Win.png','10-W04-Win.png','11-W05-Win.png') } }
+
+$biRepo = Split-Path -Parent $PSScriptRoot
+$workspaceRoot = Split-Path -Parent $biRepo
+$websiteRepo = Join-Path $workspaceRoot 'project-vortex-portfolio'
+$biImageDir = Join-Path $biRepo 'images\powerbi'
+$websiteImageDir = Join-Path $websiteRepo 'public\images\powerbi'
+$approvedReference = Join-Path $biImageDir '01-Knowledge.png'
+foreach ($requiredPath in @($approvedReference, $websiteImageDir, (Join-Path $biRepo 'PowerBI\ProjectVortex-Public.pbip'))) {
+  if (-not (Test-Path -LiteralPath $requiredPath)) { throw "Required release asset is missing: $requiredPath" }
+}
+
+$referenceImage = [System.Drawing.Image]::FromFile($approvedReference)
+try { $expectedWidth = $referenceImage.Width; $expectedHeight = $referenceImage.Height }
+finally { $referenceImage.Dispose() }
+
+# Resume safely: skip a page only if both repositories already contain identical bytes.
+$pending = [System.Collections.Generic.List[object]]::new()
+foreach ($item in $pages) {
+  $biPath = Join-Path $biImageDir $item.File
+  $sitePath = Join-Path $websiteImageDir $item.File
+  $biExists = Test-Path -LiteralPath $biPath
+  $siteExists = Test-Path -LiteralPath $sitePath
+  if ($biExists -and $siteExists) {
+    $biHash = (Get-FileHash -LiteralPath $biPath -Algorithm SHA256).Hash
+    $siteHash = (Get-FileHash -LiteralPath $sitePath -Algorithm SHA256).Hash
+    if ($biHash -ne $siteHash) { throw "Existing copies differ for $($item.File); reconcile them before recapturing." }
+    Write-Host "Already present in both repositories; skipping $($item.File)."
+    continue
+  }
+  if ($biExists -or $siteExists) { throw "Only one repository has $($item.File); reconcile before capture. No file overwritten." }
+  $pending.Add($item)
+}
+if ($pending.Count -eq 0) { Write-Host 'All eight requested pages already exist identically in both repositories.'; exit 0 }
+
 $captureRoot = Join-Path $env:LOCALAPPDATA 'ProjectVortex\PowerBI_Capture'
 $runDir = Join-Path $captureRoot (Get-Date -Format 'yyyyMMdd-HHmmss')
 New-Item -ItemType Directory -Path $runDir -Force | Out-Null
@@ -48,12 +75,14 @@ if (-not [VortexCapture.Native]::RegisterHotKey([IntPtr]::Zero, 1, 0, 0x78)) { t
 if (-not [VortexCapture.Native]::RegisterHotKey([IntPtr]::Zero, 2, 0, 0x1B)) { [VortexCapture.Native]::UnregisterHotKey([IntPtr]::Zero, 1) | Out-Null; throw 'Could not register Escape hotkey.' }
 
 try {
-  Write-Host "Capture folder: $runDir"
-  Write-Host 'Open the public PBIP in Power BI Desktop, refresh it, maximize the report and use full-screen report view.'
-  Write-Host 'Navigate to each requested page in the listed order. Press F9 while Power BI is foreground to capture; press Escape to stop.'
-  Write-Host "Next page: $($pages[0].Page)"
+  Write-Host "Private capture evidence: $runDir"
+  Write-Host "Required capture dimensions: ${expectedWidth}x${expectedHeight} (match the six approved screenshots)."
+  Write-Host 'Open and refresh the public PBIP, maximize Power BI Desktop, hide editing panes, and use report full-screen view.'
+  Write-Host 'Select each named page in order. Wait for every visual to finish rendering, then press F9 once with Power BI foreground.'
+  Write-Host 'Each accepted capture is saved immediately to both repositories using its required filename. Escape stops safely.'
+  Write-Host "Next page: $($pending[0].Page)"
   $index = 0
-  while ($index -lt $pages.Count) {
+  while ($index -lt $pending.Count) {
     $msg = [VortexCapture.MSG]::new()
     $result = [VortexCapture.Native]::GetMessage([ref]$msg, [IntPtr]::Zero, 0, 0)
     if ($result -le 0) { break }
@@ -70,27 +99,38 @@ try {
     $rect = [VortexCapture.RECT]::new()
     if (-not [VortexCapture.Native]::GetWindowRect($window, [ref]$rect)) { Write-Warning 'Could not read the Power BI window bounds.'; continue }
     $bounds = [System.Windows.Forms.Screen]::FromRectangle([System.Drawing.Rectangle]::FromLTRB($rect.Left,$rect.Top,$rect.Right,$rect.Bottom)).Bounds
-    if ($bounds.Width -lt 1920 -or $bounds.Height -lt 1080) { throw "Capture display is too small ($($bounds.Width)x$($bounds.Height)); use at least 1920x1080." }
-    if ([Math]::Abs(($bounds.Width / $bounds.Height) - (16.0 / 9.0)) -gt 0.01) { throw "Capture display must be close to 16:9; found $($bounds.Width)x$($bounds.Height)." }
+    if ($bounds.Width -ne $expectedWidth -or $bounds.Height -ne $expectedHeight) {
+      throw "Capture display is $($bounds.Width)x$($bounds.Height); approved screenshots require ${expectedWidth}x${expectedHeight}. Adjust display/report framing, then rerun."
+    }
 
-    $item = $pages[$index]
-    $path = Join-Path $runDir $item.File
+    $item = $pending[$index]
+    $stagePath = Join-Path $runDir $item.File
     $bitmap = [System.Drawing.Bitmap]::new($bounds.Width,$bounds.Height)
     try {
       $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
-      try { $graphics.CopyFromScreen($bounds.Location,[System.Drawing.Point]::Empty,$bounds.Size); $bitmap.Save($path,[System.Drawing.Imaging.ImageFormat]::Png) }
+      try { $graphics.CopyFromScreen($bounds.Location,[System.Drawing.Point]::Empty,$bounds.Size); $bitmap.Save($stagePath,[System.Drawing.Imaging.ImageFormat]::Png) }
       finally { $graphics.Dispose() }
     } finally { $bitmap.Dispose() }
-    $hash = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()
-    $records.Add([pscustomobject]@{ file=$item.File; page=$item.Page; width=$bounds.Width; height=$bounds.Height; sha256=$hash })
-    Write-Host ("Captured {0}: {1} ({2}x{3}, SHA256 {4})" -f $item.File,$item.Page,$bounds.Width,$bounds.Height,$hash)
+
+    $checkImage = [System.Drawing.Image]::FromFile($stagePath)
+    try {
+      if ($checkImage.Width -ne $expectedWidth -or $checkImage.Height -ne $expectedHeight) { throw "Image dimensions are wrong for $($item.File)." }
+    } finally { $checkImage.Dispose() }
+    $hash = (Get-FileHash -LiteralPath $stagePath -Algorithm SHA256).Hash.ToLowerInvariant()
+    $biPath = Join-Path $biImageDir $item.File
+    $sitePath = Join-Path $websiteImageDir $item.File
+    Copy-Item -LiteralPath $stagePath -Destination $biPath
+    try { Copy-Item -LiteralPath $stagePath -Destination $sitePath }
+    catch { Remove-Item -LiteralPath $biPath -ErrorAction SilentlyContinue; throw }
+    $records.Add([pscustomobject]@{ file=$item.File; page=$item.Page; width=$expectedWidth; height=$expectedHeight; sha256=$hash })
+    Write-Host ("Saved {0} to both repositories ({1}x{2}, SHA256 {3})" -f $item.File,$expectedWidth,$expectedHeight,$hash)
     $index++
-    if ($index -lt $pages.Count) { Write-Host "Next page: $($pages[$index].Page)" }
+    if ($index -lt $pending.Count) { Write-Host "Next page: $($pending[$index].Page)" }
   }
-  $manifest = [pscustomobject]@{ source='Actual Power BI Desktop screen capture'; desktopVersion=$PowerBIDesktopVersion; capturedAt=(Get-Date).ToString('o'); requestedPages=$pages.Count; capturedPages=$records }
+  $manifest = [pscustomobject]@{ source='Actual Power BI Desktop screen capture'; desktopVersion=$PowerBIDesktopVersion; capturedAt=(Get-Date).ToString('o'); requestedPages=$pending.Count; capturedPages=$records }
   [IO.File]::WriteAllText((Join-Path $runDir 'capture-manifest.json'),($manifest | ConvertTo-Json -Depth 5),[System.Text.UTF8Encoding]::new($false))
-  if ($index -eq $pages.Count) { Write-Host "Captured all $($pages.Count) requested pages. Inspect every PNG before copying it into either repository." }
-  else { Write-Warning "Captured $index of $($pages.Count) requested pages. Partial images remain in the timestamped private folder." }
+  if ($index -eq $pending.Count) { Write-Host "Captured and copied all $($pending.Count) pending pages. Visually inspect each PNG before release; capture does not verify report content or overlays." }
+  else { Write-Warning "Saved $index of $($pending.Count) pending pages. Rerun this helper to resume; identical copies are skipped." }
 } finally {
   [VortexCapture.Native]::UnregisterHotKey([IntPtr]::Zero, 1) | Out-Null
   [VortexCapture.Native]::UnregisterHotKey([IntPtr]::Zero, 2) | Out-Null

@@ -10,15 +10,21 @@ This procedure captures the actual public-safe PBIP from an authorized interacti
 
 ## Capture
 
-Record the version under **Help > About**, then run `scripts/capture-powerbi-pages.ps1 -PowerBIDesktopVersion '<version>'` from the BI repository. By default it requests the eight missing pages, in order. Use `-AllPages` to recapture all 14 if the approved captures do not match the display resolution or framing. The helper waits for **F9** while Power BI is the foreground application; press it once per page when the prompt names the page. **Escape** stops without deleting earlier captures.
+Record the version under **Help > About**, then run this helper in that same interactive Windows session:
 
-Raw captures are written to `%LOCALAPPDATA%\ProjectVortex\PowerBI_Capture\<timestamp>`. The helper captures the monitor containing the Power BI window and writes a private manifest with the Desktop version, filenames, dimensions and SHA-256 hashes. It does not determine whether a visual is complete or whether an overlay is present.
+```powershell
+& 'C:\Projects\Vortex-Edge02-Implementador\release-staging\project-vortex-bi-showcase\scripts\capture-powerbi-pages.ps1'
+```
+
+The helper prompts for the Desktop version and captures the eight missing pages in order. Select the named tab and wait for it to render, then press **F9** once. It captures only when the foreground window is Power BI. **Escape** stops safely; rerunning resumes, skipping identical files already present in both repositories. The approved images are 3240 x 1824, and the helper enforces the same dimensions.
+
+Each PNG is saved automatically under its final filename to both `images/powerbi/` in this BI repository and `public/images/powerbi/` in the sibling website repository. It also keeps the original capture and a private manifest in `%LOCALAPPDATA%\ProjectVortex\PowerBI_Capture\<timestamp>`. It does not determine whether the report page is correct, fully rendered, or free of overlays; visually inspect each capture before release.
 
 ## Review and synchronize
 
 Inspect every PNG at full size. Confirm the correct page, all visuals loaded, approved benchmark/slicer state, consistent dimensions, readable labels and no unrelated desktop content. Do not use image edits to conceal report defects. Keep unapproved captures in the local staging folder.
 
-After visual review, copy only approved captures under their specified names to `images/powerbi/` and the matching website `public/images/powerbi/`. Then run:
+After visual review, run these checks from the BI repository root:
 
 ```powershell
 python scripts/audit_screenshot_set.py
